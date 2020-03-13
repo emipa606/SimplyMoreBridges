@@ -19,10 +19,29 @@ namespace SimplyMoreBridges
 			bool result;
 			if (c.GetTerrain(map) == RimWorld.TerrainDefOf.Bridge)
 			{
-				result = true;
+                return true;
 			}
 			else
 			{
+                var terrainDef = c.GetTerrain(map);
+                if (terrainDef == TerrainDefOf.HeavyBridgeSteel ||
+                    terrainDef == TerrainDefOf.HeavyBridgePlasteel ||
+                    terrainDef == TerrainDefOf.HeavyBridgeSandstone ||
+                    terrainDef == TerrainDefOf.HeavyBridgeGranite ||
+                    terrainDef == TerrainDefOf.HeavyBridgeLimestone ||
+                    terrainDef == TerrainDefOf.HeavyBridgeSlate ||
+                    terrainDef == TerrainDefOf.HeavyBridgeMarble ||
+                    terrainDef == TerrainDefOf.DeepWaterBridgeSteel ||
+                    terrainDef == TerrainDefOf.DeepWaterBridgePlasteel ||
+                    terrainDef == TerrainDefOf.DeepWaterBridgeSandstone ||
+                    terrainDef == TerrainDefOf.DeepWaterBridgeGranite ||
+                    terrainDef == TerrainDefOf.DeepWaterBridgeLimestone ||
+                    terrainDef == TerrainDefOf.DeepWaterBridgeSlate ||
+                    terrainDef == TerrainDefOf.DeepWaterBridgeMarble)
+                {
+                    return true;
+                }
+                return false;
 				DesignatorDropdownGroupDef designatorDropdown = c.GetTerrain(map).designatorDropdown;
 				result = (designatorDropdown == DesignatorDropdownGroupDefOf.Bridge_Heavy || designatorDropdown == DesignatorDropdownGroupDefOf.Bridge_DeepWater);
 			}
@@ -33,7 +52,7 @@ namespace SimplyMoreBridges
 		public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
 		{
 			int i = 0;
-			int iLen = instructions.Count<CodeInstruction>();
+			int iLen = instructions.Count();
 			while (i < iLen)
 			{
 				CodeInstruction ci = instructions.ElementAt(i);

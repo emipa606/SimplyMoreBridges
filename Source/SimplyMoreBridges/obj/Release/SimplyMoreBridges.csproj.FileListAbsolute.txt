@@ -1,7 +1,0 @@
-E:\Steam\steamapps\common\RimWorld\Mods\SimplyMoreBridges\Source\SimplyMoreBridges\bin\Release\SimplyMoreBridges.dll
-E:\Steam\steamapps\common\RimWorld\Mods\SimplyMoreBridges\Source\SimplyMoreBridges\bin\Release\SimplyMoreBridges.pdb
-E:\Steam\steamapps\common\RimWorld\Mods\SimplyMoreBridges\Source\SimplyMoreBridges\obj\Release\SimplyMoreBridges.csproj.CoreCompileInputs.cache
-E:\Steam\steamapps\common\RimWorld\Mods\SimplyMoreBridges\Source\SimplyMoreBridges\obj\Release\SimplyMoreBridges.dll
-E:\Steam\steamapps\common\RimWorld\Mods\SimplyMoreBridges\Source\SimplyMoreBridges\obj\Release\SimplyMoreBridges.pdb
-E:\Steam\steamapps\common\RimWorld\Mods\SimplyMoreBridges\1.1\Assemblies\SimplyMoreBridges.dll
-E:\Steam\steamapps\common\RimWorld\Mods\SimplyMoreBridges\1.1\Assemblies\SimplyMoreBridges.pdb
