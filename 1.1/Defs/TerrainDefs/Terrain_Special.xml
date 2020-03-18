@@ -27,7 +27,6 @@
 		<resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
 		<statBases>
 			<WorkToBuild>3200</WorkToBuild>
-			<Flammability>0.2</Flammability>
 		</statBases>
 		<destroyOnBombDamageThreshold>40</destroyOnBombDamageThreshold>
 		<designatorDropdown>Bridge_DeepWater</designatorDropdown>
