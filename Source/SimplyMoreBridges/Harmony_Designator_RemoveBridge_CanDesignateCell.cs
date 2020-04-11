@@ -15,6 +15,7 @@ namespace SimplyMoreBridges
         public static bool Prefix(IntVec3 c, ref AcceptanceReport __result, ref Designator_RemoveBridge __instance)
         {
             var terrainDef = c.GetTerrain(__instance.Map);
+            if (Prefs.DevMode) Log.Message($"terrainDef: {terrainDef}");
             if (terrainDef == TerrainDefOf.HeavyBridgeSteel ||
                 terrainDef == TerrainDefOf.HeavyBridgePlasteel ||
                 terrainDef == TerrainDefOf.HeavyBridgeSandstone ||

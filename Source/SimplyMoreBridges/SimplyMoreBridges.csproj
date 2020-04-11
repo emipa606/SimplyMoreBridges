@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="DesignatorDropdownGroupDefOf.cs" />
     <Compile Include="Harmony.cs" />
+    <Compile Include="Harmony_TerrainGrid_RemoveTopLayer.cs" />
     <Compile Include="Harmony_Designator_RemoveBridge_CanDesignateCell.cs" />
     <Compile Include="Harmony_GenConstruct_CanPlaceBlueprintAt.cs" />
     <Compile Include="Harmony_TerrainGrid_SetTerrain.cs" />
