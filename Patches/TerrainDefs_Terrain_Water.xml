@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-
-	<Operation Class="PatchOperationRemove">
-		<xpath>/Defs/TerrainDef[@Name="WaterDeepBase"]/changeable</xpath>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/TerrainDef[@Name="WaterDeepBase"]/changeable</xpath>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/TerrainDef[@Name="WaterDeepBase"]/changeable</xpath>
+			</li>
+		</operations>
 	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/TerrainDef[@Name="WaterDeepBase"]</xpath>
-		<value>
-			<affordances>
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/TerrainDef[@Name="WaterDeepBase"]/affordances</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[@Name="WaterDeepBase"]</xpath>
+			<value>
+				<affordances>
+					<li>BridgeableDeep</li>
+				</affordances>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[@Name="WaterDeepBase"]/affordances</xpath>
+			<value>
 				<li>BridgeableDeep</li>
-			</affordances>
-		</value>
+			</value>
+		</match>
 	</Operation>
-
 </Patch>
