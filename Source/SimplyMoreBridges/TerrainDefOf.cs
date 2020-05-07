@@ -4,6 +4,15 @@ using Verse;
 
 namespace SimplyMoreBridges
 {
+
+    class ClassFunctions
+    {
+        public static bool IsCustomBridge(TerrainDef terrainDef)
+        {
+            return terrainDef.defName.StartsWith("HeavyBridge") || terrainDef.defName.StartsWith("DeepWaterBridge") ? true : false;
+        }
+    }
+
     // Token: 0x02000002 RID: 2
     [DefOf]
     public static class TerrainDefOf

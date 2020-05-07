@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Deep water bridge -->
+
+  <DeepWaterBridgeSteel.label>steel deep water bridge</DeepWaterBridgeSteel.label>
+  <DeepWaterBridgeSteel.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</DeepWaterBridgeSteel.description>
+
+  <DeepWaterBridgePlasteel.label>plasteel deep water bridge</DeepWaterBridgePlasteel.label>
+  <DeepWaterBridgePlasteel.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</DeepWaterBridgePlasteel.description>
+
+  <DeepWaterBridgeSandstone.label>sandstone deep water bridge</DeepWaterBridgeSandstone.label>
+  <DeepWaterBridgeSandstone.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</DeepWaterBridgeSandstone.description>
+
+  <DeepWaterBridgeGranite.label>granite deep water bridge</DeepWaterBridgeGranite.label>
+  <DeepWaterBridgeGranite.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</DeepWaterBridgeGranite.description>
+
+  <DeepWaterBridgeLimestone.label>limestone deep water bridge</DeepWaterBridgeLimestone.label>
+  <DeepWaterBridgeLimestone.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</DeepWaterBridgeLimestone.description>
+
+  <DeepWaterBridgeSlate.label>slate deep water bridge</DeepWaterBridgeSlate.label>
+  <DeepWaterBridgeSlate.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</DeepWaterBridgeSlate.description>
+
+  <DeepWaterBridgeMarble.label>marble deep water bridge</DeepWaterBridgeMarble.label>
+  <DeepWaterBridgeMarble.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</DeepWaterBridgeMarble.description>
+
+
+  <!-- Heavy bridge -->
+
+  <HeavyBridgeSteel.label>steel bridge</HeavyBridgeSteel.label>
+  <HeavyBridgeSteel.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</HeavyBridgeSteel.description>
+
+  <HeavyBridgePlasteel.label>plasteel bridge</HeavyBridgePlasteel.label>
+  <HeavyBridgePlasteel.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</HeavyBridgePlasteel.description>
+
+  <HeavyBridgeSandstone.label>sandstone bridge</HeavyBridgeSandstone.label>
+  <HeavyBridgeSandstone.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</HeavyBridgeSandstone.description>
+
+  <HeavyBridgeGranite.label>granite bridge</HeavyBridgeGranite.label>
+  <HeavyBridgeGranite.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</HeavyBridgeGranite.description>
+
+  <HeavyBridgeLimestone.label>limestone bridge</HeavyBridgeLimestone.label>
+  <HeavyBridgeLimestone.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</HeavyBridgeLimestone.description>
+
+  <HeavyBridgeSlate.label>slate bridge</HeavyBridgeSlate.label>
+  <HeavyBridgeSlate.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</HeavyBridgeSlate.description>
+
+  <HeavyBridgeMarble.label>marble bridge</HeavyBridgeMarble.label>
+  <HeavyBridgeMarble.description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</HeavyBridgeMarble.description>
+
+
+</LanguageData>
