@@ -115,7 +115,7 @@
     <terrainAffordanceNeeded>Bridgeable</terrainAffordanceNeeded>
     <statBases>
       <WorkToBuild>2200</WorkToBuild>
-      <Flammability>0.2</Flammability>
+      <Flammability>0</Flammability>
     </statBases>
     <destroyOnBombDamageThreshold>45</destroyOnBombDamageThreshold>
     <designatorDropdown>Bridge_Heavy</designatorDropdown>
