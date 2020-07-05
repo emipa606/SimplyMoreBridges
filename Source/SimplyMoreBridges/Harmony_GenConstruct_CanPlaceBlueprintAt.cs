@@ -2,6 +2,7 @@
 using HarmonyLib;
 using RimWorld;
 using Verse;
+using System.Linq;
 
 namespace SimplyMoreBridges
 {
@@ -13,15 +14,17 @@ namespace SimplyMoreBridges
 		// Token: 0x0600000E RID: 14 RVA: 0x0000271C File Offset: 0x0000091C
 		public static void Postfix(ref AcceptanceReport __result, BuildableDef entDef, IntVec3 center, Map map)
 		{
-			TerrainDef terrainDef = entDef as TerrainDef;
-			if (terrainDef != null)
-			{
-				TerrainAffordanceDef terrainAffordanceNeeded = map.terrainGrid.TerrainAt(center).terrainAffordanceNeeded;
-				if (terrainAffordanceNeeded == TerrainAffordanceDefOf.Bridgeable || terrainAffordanceNeeded == TerrainAffordanceDefOf.BridgeableDeep)
-				{
-					__result = new AcceptanceReport(Translator.Translate("NoFloorsOnBridges"));
-				}
-			}
+			var centerDef = map.terrainGrid.TerrainAt(center);
+			if (!(entDef is TerrainDef) || entDef.HasModExtension<SimplyMoreBridgesModExt>() || centerDef.HasModExtension<SimplyMoreBridgesModExt>()) return;
+			var terrainAffordanceNeeded = centerDef.terrainAffordanceNeeded;
+			var terrainAffordanceBridgeableDeep = DefDatabase<TerrainAffordanceDef>.AllDefs.FirstOrDefault(x => x.defName == "BridgeableDeep");
+			if (terrainAffordanceBridgeableDeep == null
+				&& terrainAffordanceNeeded == TerrainAffordanceDefOf.Bridgeable)
+				__result = new AcceptanceReport("NoFloorsOnBridges".Translate());
+			else if (terrainAffordanceBridgeableDeep != null
+				&& (terrainAffordanceNeeded == TerrainAffordanceDefOf.Bridgeable
+				|| terrainAffordanceNeeded == terrainAffordanceBridgeableDeep))
+				__result = new AcceptanceReport("NoFloorsOnBridges".Translate());
 		}
 	}
 }

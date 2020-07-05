@@ -63,6 +63,7 @@
     <Compile Include="SectionLayer_BridgeProps.cs" />
     <Compile Include="SectionLayer_BridgeProps_DeepWater.cs" />
     <Compile Include="SectionLayer_BridgeProps_Heavy.cs" />
+    <Compile Include="SimplyMoreBridgesModExt.cs" />
     <Compile Include="TerrainAffordanceDefOf.cs" />
     <Compile Include="TerrainDefOf.cs" />
   </ItemGroup>
