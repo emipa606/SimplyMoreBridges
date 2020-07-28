@@ -43,26 +43,6 @@
       <li>Stonecutting</li>
     </researchPrerequisites>
   </TerrainDef>
-  <TerrainDef ParentName="DeepWaterBridgeMetalBase">
-    <defName>DeepWaterBridgeSteel</defName>
-    <label>steel deep water bridge</label>
-    <color>(105,105,105)</color>
-    <costList>
-      <Steel>20</Steel>
-    </costList>
-  </TerrainDef>
-  <TerrainDef ParentName="DeepWaterBridgeMetalBase">
-    <defName>DeepWaterBridgePlasteel</defName>
-    <label>plasteel deep water bridge</label>
-    <color>(160,178,181)</color>
-    <costList>
-      <Steel>5</Steel>
-      <Plasteel>15</Plasteel>
-    </costList>
-    <researchPrerequisites>
-      <li>Machining</li>
-    </researchPrerequisites>
-  </TerrainDef>
   <TerrainDef ParentName="DeepWaterBridgeStoneBase">
     <defName>DeepWaterBridgeSandstone</defName>
     <label>sandstone deep water bridge</label>
@@ -108,6 +88,26 @@
       <BlocksMarble>17</BlocksMarble>
     </costList>
   </TerrainDef>
+  <TerrainDef ParentName="DeepWaterBridgeMetalBase">
+    <defName>DeepWaterBridgeSteel</defName>
+    <label>steel deep water bridge</label>
+    <color>(105,105,105)</color>
+    <costList>
+      <Steel>20</Steel>
+    </costList>
+  </TerrainDef>
+  <TerrainDef ParentName="DeepWaterBridgeMetalBase">
+    <defName>DeepWaterBridgePlasteel</defName>
+    <label>plasteel deep water bridge</label>
+    <color>(160,178,181)</color>
+    <costList>
+      <Steel>5</Steel>
+      <Plasteel>15</Plasteel>
+    </costList>
+    <researchPrerequisites>
+      <li>Machining</li>
+    </researchPrerequisites>
+  </TerrainDef>
   <!--======================== Heavy bridge ========================-->
   <TerrainDef Name="HeavyBridgeBase" ParentName="MoreBridgeBase" Abstract="True">
     <description>A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.</description>
@@ -133,26 +133,6 @@
     <texturePath>Terrain/Surfaces/HeavyBridgeStone</texturePath>
     <researchPrerequisites>
       <li>Stonecutting</li>
-    </researchPrerequisites>
-  </TerrainDef>
-  <TerrainDef ParentName="HeavyBridgeMetalBase">
-    <defName>HeavyBridgeSteel</defName>
-    <label>steel bridge</label>
-    <color>(105,105,105)</color>
-    <costList>
-      <Steel>12</Steel>
-    </costList>
-  </TerrainDef>
-  <TerrainDef ParentName="HeavyBridgeMetalBase">
-    <defName>HeavyBridgePlasteel</defName>
-    <label>plasteel bridge</label>
-    <color>(160,178,181)</color>
-    <costList>
-      <Steel>3</Steel>
-      <Plasteel>9</Plasteel>
-    </costList>
-    <researchPrerequisites>
-      <li>Machining</li>
     </researchPrerequisites>
   </TerrainDef>
   <TerrainDef ParentName="HeavyBridgeStoneBase">
@@ -199,5 +179,25 @@
       <Steel>3</Steel>
       <BlocksMarble>10</BlocksMarble>
     </costList>
+  </TerrainDef>
+  <TerrainDef ParentName="HeavyBridgeMetalBase">
+    <defName>HeavyBridgeSteel</defName>
+    <label>steel bridge</label>
+    <color>(105,105,105)</color>
+    <costList>
+      <Steel>12</Steel>
+    </costList>
+  </TerrainDef>
+  <TerrainDef ParentName="HeavyBridgeMetalBase">
+    <defName>HeavyBridgePlasteel</defName>
+    <label>plasteel bridge</label>
+    <color>(160,178,181)</color>
+    <costList>
+      <Steel>3</Steel>
+      <Plasteel>9</Plasteel>
+    </costList>
+    <researchPrerequisites>
+      <li>Machining</li>
+    </researchPrerequisites>
   </TerrainDef>
 </Defs>
