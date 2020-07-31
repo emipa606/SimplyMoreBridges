@@ -10,7 +10,7 @@ namespace SimplyMoreBridges
 {
     public class GenerateBridges
     {
-        public static void Postfix() {
+        public static void Prefix() {
             var materials = new List<ThingDef>();
             if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>().GenerateFromAll)
             {

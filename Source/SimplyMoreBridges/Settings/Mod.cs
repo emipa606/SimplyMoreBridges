@@ -16,8 +16,8 @@ namespace SimplyMoreBridges
         {
             instance = this; 
             var original = typeof(DefGenerator).GetMethod("GenerateImpliedDefs_PreResolve");
-            var postfix = typeof(GenerateBridges).GetMethod("Postfix");
-            new Harmony("mlie.simplymorebridges").Patch(original, postfix: new HarmonyMethod(postfix));
+            var prefix = typeof(GenerateBridges).GetMethod("Prefix");
+            new Harmony("mlie.simplymorebridges").Patch(original, prefix: new HarmonyMethod(prefix));
         }
 
         /// <summary>
