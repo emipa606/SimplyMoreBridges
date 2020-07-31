@@ -15,13 +15,14 @@ namespace SimplyMoreBridges
         {
             var terrainDef = __instance.TerrainAt(c);
             if (Prefs.DevMode) Log.Message($"terrainDef: {terrainDef}");
-            if (terrainDef == TerrainDefOf.DeepWaterBridgeSteel ||
-                terrainDef == TerrainDefOf.DeepWaterBridgePlasteel ||
-                terrainDef == TerrainDefOf.DeepWaterBridgeSandstone ||
-                terrainDef == TerrainDefOf.DeepWaterBridgeGranite ||
-                terrainDef == TerrainDefOf.DeepWaterBridgeLimestone ||
-                terrainDef == TerrainDefOf.DeepWaterBridgeSlate ||
-                terrainDef == TerrainDefOf.DeepWaterBridgeMarble)
+            if (terrainDef.defName.StartsWith("DeepWaterBridge"))
+                //== TerrainDefOf.DeepWaterBridgeSteel ||
+                //terrainDef == TerrainDefOf.DeepWaterBridgePlasteel ||
+                //terrainDef == TerrainDefOf.DeepWaterBridgeSandstone ||
+                //terrainDef == TerrainDefOf.DeepWaterBridgeGranite ||
+                //terrainDef == TerrainDefOf.DeepWaterBridgeLimestone ||
+                //terrainDef == TerrainDefOf.DeepWaterBridgeSlate ||
+                //terrainDef == TerrainDefOf.DeepWaterBridgeMarble)
             {
                 __instance.SetTerrain(c, TerrainDef.Named("WaterDeep"));
                 return false;

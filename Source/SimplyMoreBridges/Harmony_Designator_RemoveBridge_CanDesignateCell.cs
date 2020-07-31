@@ -16,20 +16,21 @@ namespace SimplyMoreBridges
         {
             var terrainDef = c.GetTerrain(__instance.Map);
             if (Prefs.DevMode) Log.Message($"terrainDef: {terrainDef}");
-            if (terrainDef == TerrainDefOf.HeavyBridgeSteel ||
-                terrainDef == TerrainDefOf.HeavyBridgePlasteel ||
-                terrainDef == TerrainDefOf.HeavyBridgeSandstone ||
-                terrainDef == TerrainDefOf.HeavyBridgeGranite ||
-                terrainDef == TerrainDefOf.HeavyBridgeLimestone ||
-                terrainDef == TerrainDefOf.HeavyBridgeSlate ||
-                terrainDef == TerrainDefOf.HeavyBridgeMarble ||
-                terrainDef == TerrainDefOf.DeepWaterBridgeSteel ||
-                terrainDef == TerrainDefOf.DeepWaterBridgePlasteel ||
-                terrainDef == TerrainDefOf.DeepWaterBridgeSandstone ||
-                terrainDef == TerrainDefOf.DeepWaterBridgeGranite ||
-                terrainDef == TerrainDefOf.DeepWaterBridgeLimestone ||
-                terrainDef == TerrainDefOf.DeepWaterBridgeSlate ||
-                terrainDef == TerrainDefOf.DeepWaterBridgeMarble)
+            if (terrainDef.defName.StartsWith("HeavyBridge") || terrainDef.defName.StartsWith("DeepWaterBridge"))
+                //== TerrainDefOf.HeavyBridgeSteel ||
+                //terrainDef == TerrainDefOf.HeavyBridgePlasteel ||
+                //terrainDef == TerrainDefOf.HeavyBridgeSandstone ||
+                //terrainDef == TerrainDefOf.HeavyBridgeGranite ||
+                //terrainDef == TerrainDefOf.HeavyBridgeLimestone ||
+                //terrainDef == TerrainDefOf.HeavyBridgeSlate ||
+                //terrainDef == TerrainDefOf.HeavyBridgeMarble ||
+                //terrainDef == TerrainDefOf.DeepWaterBridgeSteel ||
+                //terrainDef == TerrainDefOf.DeepWaterBridgePlasteel ||
+                //terrainDef == TerrainDefOf.DeepWaterBridgeSandstone ||
+                //terrainDef == TerrainDefOf.DeepWaterBridgeGranite ||
+                //terrainDef == TerrainDefOf.DeepWaterBridgeLimestone ||
+                //terrainDef == TerrainDefOf.DeepWaterBridgeSlate ||
+                //terrainDef == TerrainDefOf.DeepWaterBridgeMarble)
             {
                 __result = AcceptanceReport.WasAccepted;
                 if (!c.InBounds(__instance.Map) || c.Fogged(__instance.Map))
