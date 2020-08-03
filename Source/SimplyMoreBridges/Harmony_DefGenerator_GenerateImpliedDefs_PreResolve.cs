@@ -129,7 +129,6 @@ namespace SimplyMoreBridges
             else
             {
                 currentBridgeType.texturePath = $"Terrain/Surfaces/HeavyBridgeStone";
-                currentBridgeType.researchPrerequisites.Add(DefDatabase<ResearchProjectDef>.GetNamedSilentFail("Stonecutting"));
                 if (deep)
                 {
                     int baseCost = 17;
