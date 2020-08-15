@@ -2,7 +2,7 @@
 <ModMetaData>
   <name>Simply More Bridges (Continued)</name>
   <packageId>Mlie.SimplyMoreBridges</packageId>
-  <author>Mlie</author>
+  <author>Lanilor</author>
   <url>https://github.com/emipa606/SimplyMoreBridges</url>
   <supportedVersions>
     <li>1.0</li>
@@ -20,7 +20,7 @@
   <loadAfter>
     <li>brrainz.harmony</li>
   </loadAfter>
-  <description>Update of brrainz mod for RimWorld 1.1 and Harmony 2.0
+  <description>Update of Lanilors mod and Harmony 2.0
 https://steamcommunity.com/sharedfiles/filedetails/?id=1420241138
 
 [img]https://i.imgur.com/GYswkZ7.png[/img]
