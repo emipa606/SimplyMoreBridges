@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
+  <!-- Wooden bridge patch. Translators can add a "wooden" description for vanilla bridge: -->
+  <!-- <Bridge.label>place label here</Bridge.label> -->
+  <!-- <Bridge.description>Place description here</Bridge.description> -->
+
   <!-- Deep water bridge -->
 
   <DeepWaterBridgeSteel.label>steel deep water bridge</DeepWaterBridgeSteel.label>
