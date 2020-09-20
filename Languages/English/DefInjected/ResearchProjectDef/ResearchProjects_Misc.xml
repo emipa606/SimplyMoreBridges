@@ -1,11 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
-  <HeavyBridges.label>heavy bridges</HeavyBridges.label>
-  <HeavyBridges.description>Build heavy bridges to provide passage over water and even construct heavy structures on them.</HeavyBridges.description>
-
-  <DeepWaterBridges.label>deep water bridges</DeepWaterBridges.label>
-  <DeepWaterBridges.description>Learn how to build large pillar structures for your bridges to be able to build bridges even on deep water.</DeepWaterBridges.description>
-
+  <!--<HeavyBridges.label>heavy bridges</HeavyBridges.label>-->
+  <!--<HeavyBridges.description>Build heavy bridges to provide passage over water and even construct heavy structures on them.</HeavyBridges.description>-->
+  <!--<DeepWaterBridges.label>deep water bridges</DeepWaterBridges.label>-->
+  <!--<DeepWaterBridges.description>Learn how to build large pillar structures for your bridges to be able to build bridges even on deep water.</DeepWaterBridges.description>-->
 
 </LanguageData>

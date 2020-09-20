@@ -42,10 +42,8 @@ namespace SimplyMoreBridges
 			TerrainGrid terrainGrid = base.Map.terrainGrid;
 			CellRect cellRect = this.section.CellRect;
 			float num = AltitudeLayer.TerrainScatter.AltitudeFor();
-			CellRect.CellRectIterator iterator = cellRect.GetIterator();
-			while (!iterator.Done())
+			foreach(var intVec in cellRect)
 			{
-				IntVec3 intVec = iterator.Current;
 				if (this.ShouldDrawPropsBelow(intVec, terrainGrid))
 				{
 					IntVec3 c = intVec;
@@ -76,7 +74,6 @@ namespace SimplyMoreBridges
 					subMesh.tris.Add(count + 2);
 					subMesh.tris.Add(count + 3);
 				}
-				iterator.MoveNext();
 			}
 			base.FinalizeMesh(MeshParts.All);
 		}
