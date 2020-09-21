@@ -32,12 +32,28 @@ namespace SimplyMoreBridges
                     if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Stony))
                     {
                         stonyBridgesToAdd.Add(GenerateBridgeDef(material, true));
+                        if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>().AddVisuals)
+                            stonyBridgesToAdd.Add(GenerateBridgeDef(material, true, "Flagstone"));
                         stonyBridgesToAdd.Add(GenerateBridgeDef(material, false));
+                        if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>().AddVisuals)
+                            stonyBridgesToAdd.Add(GenerateBridgeDef(material, false, "Flagstone"));
                     }
                     else
                     {
                         metalBridgesToAdd.Add(GenerateBridgeDef(material, true));
+                        if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>().AddVisuals)
+                        {
+                            if (material.defName == "Steel")
+                                metalBridgesToAdd.Add(GenerateBridgeDef(material, true, "Concrete"));
+                            metalBridgesToAdd.Add(GenerateBridgeDef(material, true, "PavedTile"));
+                        }
                         metalBridgesToAdd.Add(GenerateBridgeDef(material, false));
+                        if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>().AddVisuals)
+                        {
+                            if (material.defName == "Steel")
+                                metalBridgesToAdd.Add(GenerateBridgeDef(material, false, "Concrete"));
+                            metalBridgesToAdd.Add(GenerateBridgeDef(material, false, "PavedTile"));
+                        }
                     }
                 }
                 catch (Exception exception)
@@ -58,7 +74,7 @@ namespace SimplyMoreBridges
             }
         }
 
-        private static TerrainDef GenerateBridgeDef(ThingDef material, bool deep)
+        private static TerrainDef GenerateBridgeDef(ThingDef material, bool deep, string alternateTexture = "")
         {
             var currentBridgeType = new TerrainDef
             {
@@ -86,7 +102,7 @@ namespace SimplyMoreBridges
                 currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge_DeepWater;
                 currentBridgeType.researchPrerequisites = new List<ResearchProjectDef> { DefDatabase<ResearchProjectDef>.GetNamedSilentFail("DeepWaterBridges") };
                 currentBridgeType.label = $"{material.label} deep water bridge";
-                currentBridgeType.defName = $"DeepWaterBridge{material.defName.Replace("Blocks", string.Empty)}";
+                currentBridgeType.defName = $"DeepWaterBridge{material.defName.Replace("Blocks", string.Empty)}{alternateTexture}";
             }
             else
             {
@@ -96,13 +112,23 @@ namespace SimplyMoreBridges
                 currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge_Heavy;
                 currentBridgeType.researchPrerequisites = new List<ResearchProjectDef> { DefDatabase<ResearchProjectDef>.GetNamedSilentFail("HeavyBridges") };
                 currentBridgeType.label = $"{material.label} bridge";
-                currentBridgeType.defName = $"HeavyBridge{material.defName.Replace("Blocks", string.Empty)}";
+                currentBridgeType.defName = $"HeavyBridge{material.defName.Replace("Blocks", string.Empty)}{alternateTexture}";
             }
             float hitPoints;
             if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Metallic))
             {
                 hitPoints = 300f;
-                currentBridgeType.texturePath = $"Terrain/Surfaces/DeepWaterBridgeMetal";
+                if (string.IsNullOrEmpty(alternateTexture))
+                {
+                    currentBridgeType.texturePath = "Terrain/Surfaces/DeepWaterBridgeMetal";
+                    if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>().AddVisuals)
+                        currentBridgeType.label += " (FloorTile)";
+                }
+                else
+                {
+                    currentBridgeType.texturePath = $"Terrain/Surfaces/Bridge{alternateTexture}";
+                    currentBridgeType.label += $" ({alternateTexture})";
+                }
                 currentBridgeType.researchPrerequisites.Add(DefDatabase<ResearchProjectDef>.GetNamedSilentFail("Smithing"));
                 if (deep)
                 {
@@ -134,7 +160,17 @@ namespace SimplyMoreBridges
             else
             {
                 hitPoints = 200f;
-                currentBridgeType.texturePath = $"Terrain/Surfaces/HeavyBridgeStone";
+                if (string.IsNullOrEmpty(alternateTexture))
+                {
+                    currentBridgeType.texturePath = $"Terrain/Surfaces/HeavyBridgeStone";
+                    if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>().AddVisuals)
+                        currentBridgeType.label += " (StoneTile)";
+                }
+                else
+                {
+                    currentBridgeType.texturePath = $"Terrain/Surfaces/Bridge{alternateTexture}";
+                    currentBridgeType.label += $" ({alternateTexture})";
+                }
                 if (deep)
                 {
                     int baseCost = 17;

@@ -60,6 +60,7 @@ namespace SimplyMoreBridges
             listing_Standard.Label("Changes require a game restart for effect.");
             listing_Standard.Gap();
             listing_Standard.CheckboxLabeled("Generate bridges from more materials", ref Settings.GenerateFromAll, "Will generate bridges from all loaded Stoney and Metaly materials.");
+            listing_Standard.CheckboxLabeled("Add different visuals", ref Settings.AddVisuals, "Also adds bridges with Concrete, Flagstone and Paved Tile-visuals.");
             listing_Standard.End();
             Settings.Write();
         }
