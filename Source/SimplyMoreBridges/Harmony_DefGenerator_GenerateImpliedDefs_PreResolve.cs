@@ -190,7 +190,8 @@ namespace SimplyMoreBridges
                 hitPoints = (float)Math.Round(500f * sharpValue);
             }
             currentBridgeType.statBases.Add(new StatModifier() { stat = StatDefOf.MaxHitPoints, value = hitPoints });
-            currentBridgeType.color = material.stuffProps.color;
+            if (alternateTexture != "Concrete")
+                currentBridgeType.color = material.stuffProps.color;
             return currentBridgeType;
         }
     }
