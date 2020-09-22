@@ -47,12 +47,22 @@ namespace SimplyMoreBridges
                                 metalBridgesToAdd.Add(GenerateBridgeDef(material, true, "Concrete"));
                             metalBridgesToAdd.Add(GenerateBridgeDef(material, true, "PavedTile"));
                         }
+                        if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>().GenerateFloorlike)
+                        {
+                            if (material.defName == "Silver")
+                                metalBridgesToAdd.Add(GenerateBridgeDef(material, true, "Sterile"));
+                        }
                         metalBridgesToAdd.Add(GenerateBridgeDef(material, false));
                         if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>().AddVisuals)
                         {
                             if (material.defName == "Steel")
                                 metalBridgesToAdd.Add(GenerateBridgeDef(material, false, "Concrete"));
                             metalBridgesToAdd.Add(GenerateBridgeDef(material, false, "PavedTile"));
+                        }
+                        if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>().GenerateFloorlike)
+                        {
+                            if (material.defName == "Silver")
+                                metalBridgesToAdd.Add(GenerateBridgeDef(material, false, "Sterile"));
                         }
                     }
                 }
@@ -63,7 +73,6 @@ namespace SimplyMoreBridges
             }
             Log.Message($"SimplyMoreBridges: Generated the following stony bridges: {string.Join(",", stonyBridgesToAdd)}");
             Log.Message($"SimplyMoreBridges: Generated the following metal bridges: {string.Join(",", metalBridgesToAdd)}");
-            //DefDatabase<TerrainDef>.Add(bridgesToAdd);
             foreach (TerrainDef terrainDef in stonyBridgesToAdd)
             {
                 DefGenerator.AddImpliedDef(terrainDef);
@@ -101,7 +110,7 @@ namespace SimplyMoreBridges
                 currentBridgeType.statBases.Add(new StatModifier() { stat = StatDefOf.WorkToBuild, value = 3200 });
                 currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge_DeepWater;
                 currentBridgeType.researchPrerequisites = new List<ResearchProjectDef> { DefDatabase<ResearchProjectDef>.GetNamedSilentFail("DeepWaterBridges") };
-                currentBridgeType.label = $"{material.label} deep water bridge";
+                currentBridgeType.label = $"{material.label.Replace(" blocks", "")} deep water bridge";
                 currentBridgeType.defName = $"DeepWaterBridge{material.defName.Replace("Blocks", string.Empty)}{alternateTexture}";
             }
             else
@@ -111,7 +120,7 @@ namespace SimplyMoreBridges
                 currentBridgeType.statBases.Add(new StatModifier() { stat = StatDefOf.WorkToBuild, value = 2200 });
                 currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge_Heavy;
                 currentBridgeType.researchPrerequisites = new List<ResearchProjectDef> { DefDatabase<ResearchProjectDef>.GetNamedSilentFail("HeavyBridges") };
-                currentBridgeType.label = $"{material.label} bridge";
+                currentBridgeType.label = $"{material.label.Replace(" blocks", "")} bridge";
                 currentBridgeType.defName = $"HeavyBridge{material.defName.Replace("Blocks", string.Empty)}{alternateTexture}";
             }
             float hitPoints;
@@ -192,6 +201,12 @@ namespace SimplyMoreBridges
             currentBridgeType.statBases.Add(new StatModifier() { stat = StatDefOf.MaxHitPoints, value = hitPoints });
             if (alternateTexture != "Concrete")
                 currentBridgeType.color = material.stuffProps.color;
+            if (alternateTexture == "Sterile")
+            {
+                currentBridgeType.statBases.Add(new StatModifier() { stat = StatDefOf.Cleanliness, value = 0.6f });
+                currentBridgeType.color = new UnityEngine.Color(181, 181, 181);
+                currentBridgeType.researchPrerequisites.Add(DefDatabase<ResearchProjectDef>.GetNamedSilentFail("SterileMaterials"));
+            }
             return currentBridgeType;
         }
     }
