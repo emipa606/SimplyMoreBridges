@@ -33,10 +33,7 @@ namespace SimplyMoreBridges
                 }
                 return settings;
             }
-            set
-            {
-                settings = value;
-            }
+            set => settings = value;
         }
 
         /// <summary>
@@ -55,14 +52,21 @@ namespace SimplyMoreBridges
         /// <param name="rect"></param>
         public override void DoSettingsWindowContents(Rect rect)
         {
-            Listing_Standard listing_Standard = new Listing_Standard();
+            var listing_Standard = new Listing_Standard();
             listing_Standard.Begin(rect);
             listing_Standard.Label("Changes require a game restart for effect.");
             listing_Standard.Gap();
             listing_Standard.CheckboxLabeled("Add different visuals", ref Settings.AddVisuals, "Also adds bridges with Concrete, Flagstone and Paved Tile-visuals.");
             listing_Standard.CheckboxLabeled("Generate bridges from more materials", ref Settings.GenerateFromAll, "Will generate bridges from all loaded Stoney and Metaly materials.");
             if (Settings.GenerateFromAll)
+            {
                 listing_Standard.CheckboxLabeled("Generate sterile bridges", ref Settings.GenerateFloorlike, "Will add sterile bridges made of silver.");
+            }
+            listing_Standard.Gap();
+            var currentPercent = System.Math.Round(Settings.CostPercent * 100);
+            listing_Standard.Label($"Cost of bridges in percent: {currentPercent}%");
+            Settings.CostPercent = listing_Standard.Slider(Settings.CostPercent, 0.01f, 2f);
+
             listing_Standard.End();
             Settings.Write();
         }

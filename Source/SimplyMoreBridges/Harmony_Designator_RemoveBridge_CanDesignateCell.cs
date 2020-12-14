@@ -12,7 +12,11 @@ namespace SimplyMoreBridges
         public static bool Prefix(IntVec3 c, ref AcceptanceReport __result, ref Designator_RemoveBridge __instance)
         {
             var terrainDef = c.GetTerrain(__instance.Map);
-            if (Prefs.DevMode) Log.Message($"terrainDef: {terrainDef}");
+            if (Prefs.DevMode)
+            {
+                Log.Message($"terrainDef: {terrainDef}");
+            }
+
             if (terrainDef.defName.StartsWith("HeavyBridge") || terrainDef.defName.StartsWith("DeepWaterBridge"))
             {
                 __result = AcceptanceReport.WasAccepted;

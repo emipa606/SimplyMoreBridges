@@ -14,7 +14,11 @@ namespace SimplyMoreBridges
         public static bool Prefix(ref TerrainGrid __instance, IntVec3 c, bool doLeavings = true)
         {
             var terrainDef = __instance.TerrainAt(c);
-            if (Prefs.DevMode) Log.Message($"terrainDef: {terrainDef}");
+            if (Prefs.DevMode)
+            {
+                Log.Message($"terrainDef: {terrainDef}");
+            }
+
             if (terrainDef.defName.StartsWith("DeepWaterBridge"))
                 //== TerrainDefOf.DeepWaterBridgeSteel ||
                 //terrainDef == TerrainDefOf.DeepWaterBridgePlasteel ||

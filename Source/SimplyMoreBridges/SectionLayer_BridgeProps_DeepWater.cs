@@ -13,28 +13,16 @@ namespace SimplyMoreBridges
 		{
 		}
 
-		// Token: 0x17000004 RID: 4
-		// (get) Token: 0x06000013 RID: 19 RVA: 0x000027C8 File Offset: 0x000009C8
-		protected override Material PropsLoopMat
-		{
-			get
-			{
-				return SectionLayer_BridgeProps_DeepWater.propsLoopMat;
-			}
-		}
+        // Token: 0x17000004 RID: 4
+        // (get) Token: 0x06000013 RID: 19 RVA: 0x000027C8 File Offset: 0x000009C8
+        protected override Material PropsLoopMat => propsLoopMat;
 
-		// Token: 0x17000005 RID: 5
-		// (get) Token: 0x06000014 RID: 20 RVA: 0x000027E0 File Offset: 0x000009E0
-		protected override Material PropsRightMat
-		{
-			get
-			{
-				return SectionLayer_BridgeProps_DeepWater.propsRightMat;
-			}
-		}
+        // Token: 0x17000005 RID: 5
+        // (get) Token: 0x06000014 RID: 20 RVA: 0x000027E0 File Offset: 0x000009E0
+        protected override Material PropsRightMat => propsRightMat;
 
-		// Token: 0x06000015 RID: 21 RVA: 0x000027F8 File Offset: 0x000009F8
-		protected override bool IsTerrainThisBridge(TerrainDef terrain)
+        // Token: 0x06000015 RID: 21 RVA: 0x000027F8 File Offset: 0x000009F8
+        protected override bool IsTerrainThisBridge(TerrainDef terrain)
 		{
 			return terrain.designatorDropdown == DesignatorDropdownGroupDefOf.Bridge_DeepWater;
 		}

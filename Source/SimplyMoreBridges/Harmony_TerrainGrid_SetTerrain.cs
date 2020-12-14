@@ -21,8 +21,8 @@ namespace SimplyMoreBridges
 		// Token: 0x0600001D RID: 29 RVA: 0x00002BE0 File Offset: 0x00000DE0
 		public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
 		{
-			int i = 0;
-			int iLen = instructions.Count<CodeInstruction>();
+			var i = 0;
+			var iLen = instructions.Count<CodeInstruction>();
 			while (i < iLen)
 			{
 				CodeInstruction ci = instructions.ElementAt(i);
