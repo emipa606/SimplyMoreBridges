@@ -28,6 +28,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1420241138
 - Added an option to generate bridges from all materials, even from other mods.
 - Added option to build bridges using other visuals; Flagstone, Paved tile and Concrete-visuals.
 - Added russian translation, thanks uncleshvya
+- Added slider to set the cost of the bridges
 
 [img]https://i.imgur.com/7Gzt3Rg.png[/img]
 
@@ -52,7 +53,17 @@ Can be added to an existing save. (To remove this mod, remove all steel bridges 
 
 (This mod has nothing to do with any old bridges mod from B18. It reuses and extends the 1.0 core bridges code and adds a steel version.)
 
-[h1]Support me on Ko-fi[/h1]
-If you enjoy my mods, please consider supporting me on Ko-fi. It really helps me motivating myself to keep on working on my projects. Thank you.
-[url=https://ko-fi.com/F1F6JCJV][img]http://i.imgur.com/YE81xKZ.png[/img][/url]</description>
+
+
+[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]
+</description>
 </ModMetaData>
+

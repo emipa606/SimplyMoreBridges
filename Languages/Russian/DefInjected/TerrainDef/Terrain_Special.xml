@@ -1,262 +1,229 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
-	<!-- Wooden bridge -->
-
-	<!-- Оригинал: мост -->
-	<Bridge.label>деревянный мост</Bridge.label>
-	<!-- Оригинал: ...можно располагать над водой... -->
-	<Bridge.description>Плоский деревянный настил на сваях, который можно располагать над неглубокой водой. Выдерживает лишь лёгкие сооружения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</Bridge.description>
-
-	<!-- EN: While there is no language-based script about bridge generation, all new bridges are named automatically like:
+  <!-- Wooden bridge -->
+  <!-- Оригинал: мост -->
+  <Bridge.label>деревянный мост</Bridge.label>
+  <!-- Оригинал: ...можно располагать над водой... -->
+  <Bridge.description>Плоский деревянный настил на сваях, который можно располагать над неглубокой водой. Выдерживает лишь лёгкие сооружения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</Bridge.description>
+  <!-- EN: While there is no language-based script about bridge generation, all new bridges are named automatically like:
 	"material_deep water bridge_(Type)" for heavy bridges;
 	"material_bridge_(Type)" for deep water bridges;
 	And descriptions are identical (description base): -->
-	<!-- RU: Пока мы не напишем международный генератор названия мостов, все мосты из новых материалов автоматически именуются по схеме:
+  <!-- RU: Пока мы не напишем международный генератор названия мостов, все мосты из новых материалов автоматически именуются по схеме:
 	"материал_bridge_(Тип)" для крепких мостов;
 	"материал_deep water bridge_(Тип)" для глубоководных мостов;
 	И у всех одинаковое описание (description base): -->
-
-	<!-- Description base: A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well. -->
-
-	<!-- Heavy stone bridges -->
-
-	<!-- EN: jade bridge (StoneTile) -->
-	<HeavyBridgeJade.label>мост из блоков нефрита</HeavyBridgeJade.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeJade.description>Плоский настил из блоков нефрита на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeJade.description>
-	<!-- EN: jade bridge (FlagStone) -->
-	<HeavyBridgeJadeFlagstone.label>мост из декоративного нефрита</HeavyBridgeJadeFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeJadeFlagstone.description>Плоский настил из нефрита, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeJadeFlagstone.description>
-
-	<!-- EN: sandstone bridge -->
-	<HeavyBridgeSandstone.label>мост из блоков песчаника</HeavyBridgeSandstone.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeSandstone.description>Плоский настил из блоков песчаника на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSandstone.description>
-	<!-- EN: sandstone bridge (FlagStone) -->
-	<HeavyBridgeSandstoneFlagstone.label>мост из декоративного песчаника</HeavyBridgeSandstoneFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeSandstoneFlagstone.description>Плоский настил из песчаника, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSandstoneFlagstone.description>
-
-	<!-- EN: granite bridge -->
-	<HeavyBridgeGranite.label>мост из блоков гранита</HeavyBridgeGranite.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeGranite.description>Плоский настил из блоков гранита на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeGranite.description>
-	<!-- EN: granite bridge (FlagStone) -->
-	<HeavyBridgeGraniteFlagstone.label>мост из декоративного гранита</HeavyBridgeGraniteFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeGraniteFlagstone.description>Плоский настил из гранита, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeGraniteFlagstone.description>
-
-	<!-- EN: limestone bridge -->
-	<HeavyBridgeLimestone.label>мост из блоков известняка</HeavyBridgeLimestone.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeLimestone.description>Плоский настил из блоков известняка на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeLimestone.description>
-	<!-- EN: limestone bridge (FlagStone) -->
-	<HeavyBridgeLimestoneFlagstone.label>мост из декоративного известняка</HeavyBridgeLimestoneFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeLimestoneFlagstone.description>Плоский настил из известняка, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeLimestoneFlagstone.description>
-
-	<!-- EN: slate bridge -->
-	<HeavyBridgeSlate.label>мост из блоков сланца</HeavyBridgeSlate.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeSlate.description>Плоский настил из блоков сланца на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSlate.description>
-	<!-- EN: slate bridge (FlagStone) -->
-	<HeavyBridgeSlateFlagstone.label>мост из декоративного сланца</HeavyBridgeSlateFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeSlateFlagstone.description>Плоский настил из сланца, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSlateFlagstone.description>
-
-	<!-- EN: marble bridge -->
-	<HeavyBridgeMarble.label>мост из блоков мрамора</HeavyBridgeMarble.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeMarble.description>Плоский настил из блоков мрамора на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeMarble.description>
-	<!-- EN: marble bridge (FlagStone) -->
-	<HeavyBridgeMarbleFlagstone.label>мост из декоративного мрамора</HeavyBridgeMarbleFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeMarbleFlagstone.description>Плоский настил из мрамора, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeMarbleFlagstone.description>
-
-	<!-- EN: concrete slab bridge (StoneTile) -->
-	<HeavyBridgeConcreteSlab.label>мост из блоков керамобетона</HeavyBridgeConcreteSlab.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeConcreteSlab.description>Плоский настил из блоков керамобетона на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeConcreteSlab.description>
-	<!-- EN: concrete slab (FlagStone) -->
-	<HeavyBridgeConcreteSlabFlagstone.label>мост из декоративного керамобетона</HeavyBridgeConcreteSlabFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeConcreteSlabFlagstone.description>Плоский настил из керамобетона, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeConcreteSlabFlagstone.description>
-
-	<!-- Heavy metal bridges \m/_ -->
-
-	<!-- EN: silver bridge (FloorTile) -->
-	<HeavyBridgeSilver.label>мост из полированного серебра</HeavyBridgeSilver.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeSilver.description>Плоский настил из полированного серебра на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSilver.description>
-	<!-- EN: silver bridge (PavedTile) -->
-	<HeavyBridgeSilverPavedTile.label>мост из матового серебра</HeavyBridgeSilverPavedTile.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeSilverPavedTile.description>Плоский настил из матового серебра на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSilverPavedTile.description>
-	<!-- EN: silver bridge (Sterile) -->
-	<HeavyBridgeSilverSterile.label>мост со стерильным покрытием</HeavyBridgeSilverSterile.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeSilverSterile.description>Плоский настил со стерильным покрытием на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSilverSterile.description>
-
-	<!-- EN: gold bridge (FloorTile) -->
-	<HeavyBridgeGold.label>мост из полированного золота</HeavyBridgeGold.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeGold.description>Плоский настил из полированного золота на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeGold.description>
-	<!-- EN: gold bridge (PavedTile) -->
-	<HeavyBridgeGoldPavedTile.label>мост из матового золота</HeavyBridgeGoldPavedTile.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeGoldPavedTile.description>Плоский настил из матового золота на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeGoldPavedTile.description>
-
-	<!-- EN: steel bridge -->
-	<HeavyBridgeSteel.label>мост из полированной стали</HeavyBridgeSteel.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeSteel.description>Плоский настил из полированной стали на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSteel.description>
-	<!-- EN: steel bridge (Concrete) -->
-	<HeavyBridgeSteelConcrete.label>мост из бетона</HeavyBridgeSteelConcrete.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeSteelConcrete.description>Плоский настил из быстрозаливного бетона на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSteelConcrete.description>
-	<!-- EN: steel bridge (PavedTile) -->
-	<HeavyBridgeSteelPavedTile.label>мост из матовой стали</HeavyBridgeSteelPavedTile.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeSteelPavedTile.description>Плоский настил из матовой стали на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSteelPavedTile.description>
-
-	<!-- EN: plasteel bridge -->
-	<HeavyBridgePlasteel.label>мост из полированной пластали</HeavyBridgePlasteel.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgePlasteel.description>Плоский настил из полированной пластали на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgePlasteel.description>
-	<!-- EN: plasteel bridge (PavedTile) -->
-	<HeavyBridgePlasteelPavedTile.label>мост из матовой пластали</HeavyBridgePlasteelPavedTile.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgePlasteelPavedTile.description>Плоский настил из матовой пластали на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgePlasteelPavedTile.description>
-
-	<!-- EN: uranium bridge (FloorTile) -->
-	<HeavyBridgeUranium.label>мост из полированного урана</HeavyBridgeUranium.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeUranium.description>Плоский настил из полированного урана на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeUranium.description>
-	<!-- EN: uranium bridge (PavedTile) -->
-	<HeavyBridgeUraniumPavedTile.label>мост из матового урана</HeavyBridgeUraniumPavedTile.label>
-	<!-- EN: (description base, see above) -->
-	<HeavyBridgeUraniumPavedTile.description>Плоский настил из матового урана на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeUraniumPavedTile.description>
-
-	<!-- Deep water stone bridges -->
-
-	<!-- EN: jade deep water bridge (StoneTile) -->
-	<DeepWaterBridgeJade.label>глубоководный мост из блоков нефрита</DeepWaterBridgeJade.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeJade.description>Плоский настил из блоков нефрита на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeJade.description>
-	<!-- EN: jade deep water deep water bridge (FlagStone) -->
-	<DeepWaterBridgeJadeFlagstone.label>глубоководный мост из декоративного нефрита</DeepWaterBridgeJadeFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeJadeFlagstone.description>Плоский настил из нефрита, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeJadeFlagstone.description>
-
-	<!-- EN: sandstone deep water bridge -->
-	<DeepWaterBridgeSandstone.label>глубоководный мост из блоков песчаника</DeepWaterBridgeSandstone.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeSandstone.description>Плоский настил из блоков песчаника на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSandstone.description>
-	<!-- EN: sandstone deep water bridge (FlagStone) -->
-	<DeepWaterBridgeSandstoneFlagstone.label>глубоководный мост из декоративного песчаника</DeepWaterBridgeSandstoneFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeSandstoneFlagstone.description>Плоский настил из песчаника, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSandstoneFlagstone.description>
-
-	<!-- EN: granite deep water bridge -->
-	<DeepWaterBridgeGranite.label>глубоководный мост из блоков гранита</DeepWaterBridgeGranite.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeGranite.description>Плоский настил из блоков гранита на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeGranite.description>
-	<!-- EN: granite deep water bridge (FlagStone) -->
-	<DeepWaterBridgeGraniteFlagstone.label>глубоководный мост из декоративного гранита</DeepWaterBridgeGraniteFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeGraniteFlagstone.description>Плоский настил из гранита, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeGraniteFlagstone.description>
-
-	<!-- EN: limestone deep water bridge -->
-	<DeepWaterBridgeLimestone.label>глубоководный мост из блоков известняка</DeepWaterBridgeLimestone.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeLimestone.description>Плоский настил из блоков известняка на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeLimestone.description>
-	<!-- EN: limestone deep water bridge (FlagStone) -->
-	<DeepWaterBridgeLimestoneFlagstone.label>глубоководный мост из декоративного известняка</DeepWaterBridgeLimestoneFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeLimestoneFlagstone.description>Плоский настил из известняка, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeLimestoneFlagstone.description>
-
-	<!-- EN: slate deep water bridge -->
-	<DeepWaterBridgeSlate.label>глубоководный мост из блоков сланца</DeepWaterBridgeSlate.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeSlate.description>Плоский настил из блоков сланца на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSlate.description>
-	<!-- EN: slate deep water bridge (FlagStone) -->
-	<DeepWaterBridgeSlateFlagstone.label>глубоководный мост из декоративного сланца</DeepWaterBridgeSlateFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeSlateFlagstone.description>Плоский настил из сланца, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSlateFlagstone.description>
-
-	<!-- EN: marble deep water bridge -->
-	<DeepWaterBridgeMarble.label>глубоководный мост из блоков мрамора</DeepWaterBridgeMarble.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeMarble.description>Плоский настил из блоков мрамора на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeMarble.description>
-	<!-- EN: marble deep water bridge (FlagStone) -->
-	<DeepWaterBridgeMarbleFlagstone.label>глубоководный мост из декоративного мрамора</DeepWaterBridgeMarbleFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeMarbleFlagstone.description>Плоский настил из мрамора, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeMarbleFlagstone.description>
-
-	<!-- EN: concrete slab deep water bridge (StoneTile) -->
-	<DeepWaterBridgeConcreteSlab.label>глубоководный мост из блоков керамобетона</DeepWaterBridgeConcreteSlab.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeConcreteSlab.description>Плоский настил из блоков керамобетона на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeConcreteSlab.description>
-	<!-- EN: concrete slab (FlagStone) -->
-	<DeepWaterBridgeConcreteSlabFlagstone.label>глубоководный мост из декоративного керамобетона</DeepWaterBridgeConcreteSlabFlagstone.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeConcreteSlabFlagstone.description>Плоский настил из керамобетона, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeConcreteSlabFlagstone.description>
-
-	<!-- Deep water bridges of metal -->
-
-	<!-- EN: silver deep water bridge (FloorTile) -->
-	<DeepWaterBridgeSilver.label>глубоководный мост из полированного серебра</DeepWaterBridgeSilver.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeSilver.description>Плоский настил из полированного серебра на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSilver.description>
-	<!-- EN: silver deep water bridge (PavedTile) -->
-	<DeepWaterBridgeSilverPavedTile.label>глубоководный мост из матового серебра</DeepWaterBridgeSilverPavedTile.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeSilverPavedTile.description>Плоский настил из матового серебра на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSilverPavedTile.description>
-	<!-- EN: silver deep water bridge (Sterile) -->
-	<DeepWaterBridgeSilverSterile.label>глубоководный мост со стерильным покрытием</DeepWaterBridgeSilverSterile.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeSilverSterile.description>Плоский настил со стерильным покрытием на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSilverSterile.description>
-
-	<!-- EN: gold deep water bridge (FloorTile) -->
-	<DeepWaterBridgeGold.label>глубоководный мост из полированного золота</DeepWaterBridgeGold.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeGold.description>Плоский настил из полированного золота на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeGold.description>
-	<!-- EN: gold deep water bridge (PavedTile) -->
-	<DeepWaterBridgeGoldPavedTile.label>глубоководный мост из матового золота</DeepWaterBridgeGoldPavedTile.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeGoldPavedTile.description>Плоский настил из матового золота на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeGoldPavedTile.description>
-
-	<!-- EN: steel deep water bridge -->
-	<DeepWaterBridgeSteel.label>глубоководный мост из полированной стали</DeepWaterBridgeSteel.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeSteel.description>Плоский настил из полированной стали на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSteel.description>
-	<!-- EN: steel deep water bridge (Concrete) -->
-	<DeepWaterBridgeSteelConcrete.label>глубоководный мост из бетона</DeepWaterBridgeSteelConcrete.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeSteelConcrete.description>Плоский настил из быстрозаливного бетона на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSteelConcrete.description>
-	<!-- EN: steel deep water bridge (PavedTile) -->
-	<DeepWaterBridgeSteelPavedTile.label>глубоководный мост из матовой стали</DeepWaterBridgeSteelPavedTile.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeSteelPavedTile.description>Плоский настил из матовой стали на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSteelPavedTile.description>
-
-	<!-- EN: plasteel deep water bridge -->
-	<DeepWaterBridgePlasteel.label>глубоководный мост из полированной пластали</DeepWaterBridgePlasteel.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgePlasteel.description>Плоский настил из полированной пластали на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgePlasteel.description>
-	<!-- EN: plasteel deep water bridge (PavedTile) -->
-	<DeepWaterBridgePlasteelPavedTile.label>глубоководный мост из матовой пластали</DeepWaterBridgePlasteelPavedTile.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgePlasteelPavedTile.description>Плоский настил из матовой пластали на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgePlasteelPavedTile.description>
-
-	<!-- EN: uranium deep water bridge (FloorTile) -->
-	<DeepWaterBridgeUranium.label>глубоководный мост из полированного урана</DeepWaterBridgeUranium.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeUranium.description>Плоский настил из полированного урана на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeUranium.description>
-	<!-- EN: uranium deep water bridge (PavedTile) -->
-	<DeepWaterBridgeUraniumPavedTile.label>глубоководный мост из матового урана</DeepWaterBridgeUraniumPavedTile.label>
-	<!-- EN: (description base, see above) -->
-	<DeepWaterBridgeUraniumPavedTile.description>Плоский настил из матового урана на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeUraniumPavedTile.description>
-
+  <!-- Description base: A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well. -->
+  <!-- Heavy stone bridges -->
+  <!-- EN: jade bridge (StoneTile) -->
+  <HeavyBridgeJade.label>мост из блоков нефрита</HeavyBridgeJade.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeJade.description>Плоский настил из блоков нефрита на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeJade.description>
+  <!-- EN: jade bridge (FlagStone) -->
+  <HeavyBridgeJadeFlagstone.label>мост из декоративного нефрита</HeavyBridgeJadeFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeJadeFlagstone.description>Плоский настил из нефрита, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeJadeFlagstone.description>
+  <!-- EN: sandstone bridge -->
+  <HeavyBridgeSandstone.label>мост из блоков песчаника</HeavyBridgeSandstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSandstone.description>Плоский настил из блоков песчаника на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSandstone.description>
+  <!-- EN: sandstone bridge (FlagStone) -->
+  <HeavyBridgeSandstoneFlagstone.label>мост из декоративного песчаника</HeavyBridgeSandstoneFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSandstoneFlagstone.description>Плоский настил из песчаника, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSandstoneFlagstone.description>
+  <!-- EN: granite bridge -->
+  <HeavyBridgeGranite.label>мост из блоков гранита</HeavyBridgeGranite.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeGranite.description>Плоский настил из блоков гранита на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeGranite.description>
+  <!-- EN: granite bridge (FlagStone) -->
+  <HeavyBridgeGraniteFlagstone.label>мост из декоративного гранита</HeavyBridgeGraniteFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeGraniteFlagstone.description>Плоский настил из гранита, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeGraniteFlagstone.description>
+  <!-- EN: limestone bridge -->
+  <HeavyBridgeLimestone.label>мост из блоков известняка</HeavyBridgeLimestone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeLimestone.description>Плоский настил из блоков известняка на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeLimestone.description>
+  <!-- EN: limestone bridge (FlagStone) -->
+  <HeavyBridgeLimestoneFlagstone.label>мост из декоративного известняка</HeavyBridgeLimestoneFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeLimestoneFlagstone.description>Плоский настил из известняка, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeLimestoneFlagstone.description>
+  <!-- EN: slate bridge -->
+  <HeavyBridgeSlate.label>мост из блоков сланца</HeavyBridgeSlate.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSlate.description>Плоский настил из блоков сланца на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSlate.description>
+  <!-- EN: slate bridge (FlagStone) -->
+  <HeavyBridgeSlateFlagstone.label>мост из декоративного сланца</HeavyBridgeSlateFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSlateFlagstone.description>Плоский настил из сланца, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSlateFlagstone.description>
+  <!-- EN: marble bridge -->
+  <HeavyBridgeMarble.label>мост из блоков мрамора</HeavyBridgeMarble.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeMarble.description>Плоский настил из блоков мрамора на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeMarble.description>
+  <!-- EN: marble bridge (FlagStone) -->
+  <HeavyBridgeMarbleFlagstone.label>мост из декоративного мрамора</HeavyBridgeMarbleFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeMarbleFlagstone.description>Плоский настил из мрамора, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeMarbleFlagstone.description>
+  <!-- EN: concrete slab bridge (StoneTile) -->
+  <HeavyBridgeConcreteSlab.label>мост из блоков керамобетона</HeavyBridgeConcreteSlab.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeConcreteSlab.description>Плоский настил из блоков керамобетона на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeConcreteSlab.description>
+  <!-- EN: concrete slab (FlagStone) -->
+  <HeavyBridgeConcreteSlabFlagstone.label>мост из декоративного керамобетона</HeavyBridgeConcreteSlabFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeConcreteSlabFlagstone.description>Плоский настил из керамобетона, с узором под дикий камень, на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeConcreteSlabFlagstone.description>
+  <!-- Heavy metal bridges \m/_ -->
+  <!-- EN: silver bridge (FloorTile) -->
+  <HeavyBridgeSilver.label>мост из полированного серебра</HeavyBridgeSilver.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSilver.description>Плоский настил из полированного серебра на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSilver.description>
+  <!-- EN: silver bridge (PavedTile) -->
+  <HeavyBridgeSilverPavedTile.label>мост из матового серебра</HeavyBridgeSilverPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSilverPavedTile.description>Плоский настил из матового серебра на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSilverPavedTile.description>
+  <!-- EN: silver bridge (Sterile) -->
+  <HeavyBridgeSilverSterile.label>мост со стерильным покрытием</HeavyBridgeSilverSterile.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSilverSterile.description>Плоский настил со стерильным покрытием на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSilverSterile.description>
+  <!-- EN: gold bridge (FloorTile) -->
+  <HeavyBridgeGold.label>мост из полированного золота</HeavyBridgeGold.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeGold.description>Плоский настил из полированного золота на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeGold.description>
+  <!-- EN: gold bridge (PavedTile) -->
+  <HeavyBridgeGoldPavedTile.label>мост из матового золота</HeavyBridgeGoldPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeGoldPavedTile.description>Плоский настил из матового золота на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeGoldPavedTile.description>
+  <!-- EN: steel bridge -->
+  <HeavyBridgeSteel.label>мост из полированной стали</HeavyBridgeSteel.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSteel.description>Плоский настил из полированной стали на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSteel.description>
+  <!-- EN: steel bridge (Concrete) -->
+  <HeavyBridgeSteelConcrete.label>мост из бетона</HeavyBridgeSteelConcrete.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSteelConcrete.description>Плоский настил из быстрозаливного бетона на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSteelConcrete.description>
+  <!-- EN: steel bridge (PavedTile) -->
+  <HeavyBridgeSteelPavedTile.label>мост из матовой стали</HeavyBridgeSteelPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSteelPavedTile.description>Плоский настил из матовой стали на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeSteelPavedTile.description>
+  <!-- EN: plasteel bridge -->
+  <HeavyBridgePlasteel.label>мост из полированной пластали</HeavyBridgePlasteel.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgePlasteel.description>Плоский настил из полированной пластали на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgePlasteel.description>
+  <!-- EN: plasteel bridge (PavedTile) -->
+  <HeavyBridgePlasteelPavedTile.label>мост из матовой пластали</HeavyBridgePlasteelPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgePlasteelPavedTile.description>Плоский настил из матовой пластали на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgePlasteelPavedTile.description>
+  <!-- EN: uranium bridge (FloorTile) -->
+  <HeavyBridgeUranium.label>мост из полированного урана</HeavyBridgeUranium.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeUranium.description>Плоский настил из полированного урана на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeUranium.description>
+  <!-- EN: uranium bridge (PavedTile) -->
+  <HeavyBridgeUraniumPavedTile.label>мост из матового урана</HeavyBridgeUraniumPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeUraniumPavedTile.description>Плоский настил из матового урана на армированных сваях, который можно располагать над неглубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</HeavyBridgeUraniumPavedTile.description>
+  <!-- Deep water stone bridges -->
+  <!-- EN: jade deep water bridge (StoneTile) -->
+  <DeepWaterBridgeJade.label>глубоководный мост из блоков нефрита</DeepWaterBridgeJade.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeJade.description>Плоский настил из блоков нефрита на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeJade.description>
+  <!-- EN: jade deep water deep water bridge (FlagStone) -->
+  <DeepWaterBridgeJadeFlagstone.label>глубоководный мост из декоративного нефрита</DeepWaterBridgeJadeFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeJadeFlagstone.description>Плоский настил из нефрита, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeJadeFlagstone.description>
+  <!-- EN: sandstone deep water bridge -->
+  <DeepWaterBridgeSandstone.label>глубоководный мост из блоков песчаника</DeepWaterBridgeSandstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSandstone.description>Плоский настил из блоков песчаника на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSandstone.description>
+  <!-- EN: sandstone deep water bridge (FlagStone) -->
+  <DeepWaterBridgeSandstoneFlagstone.label>глубоководный мост из декоративного песчаника</DeepWaterBridgeSandstoneFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSandstoneFlagstone.description>Плоский настил из песчаника, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSandstoneFlagstone.description>
+  <!-- EN: granite deep water bridge -->
+  <DeepWaterBridgeGranite.label>глубоководный мост из блоков гранита</DeepWaterBridgeGranite.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeGranite.description>Плоский настил из блоков гранита на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeGranite.description>
+  <!-- EN: granite deep water bridge (FlagStone) -->
+  <DeepWaterBridgeGraniteFlagstone.label>глубоководный мост из декоративного гранита</DeepWaterBridgeGraniteFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeGraniteFlagstone.description>Плоский настил из гранита, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeGraniteFlagstone.description>
+  <!-- EN: limestone deep water bridge -->
+  <DeepWaterBridgeLimestone.label>глубоководный мост из блоков известняка</DeepWaterBridgeLimestone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeLimestone.description>Плоский настил из блоков известняка на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeLimestone.description>
+  <!-- EN: limestone deep water bridge (FlagStone) -->
+  <DeepWaterBridgeLimestoneFlagstone.label>глубоководный мост из декоративного известняка</DeepWaterBridgeLimestoneFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeLimestoneFlagstone.description>Плоский настил из известняка, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeLimestoneFlagstone.description>
+  <!-- EN: slate deep water bridge -->
+  <DeepWaterBridgeSlate.label>глубоководный мост из блоков сланца</DeepWaterBridgeSlate.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSlate.description>Плоский настил из блоков сланца на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSlate.description>
+  <!-- EN: slate deep water bridge (FlagStone) -->
+  <DeepWaterBridgeSlateFlagstone.label>глубоководный мост из декоративного сланца</DeepWaterBridgeSlateFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSlateFlagstone.description>Плоский настил из сланца, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSlateFlagstone.description>
+  <!-- EN: marble deep water bridge -->
+  <DeepWaterBridgeMarble.label>глубоководный мост из блоков мрамора</DeepWaterBridgeMarble.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeMarble.description>Плоский настил из блоков мрамора на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeMarble.description>
+  <!-- EN: marble deep water bridge (FlagStone) -->
+  <DeepWaterBridgeMarbleFlagstone.label>глубоководный мост из декоративного мрамора</DeepWaterBridgeMarbleFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeMarbleFlagstone.description>Плоский настил из мрамора, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeMarbleFlagstone.description>
+  <!-- EN: concrete slab deep water bridge (StoneTile) -->
+  <DeepWaterBridgeConcreteSlab.label>глубоководный мост из блоков керамобетона</DeepWaterBridgeConcreteSlab.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeConcreteSlab.description>Плоский настил из блоков керамобетона на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeConcreteSlab.description>
+  <!-- EN: concrete slab (FlagStone) -->
+  <DeepWaterBridgeConcreteSlabFlagstone.label>глубоководный мост из декоративного керамобетона</DeepWaterBridgeConcreteSlabFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeConcreteSlabFlagstone.description>Плоский настил из керамобетона, с узором под дикий камень, на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeConcreteSlabFlagstone.description>
+  <!-- Deep water bridges of metal -->
+  <!-- EN: silver deep water bridge (FloorTile) -->
+  <DeepWaterBridgeSilver.label>глубоководный мост из полированного серебра</DeepWaterBridgeSilver.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSilver.description>Плоский настил из полированного серебра на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSilver.description>
+  <!-- EN: silver deep water bridge (PavedTile) -->
+  <DeepWaterBridgeSilverPavedTile.label>глубоководный мост из матового серебра</DeepWaterBridgeSilverPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSilverPavedTile.description>Плоский настил из матового серебра на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSilverPavedTile.description>
+  <!-- EN: silver deep water bridge (Sterile) -->
+  <DeepWaterBridgeSilverSterile.label>глубоководный мост со стерильным покрытием</DeepWaterBridgeSilverSterile.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSilverSterile.description>Плоский настил со стерильным покрытием на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSilverSterile.description>
+  <!-- EN: gold deep water bridge (FloorTile) -->
+  <DeepWaterBridgeGold.label>глубоководный мост из полированного золота</DeepWaterBridgeGold.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeGold.description>Плоский настил из полированного золота на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeGold.description>
+  <!-- EN: gold deep water bridge (PavedTile) -->
+  <DeepWaterBridgeGoldPavedTile.label>глубоководный мост из матового золота</DeepWaterBridgeGoldPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeGoldPavedTile.description>Плоский настил из матового золота на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeGoldPavedTile.description>
+  <!-- EN: steel deep water bridge -->
+  <DeepWaterBridgeSteel.label>глубоководный мост из полированной стали</DeepWaterBridgeSteel.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSteel.description>Плоский настил из полированной стали на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSteel.description>
+  <!-- EN: steel deep water bridge (Concrete) -->
+  <DeepWaterBridgeSteelConcrete.label>глубоководный мост из бетона</DeepWaterBridgeSteelConcrete.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSteelConcrete.description>Плоский настил из быстрозаливного бетона на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSteelConcrete.description>
+  <!-- EN: steel deep water bridge (PavedTile) -->
+  <DeepWaterBridgeSteelPavedTile.label>глубоководный мост из матовой стали</DeepWaterBridgeSteelPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSteelPavedTile.description>Плоский настил из матовой стали на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeSteelPavedTile.description>
+  <!-- EN: plasteel deep water bridge -->
+  <DeepWaterBridgePlasteel.label>глубоководный мост из полированной пластали</DeepWaterBridgePlasteel.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgePlasteel.description>Плоский настил из полированной пластали на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgePlasteel.description>
+  <!-- EN: plasteel deep water bridge (PavedTile) -->
+  <DeepWaterBridgePlasteelPavedTile.label>глубоководный мост из матовой пластали</DeepWaterBridgePlasteelPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgePlasteelPavedTile.description>Плоский настил из матовой пластали на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgePlasteelPavedTile.description>
+  <!-- EN: uranium deep water bridge (FloorTile) -->
+  <DeepWaterBridgeUranium.label>глубоководный мост из полированного урана</DeepWaterBridgeUranium.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeUranium.description>Плоский настил из полированного урана на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeUranium.description>
+  <!-- EN: uranium deep water bridge (PavedTile) -->
+  <DeepWaterBridgeUraniumPavedTile.label>глубоководный мост из матового урана</DeepWaterBridgeUraniumPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeUraniumPavedTile.description>Плоский настил из матового урана на армированных сваях, который можно располагать над глубокой водой. Выдерживает даже тяжёлые строения. Будьте осторожны: если мост рухнет, то вместе с ним рухнет и то, что на нём стоит.</DeepWaterBridgeUraniumPavedTile.description>
 </LanguageData>
