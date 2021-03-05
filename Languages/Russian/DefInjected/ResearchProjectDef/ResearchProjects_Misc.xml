@@ -1,11 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <!--<HeavyBridges.label>heavy bridges</HeavyBridges.label>-->
-  <HeavyBridges.label>крепкие мосты</HeavyBridges.label>
-  <!-- EN <HeavyBridges.description>Build heavy bridges to provide passage over water and even construct heavy structures on them.</HeavyBridges.description> -->
-  <HeavyBridges.description>Стройте крепкие мосты, которые выдержат даже тяжёлые строения.</HeavyBridges.description>
-  <!-- EN <DeepWaterBridges.label>deep water bridges</DeepWaterBridges.label> -->
-  <DeepWaterBridges.label>глубоководные мосты</DeepWaterBridges.label>
-  <!-- EN <DeepWaterBridges.description>Learn how to build large pillar structures for your bridges to be able to build bridges even on deep water.</DeepWaterBridges.description> -->
-  <DeepWaterBridges.description>Изучите методы изготовления длинных свай, чтобы строить мосты даже над глубиной.</DeepWaterBridges.description>
+
+	<!-- EN: heavy bridges -->
+	<HeavyBridges.label>крепкие мосты</HeavyBridges.label>
+	<!-- EN: Build heavy bridges to provide passage over water and even construct heavy structures on them. -->
+	<HeavyBridges.description>Стройте крепкие мосты, которые выдержат даже тяжёлые строения.</HeavyBridges.description>
+	<!-- EN: deep water bridges -->
+	<DeepWaterBridges.label>глубоководные мосты</DeepWaterBridges.label>
+	<!-- EN: Learn how to build large pillar structures for your bridges to be able to build bridges even on deep water. -->
+	<DeepWaterBridges.description>Изучите методы изготовления длинных свай, чтобы строить мосты даже над глубиной.</DeepWaterBridges.description>
+
 </LanguageData>
