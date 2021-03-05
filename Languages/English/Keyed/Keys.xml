@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Settings -->
+  <SimplyMoreBridges.RestartInfo>Changes require a game restart for effect.</SimplyMoreBridges.RestartInfo>
+  <SimplyMoreBridges.AddVisualsLabel>Add different visuals</SimplyMoreBridges.AddVisualsLabel>
+  <SimplyMoreBridges.AddVisualsTooltip>Also adds bridges with Concrete, Flagstone and Paved Tile-visuals.</SimplyMoreBridges.AddVisualsTooltip>
+  <SimplyMoreBridges.GenerateFromAllLabel>Generate bridges from more materials</SimplyMoreBridges.GenerateFromAllLabel>
+  <SimplyMoreBridges.GenerateFromAllTooltip>Will generate bridges from all loaded Stoney and Metallic materials.</SimplyMoreBridges.GenerateFromAllTooltip>
+  <SimplyMoreBridges.GenerateFloorlikeLabel>Generate sterile bridges</SimplyMoreBridges.GenerateFloorlikeLabel>
+  <SimplyMoreBridges.GenerateFloorlikeTooltip>Will add sterile bridges made of silver.</SimplyMoreBridges.GenerateFloorlikeTooltip>
+  <SimplyMoreBridges.BridgeCostPercent>Cost of bridges in percent: {0}%</SimplyMoreBridges.BridgeCostPercent>
+  <SimplyMoreBridges.NoFloorsOnBridges>You can not build a floor without first deconstructing the bridge</SimplyMoreBridges.NoFloorsOnBridges>
+</LanguageData>

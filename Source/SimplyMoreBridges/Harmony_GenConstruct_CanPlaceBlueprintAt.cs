@@ -1,7 +1,7 @@
-﻿using HarmonyLib;
+﻿using System.Linq;
+using HarmonyLib;
 using RimWorld;
 using Verse;
-using System.Linq;
 
 namespace SimplyMoreBridges
 {
@@ -14,20 +14,25 @@ namespace SimplyMoreBridges
         public static void Postfix(ref AcceptanceReport __result, BuildableDef entDef, IntVec3 center, Map map)
         {
             var centerDef = map.terrainGrid.TerrainAt(center);
-            if (!(entDef is TerrainDef) || entDef.HasModExtension<SimplyMoreBridgesModExt>() || centerDef.HasModExtension<SimplyMoreBridgesModExt>())
+            if (!(entDef is TerrainDef) || entDef.HasModExtension<SimplyMoreBridgesModExt>() ||
+                centerDef.HasModExtension<SimplyMoreBridgesModExt>())
             {
                 return;
             }
+
             var terrainAffordanceNeeded = centerDef.terrainAffordanceNeeded;
-            var terrainAffordanceBridgeableDeep = DefDatabase<TerrainAffordanceDef>.AllDefs.FirstOrDefault(x => x.defName == "BridgeableDeep");
+            var terrainAffordanceBridgeableDeep =
+                DefDatabase<TerrainAffordanceDef>.AllDefs.FirstOrDefault(x => x.defName == "BridgeableDeep");
             if (terrainAffordanceBridgeableDeep == null && terrainAffordanceNeeded == TerrainAffordanceDefOf.Bridgeable)
             {
-                __result = new AcceptanceReport("NoFloorsOnBridges".Translate());
+                __result = new AcceptanceReport("SimplyMoreBridges.NoFloorsOnBridges".Translate());
             }
+
             if (terrainAffordanceBridgeableDeep != null &&
-                (terrainAffordanceNeeded == TerrainAffordanceDefOf.Bridgeable || terrainAffordanceNeeded == terrainAffordanceBridgeableDeep))
+                (terrainAffordanceNeeded == TerrainAffordanceDefOf.Bridgeable ||
+                 terrainAffordanceNeeded == terrainAffordanceBridgeableDeep))
             {
-                __result = new AcceptanceReport("NoFloorsOnBridges".Translate());
+                __result = new AcceptanceReport("SimplyMoreBridges.NoFloorsOnBridges".Translate());
             }
         }
     }
