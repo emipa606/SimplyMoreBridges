@@ -17,32 +17,30 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\1.2\Assemblies</OutputPath>
+    <OutputPath>..\..\1.2\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\1.2\Assemblies</OutputPath>
+    <OutputPath>..\..\1.2\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>*</Version>
+      <Version>1.2.2900</Version>
       <ExcludeAssets>runtime</ExcludeAssets>
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
-      <Version>*</Version>
+      <Version>2.0.4</Version>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
   </ItemGroup>
@@ -51,24 +49,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DesignatorDropdownGroupDefOf.cs" />
-    <Compile Include="GenerateBridges.cs" />
-    <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="Harmony_DefGenerator_GenerateImpliedDefs_PreResolve.cs" />
+    <Compile Include="Harmony.cs" />
     <Compile Include="Harmony_TerrainGrid_RemoveTopLayer.cs" />
     <Compile Include="Harmony_Designator_RemoveBridge_CanDesignateCell.cs" />
     <Compile Include="Harmony_GenConstruct_CanPlaceBlueprintAt.cs" />
     <Compile Include="Harmony_TerrainGrid_SetTerrain.cs" />
-    <Compile Include="SimplyMoreBridgesMod.cs" />
+    <Compile Include="Settings\Mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SectionLayer_BridgeProps.cs" />
     <Compile Include="SectionLayer_BridgeProps_DeepWater.cs" />
     <Compile Include="SectionLayer_BridgeProps_Heavy.cs" />
-    <Compile Include="SimplyMoreBridgesSettings.cs" />
+    <Compile Include="Settings\Settings.cs" />
     <Compile Include="SimplyMoreBridgesModExt.cs" />
     <Compile Include="TerrainAffordanceDefOf.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

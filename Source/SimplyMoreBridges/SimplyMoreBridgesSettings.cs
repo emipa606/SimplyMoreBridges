@@ -8,8 +8,11 @@ namespace SimplyMoreBridges
     internal class SimplyMoreBridgesSettings : ModSettings
     {
         public bool AddVisuals;
+
         public float CostPercent = 1f;
+
         public bool GenerateFloorlike;
+
         public bool GenerateFromAll;
 
         /// <summary>
