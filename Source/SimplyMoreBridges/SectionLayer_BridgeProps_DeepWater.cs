@@ -8,15 +8,18 @@ namespace SimplyMoreBridges
     public class SectionLayer_BridgeProps_DeepWater : SectionLayer_BridgeProps
     {
         // Token: 0x04000013 RID: 19
-        private static readonly Material propsLoopMat =
-            MaterialPool.MatFrom("Terrain/Misc/DeepWaterBridgeProps_Loop", ShaderDatabase.Transparent);
+        private static readonly Material propsLoopMat = MaterialPool.MatFrom(
+            "Terrain/Misc/DeepWaterBridgeProps_Loop",
+            ShaderDatabase.Transparent);
 
         // Token: 0x04000014 RID: 20
-        private static readonly Material propsRightMat =
-            MaterialPool.MatFrom("Terrain/Misc/DeepWaterBridgeProps_Right", ShaderDatabase.Transparent);
+        private static readonly Material propsRightMat = MaterialPool.MatFrom(
+            "Terrain/Misc/DeepWaterBridgeProps_Right",
+            ShaderDatabase.Transparent);
 
         // Token: 0x06000012 RID: 18 RVA: 0x000027B9 File Offset: 0x000009B9
-        public SectionLayer_BridgeProps_DeepWater(Section section) : base(section)
+        public SectionLayer_BridgeProps_DeepWater(Section section)
+            : base(section)
         {
         }
 

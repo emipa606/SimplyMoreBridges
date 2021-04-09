@@ -8,10 +8,15 @@ namespace SimplyMoreBridges
     public abstract class SectionLayer_BridgeProps : SectionLayer
     {
         // Token: 0x06000004 RID: 4 RVA: 0x00002089 File Offset: 0x00000289
-        protected SectionLayer_BridgeProps(Section section) : base(section)
+        protected SectionLayer_BridgeProps(Section section)
+            : base(section)
         {
             relevantChangeTypes = MapMeshFlag.Terrain;
         }
+
+        // Token: 0x17000003 RID: 3
+        // (get) Token: 0x06000008 RID: 8 RVA: 0x000020A0 File Offset: 0x000002A0
+        public override bool Visible => DebugViewSettings.drawTerrain;
 
         // Token: 0x17000001 RID: 1
         // (get) Token: 0x06000005 RID: 5
@@ -20,13 +25,6 @@ namespace SimplyMoreBridges
         // Token: 0x17000002 RID: 2
         // (get) Token: 0x06000006 RID: 6
         protected abstract Material PropsRightMat { get; }
-
-        // Token: 0x17000003 RID: 3
-        // (get) Token: 0x06000008 RID: 8 RVA: 0x000020A0 File Offset: 0x000002A0
-        public override bool Visible => DebugViewSettings.drawTerrain;
-
-        // Token: 0x06000007 RID: 7
-        protected abstract bool IsTerrainThisBridge(TerrainDef terrain);
 
         // Token: 0x06000009 RID: 9 RVA: 0x000020B8 File Offset: 0x000002B8
         public override void Regenerate()
@@ -75,6 +73,9 @@ namespace SimplyMoreBridges
             FinalizeMesh(MeshParts.All);
         }
 
+        // Token: 0x06000007 RID: 7
+        protected abstract bool IsTerrainThisBridge(TerrainDef terrain);
+
         // Token: 0x0600000A RID: 10 RVA: 0x00002320 File Offset: 0x00000520
         private bool ShouldDrawPropsBelow(IntVec3 c, TerrainGrid terrGrid)
         {
@@ -95,9 +96,9 @@ namespace SimplyMoreBridges
                 else
                 {
                     var terrain = terrGrid.TerrainAt(c2);
-                    result = !IsTerrainThisBridge(terrain) &&
-                             (c2.SupportsStructureType(Map, TerrainAffordanceDefOf.Bridgeable) ||
-                              c2.SupportsStructureType(Map, TerrainAffordanceDefOf.BridgeableDeep));
+                    result = !IsTerrainThisBridge(terrain)
+                             && (c2.SupportsStructureType(Map, TerrainAffordanceDefOf.Bridgeable)
+                                 || c2.SupportsStructureType(Map, TerrainAffordanceDefOf.BridgeableDeep));
                 }
             }
 

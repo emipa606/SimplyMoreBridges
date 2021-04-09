@@ -8,15 +8,18 @@ namespace SimplyMoreBridges
     public class SectionLayer_BridgeProps_Heavy : SectionLayer_BridgeProps
     {
         // Token: 0x04000015 RID: 21
-        private static readonly Material propsLoopMat =
-            MaterialPool.MatFrom("Terrain/Misc/HeavyBridgeProps_Loop", ShaderDatabase.Transparent);
+        private static readonly Material propsLoopMat = MaterialPool.MatFrom(
+            "Terrain/Misc/HeavyBridgeProps_Loop",
+            ShaderDatabase.Transparent);
 
         // Token: 0x04000016 RID: 22
-        private static readonly Material propsRightMat =
-            MaterialPool.MatFrom("Terrain/Misc/HeavyBridgeProps_Right", ShaderDatabase.Transparent);
+        private static readonly Material propsRightMat = MaterialPool.MatFrom(
+            "Terrain/Misc/HeavyBridgeProps_Right",
+            ShaderDatabase.Transparent);
 
         // Token: 0x06000017 RID: 23 RVA: 0x00002841 File Offset: 0x00000A41
-        public SectionLayer_BridgeProps_Heavy(Section section) : base(section)
+        public SectionLayer_BridgeProps_Heavy(Section section)
+            : base(section)
         {
         }
 

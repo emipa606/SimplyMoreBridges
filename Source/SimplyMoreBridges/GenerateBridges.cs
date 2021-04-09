@@ -380,8 +380,8 @@ namespace SimplyMoreBridges
                 currentBridgeType.tags.Add("Floor");
             }
 
-            if (material.stuffProps.statOffsets.Any(
-                modifier => modifier.stat == StatDefOf.Beauty && modifier.value > 5))
+            if (material.stuffProps.statOffsets?.Any(
+                    modifier => modifier.stat == StatDefOf.Beauty && modifier.value > 5) == true)
             {
                 currentBridgeType.tags.Add("FineFloor");
             }

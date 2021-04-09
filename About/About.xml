@@ -29,6 +29,8 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1420241138
 - Added option to build bridges using other visuals; Flagstone, Paved tile and Concrete-visuals.
 - Added russian translation, thanks Uncle Shvya
 - Added slider to set the cost of the bridges
+- All bridges (except Flagstone) are now considered Floor for Royalty
+- All bridges built from beautiful material (Gold/Jade etc.) are considered Fine Floor
 
 [img]https://i.imgur.com/7Gzt3Rg.png[/img]
 
