@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Wooden bridge -->
+  <!-- Оригинал: мост -->
+  <Bridge.label>Pont de bois</Bridge.label>
+  <!-- Оригинал: ...можно располагать над водой... -->
+  <Bridge.description>Une terrasse plate en bois sur pilotis pouvant être positionnée au-dessus de l'eau peu profonde. Résiste uniquement aux structures légères. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</Bridge.description>
+  <!-- EN: While there is no language-based script about bridge generation, all new bridges are named automatically like:
+	"material_deep water bridge_(Type)" for heavy bridges;
+	"material_bridge_(Type)" for deep water bridges;
+	And descriptions are identical (description base): -->
+  <!-- RU: Пока мы не напишем международный генератор названия мостов, все мосты из новых материалов автоматически именуются по схеме:
+	"материал_bridge_(Тип)" для крепких мостов;
+	"материал_deep water bridge_(Тип)" для глубоководных мостов;
+	И у всех одинаковое описание (description base): -->
+  <!-- Description base: A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well. -->
+  <!-- Heavy stone bridges -->
+  <!-- EN: jade bridge (StoneTile) -->
+  <HeavyBridgeJade.label>pont en jade</HeavyBridgeJade.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeJade.description>Un pont plat de blocs de jade sur pieux renforcés qui peut être positionné au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeJade.description>
+  <!-- EN: jade bridge (FlagStone) -->
+  <HeavyBridgeJadeFlagstone.label>pont de jade décoratif</HeavyBridgeJadeFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeJadeFlagstone.description>Une terrasse plate en jade avec un motif en pierre sauvage sur des pieux renforcés qui peut être positionnée au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeJadeFlagstone.description>
+  <!-- EN: sandstone bridge -->
+  <HeavyBridgeSandstone.label>pont en grès</HeavyBridgeSandstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSandstone.description>Un pont plat de blocs de grès sur des pieux renforcés qui peut être placé au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeSandstone.description>
+  <!-- EN: sandstone bridge (FlagStone) -->
+  <HeavyBridgeSandstoneFlagstone.label>pont de grès décoratif</HeavyBridgeSandstoneFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSandstoneFlagstone.description>Une terrasse en grès plat avec un motif de pierre sauvage sur des pieux renforcés qui peut être positionnée au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeSandstoneFlagstone.description>
+  <!-- EN: granite bridge -->
+  <HeavyBridgeGranite.label>pont en granit</HeavyBridgeGranite.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeGranite.description>Un pont plat fait de blocs de granit sur pieux renforcés qui peuvent être placés sur des eaux peu profondes. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeGranite.description>
+  <!-- EN: granite bridge (FlagStone) -->
+  <HeavyBridgeGraniteFlagstone.label>pont de granit décoratif</HeavyBridgeGraniteFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeGraniteFlagstone.description>Une terrasse en granit plat avec un motif en pierre sauvage sur des pieux renforcés qui peut être positionnée au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeGraniteFlagstone.description>
+  <!-- EN: limestone bridge -->
+  <HeavyBridgeLimestone.label>pont en calcaire</HeavyBridgeLimestone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeLimestone.description>Un pont plat de blocs de calcaire sur des pieux renforcés qui peut être placé au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeLimestone.description>
+  <!-- EN: limestone bridge (FlagStone) -->
+  <HeavyBridgeLimestoneFlagstone.label>pont de calcaire décoratif</HeavyBridgeLimestoneFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeLimestoneFlagstone.description>Une terrasse en calcaire plat avec un motif en pierre sauvage sur des pieux renforcés qui peut être positionnée sur des eaux peu profondes. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeLimestoneFlagstone.description>
+  <!-- EN: slate bridge -->
+  <HeavyBridgeSlate.label>pont en ardoise</HeavyBridgeSlate.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSlate.description>Un pont plat de blocs d'ardoise sur pieux renforcés qui peut être positionné au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeSlate.description>
+  <!-- EN: slate bridge (FlagStone) -->
+  <HeavyBridgeSlateFlagstone.label>pont en ardoise décoratif</HeavyBridgeSlateFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSlateFlagstone.description>Un pont plat en ardoise avec un motif en pierre sauvage sur des pieux renforcés qui peut être positionné au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeSlateFlagstone.description>
+  <!-- EN: marble bridge -->
+  <HeavyBridgeMarble.label>pont en marbre</HeavyBridgeMarble.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeMarble.description>Une plate-forme plate faite de blocs de marbre sur des pieux renforcés qui peut être positionnée au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeMarble.description>
+  <!-- EN: marble bridge (FlagStone) -->
+  <HeavyBridgeMarbleFlagstone.label>pont en marbre décoratif</HeavyBridgeMarbleFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeMarbleFlagstone.description>Une terrasse en marbre plat avec un motif de pierre sauvage sur des pieux renforcés qui peut être positionné au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeMarbleFlagstone.description>
+  <!-- EN: concrete slab bridge (StoneTile) -->
+  <HeavyBridgeConcreteSlab.label>pont en céramique</HeavyBridgeConcreteSlab.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeConcreteSlab.description>Un pont plat fait de blocs de béton céramique sur pieux renforcés qui peuvent être placés au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeConcreteSlab.description>
+  <!-- EN: concrete slab (FlagStone) -->
+  <HeavyBridgeConcreteSlabFlagstone.label>pont en céramique décoratif</HeavyBridgeConcreteSlabFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeConcreteSlabFlagstone.description>Un pont plat en céramique avec un motif de pierre sauvage sur des pieux renforcés qui peut être positionné sur des eaux peu profondes. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui..</HeavyBridgeConcreteSlabFlagstone.description>
+  <!-- Heavy metal bridges \m/_ -->
+  <!-- EN: silver bridge (FloorTile) -->
+  <HeavyBridgeSilver.label>pont en argent</HeavyBridgeSilver.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSilver.description>Un pont plat en argent poli sur pieux renforcés qui peut être positionné au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeSilver.description>
+  <!-- EN: silver bridge (PavedTile) -->
+  <HeavyBridgeSilverPavedTile.label>pont en argent pavé</HeavyBridgeSilverPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSilverPavedTile.description>Un pont plat en argent pavé sur pieux renforcés qui peut être positionné au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeSilverPavedTile.description>
+  <!-- EN: silver bridge (Sterile) -->
+  <HeavyBridgeSilverSterile.label>pont stérile</HeavyBridgeSilverSterile.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSilverSterile.description>Une plate-forme plate stérilisée sur des pilotis renforcées qui peut être placée au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeSilverSterile.description>
+  <!-- EN: gold bridge (FloorTile) -->
+  <HeavyBridgeGold.label>pont en or</HeavyBridgeGold.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeGold.description>Un pont plat en or poli sur pieux renforcés qui peut être positionné au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeGold.description>
+  <!-- EN: gold bridge (PavedTile) -->
+  <HeavyBridgeGoldPavedTile.label>pont en or pavé</HeavyBridgeGoldPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeGoldPavedTile.description>Un pont plat or pavé sur pieux renforcés qui peut être positionné au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeGoldPavedTile.description>
+  <!-- EN: steel bridge -->
+  <HeavyBridgeSteel.label>pont en acier</HeavyBridgeSteel.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSteel.description>Pont plat en acier poli sur pieux renforcés pouvant être positionné au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeSteel.description>
+  <!-- EN: steel bridge (Concrete) -->
+  <HeavyBridgeSteelConcrete.label>pont en béton</HeavyBridgeSteelConcrete.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSteelConcrete.description>Un pont en béton sur pieux renforcés pouvant être positionné au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeSteelConcrete.description>
+  <!-- EN: steel bridge (PavedTile) -->
+  <HeavyBridgeSteelPavedTile.label>pont en acier pavé</HeavyBridgeSteelPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeSteelPavedTile.description>Pont plat en acier pavé sur pieux renforcés pouvant être positionné au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeSteelPavedTile.description>
+  <!-- EN: plasteel bridge -->
+  <HeavyBridgePlasteel.label>pont en plastacier</HeavyBridgePlasteel.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgePlasteel.description>Une plate-forme plate en plastacier sur des pilotis renforcées qui peut être placée au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgePlasteel.description>
+  <!-- EN: plasteel bridge (PavedTile) -->
+  <HeavyBridgePlasteelPavedTile.label>pont en plastacier pavé</HeavyBridgePlasteelPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgePlasteelPavedTile.description>Pont en plastacier pavé sur pieux renforcés pouvant être positionnés au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgePlasteelPavedTile.description>
+  <!-- EN: uranium bridge (FloorTile) -->
+  <HeavyBridgeUranium.label>pont en uranium</HeavyBridgeUranium.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeUranium.description>Un pont plat en uranium sur pieux renforcés qui peut être positionné au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeUranium.description>
+  <!-- EN: uranium bridge (PavedTile) -->
+  <HeavyBridgeUraniumPavedTile.label>pont en uranium pavé</HeavyBridgeUraniumPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <HeavyBridgeUraniumPavedTile.description>Un pont plat en uranium pavé sur pieux renforcés pouvant être positionné au-dessus de l'eau peu profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</HeavyBridgeUraniumPavedTile.description>
+  <!-- Deep water stone bridges -->
+  <!-- EN: jade deep water bridge (StoneTile) -->
+  <DeepWaterBridgeJade.label>pont en eaux profondes en jade</DeepWaterBridgeJade.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeJade.description>Un pont plat de blocs de jade sur pieux renforcés qui peut être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeJade.description>
+  <!-- EN: jade deep water deep water bridge (FlagStone) -->
+  <DeepWaterBridgeJadeFlagstone.label>pont en eaux profondes en jade ornemental</DeepWaterBridgeJadeFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeJadeFlagstone.description>Un platelage en jade plat avec un motif en pierre sauvage sur pieux renforcés qui peut être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeJadeFlagstone.description>
+  <!-- EN: sandstone deep water bridge -->
+  <DeepWaterBridgeSandstone.label>pont en eaux profondes en grès</DeepWaterBridgeSandstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSandstone.description>Une plate-forme plate de blocs de grès sur des pieux renforcés qui peut être placée au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeSandstone.description>
+  <!-- EN: sandstone deep water bridge (FlagStone) -->
+  <DeepWaterBridgeSandstoneFlagstone.label>pont en eaux profondes en grès ornemental</DeepWaterBridgeSandstoneFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSandstoneFlagstone.description>Une terrasse en grès plat avec un motif en pierre sauvage sur des pieux renforcés qui peut être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeSandstoneFlagstone.description>
+  <!-- EN: granite deep water bridge -->
+  <DeepWaterBridgeGranite.label>pont en eaux profondes en granit</DeepWaterBridgeGranite.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeGranite.description>Un pont plat fait de blocs de granit sur des pieux renforcés qui peuvent être placés au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeGranite.description>
+  <!-- EN: granite deep water bridge (FlagStone) -->
+  <DeepWaterBridgeGraniteFlagstone.label>pont en eaux profondes en granit ornemental</DeepWaterBridgeGraniteFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeGraniteFlagstone.description>Un pont en granit plat avec un motif en pierre sauvage sur pieux renforcés qui peut être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeGraniteFlagstone.description>
+  <!-- EN: limestone deep water bridge -->
+  <DeepWaterBridgeLimestone.label>pont en eaux profondes en calcaire</DeepWaterBridgeLimestone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeLimestone.description>Un pont plat de blocs de calcaire sur pieux renforcés qui peut être placé au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeLimestone.description>
+  <!-- EN: limestone deep water bridge (FlagStone) -->
+  <DeepWaterBridgeLimestoneFlagstone.label>pont en eaux profondes en calcaire ornemental</DeepWaterBridgeLimestoneFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeLimestoneFlagstone.description>Un platelage en calcaire plat avec un motif en pierre sauvage sur pieux renforcés qui peut être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeLimestoneFlagstone.description>
+  <!-- EN: slate deep water bridge -->
+  <DeepWaterBridgeSlate.label>pont en eaux profondes en ardoise</DeepWaterBridgeSlate.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSlate.description>Une plate-forme plate de blocs d'ardoise sur des pieux renforcés qui peut être placée au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeSlate.description>
+  <!-- EN: slate deep water bridge (FlagStone) -->
+  <DeepWaterBridgeSlateFlagstone.label>pont en eau profonde en ardoise ornementale</DeepWaterBridgeSlateFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSlateFlagstone.description>Un pont plat en ardoise avec un motif en pierre sauvage sur des pieux renforcés qui peut être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeSlateFlagstone.description>
+  <!-- EN: marble deep water bridge -->
+  <DeepWaterBridgeMarble.label>pont en eaux profondes en marbre</DeepWaterBridgeMarble.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeMarble.description>Une plate-forme plate faite de blocs de marbre sur des piles renforcées qui peut être placée au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeMarble.description>
+  <!-- EN: marble deep water bridge (FlagStone) -->
+  <DeepWaterBridgeMarbleFlagstone.label>pont en eaux profondes en marbre ornementale</DeepWaterBridgeMarbleFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeMarbleFlagstone.description>Une terrasse en marbre plat avec un motif de pierre sauvage sur des pieux renforcés qui peut être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeMarbleFlagstone.description>
+  <!-- EN: concrete slab deep water bridge (StoneTile) -->
+  <DeepWaterBridgeConcreteSlab.label>pont en eaux profondes en céramique</DeepWaterBridgeConcreteSlab.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeConcreteSlab.description>Une plate-forme plate faite de blocs en céramique sur des pieux renforcés qui peut être placée au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeConcreteSlab.description>
+  <!-- EN: concrete slab (FlagStone) -->
+  <DeepWaterBridgeConcreteSlabFlagstone.label>pont en eaux profondes en céramique ornementale</DeepWaterBridgeConcreteSlabFlagstone.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeConcreteSlabFlagstone.description>Un tablier plat en béton céramique avec un motif de pierre sauvage sur pieux renforcés qui peut être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeConcreteSlabFlagstone.description>
+  <!-- Deep water bridges of metal -->
+  <!-- EN: silver deep water bridge (FloorTile) -->
+  <DeepWaterBridgeSilver.label>pont en eaux profondes en argent</DeepWaterBridgeSilver.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSilver.description>Un pont plat en argent sur pieux renforcés qui peut être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeSilver.description>
+  <!-- EN: silver deep water bridge (PavedTile) -->
+  <DeepWaterBridgeSilverPavedTile.label>pont en eaux profondes en argent pavé</DeepWaterBridgeSilverPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSilverPavedTile.description>Un pont plat en argent pavé sur pieux renforcés pouvant être positionné au-dessus de l'eau profonde Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeSilverPavedTile.description>
+  <!-- EN: silver deep water bridge (Sterile) -->
+  <DeepWaterBridgeSilverSterile.label>bridge en eaux profondes stérile</DeepWaterBridgeSilverSterile.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSilverSterile.description>Pont plat stérilisé sur pieux renforcés qui peut être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeSilverSterile.description>
+  <!-- EN: gold deep water bridge (FloorTile) -->
+  <DeepWaterBridgeGold.label>pont en eaux profondes en or</DeepWaterBridgeGold.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeGold.description>Un pont plat en or sur pieux renforcés qui peut être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeGold.description>
+  <!-- EN: gold deep water bridge (PavedTile) -->
+  <DeepWaterBridgeGoldPavedTile.label>pont en eaux profondes en or pavé</DeepWaterBridgeGoldPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeGoldPavedTile.description>Un pont plat en or pavé sur pieux renforcés qui peut être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeGoldPavedTile.description>
+  <!-- EN: steel deep water bridge -->
+  <DeepWaterBridgeSteel.label>pont en eaux profondes en acier</DeepWaterBridgeSteel.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSteel.description>Pont plat en acier sur pieux renforcés pouvant être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeSteel.description>
+  <!-- EN: steel deep water bridge (Concrete) -->
+  <DeepWaterBridgeSteelConcrete.label>pont en eaux profondes en béton</DeepWaterBridgeSteelConcrete.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSteelConcrete.description>Un pont plat en béton à remplissage rapide sur pieux renforcés pouvant être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeSteelConcrete.description>
+  <!-- EN: steel deep water bridge (PavedTile) -->
+  <DeepWaterBridgeSteelPavedTile.label>pont en eaux profondes en acier pavé</DeepWaterBridgeSteelPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeSteelPavedTile.description>Pont plat en acier brossé sur pieux renforcés pouvant être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeSteelPavedTile.description>
+  <!-- EN: plasteel deep water bridge -->
+  <DeepWaterBridgePlasteel.label>pont en eaux profondes en plastacier</DeepWaterBridgePlasteel.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgePlasteel.description>Pont plat en plastacier sur pieux renforcés pouvant être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgePlasteel.description>
+  <!-- EN: plasteel deep water bridge (PavedTile) -->
+  <DeepWaterBridgePlasteelPavedTile.label>pont en eaux profondes en plastacier pavé</DeepWaterBridgePlasteelPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgePlasteelPavedTile.description>Pont plat en plastal mat sur pieux renforcés pouvant être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgePlasteelPavedTile.description>
+  <!-- EN: uranium deep water bridge (FloorTile) -->
+  <DeepWaterBridgeUranium.label>pont en eaux profondes en uranium</DeepWaterBridgeUranium.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeUranium.description>Un pont plat en uranium sur pieux renforcés qui peut être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeUranium.description>
+  <!-- EN: uranium deep water bridge (PavedTile) -->
+  <DeepWaterBridgeUraniumPavedTile.label>pont en eaux profondes en uranium pavé</DeepWaterBridgeUraniumPavedTile.label>
+  <!-- EN: (description base, see above) -->
+  <DeepWaterBridgeUraniumPavedTile.description>Un pont plat en uranium pavé sur pieux renforcés pouvant être positionné au-dessus de l'eau profonde. Résiste même aux structures lourdes. Attention: si le pont s'effondre, ce qui se trouve dessus s'effondrera avec lui.</DeepWaterBridgeUraniumPavedTile.description>
+</LanguageData>

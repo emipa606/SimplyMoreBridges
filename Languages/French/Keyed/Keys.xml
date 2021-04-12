@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Settings -->
+  <SimplyMoreBridges.RestartInfo>Les changements nécessitent un redémarrage du jeu pour avoir effet.</SimplyMoreBridges.RestartInfo>
+  <SimplyMoreBridges.AddVisualsLabel>Ajouter différents visuels</SimplyMoreBridges.AddVisualsLabel>
+  <SimplyMoreBridges.AddVisualsTooltip>Ajoute également des ponts avec des visuels de béton, de dalles et de sols pavés.</SimplyMoreBridges.AddVisualsTooltip>
+  <SimplyMoreBridges.GenerateFromAllLabel>Générez des ponts à partir de plus de matériaux</SimplyMoreBridges.GenerateFromAllLabel>
+  <SimplyMoreBridges.GenerateFromAllTooltip>Générera des ponts à partir de toutes les roches et métaux chargés.</SimplyMoreBridges.GenerateFromAllTooltip>
+  <SimplyMoreBridges.GenerateFloorlikeLabel>Générer des ponts stériles</SimplyMoreBridges.GenerateFloorlikeLabel>
+  <SimplyMoreBridges.GenerateFloorlikeTooltip>Ajoutera des ponts stériles en argent.</SimplyMoreBridges.GenerateFloorlikeTooltip>
+  <SimplyMoreBridges.BridgeCostPercent>Coût des ponts en pourcentage:{0}%</SimplyMoreBridges.BridgeCostPercent>
+  <SimplyMoreBridges.NoFloorsOnBridges>Vous ne pouvez pas construire un sol sans d'abord déconstruire le pont</SimplyMoreBridges.NoFloorsOnBridges>
+</LanguageData>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Deep water bridges can be built here -->
+  <!-- EN: bridgeable deep -->
+  <BridgeableDeep.label>Ponts profonds constructibles</BridgeableDeep.label>
+</LanguageData>
