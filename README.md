@@ -36,7 +36,7 @@ A simple mod that adds more briges types on top of the wood bridges that rimworl
 
 You can build these new bridges out of steel, plasteel and stone types.
 
-Research "heavy bridges" and "deep water bridges" to build them.
+Research &quot;heavy bridges&quot; and &quot;deep water bridges&quot; to build them.
 
 Can be added to an existing save. (To remove this mod, remove all steel bridges from your world first.)
 
