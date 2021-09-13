@@ -170,7 +170,7 @@ namespace SimplyMoreBridges
                 destroyOnBombDamageThreshold = 40,
                 statBases = new List<StatModifier>
                 {
-                    new StatModifier {stat = StatDefOf.Flammability, value = 0}
+                    new StatModifier { stat = StatDefOf.Flammability, value = 0 }
                 }
             };
 
@@ -178,7 +178,7 @@ namespace SimplyMoreBridges
             {
                 currentBridgeType.uiIconPath = "Terrain/Surfaces/DeepWaterBridge_MenuIcon";
                 currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.BridgeableDeep;
-                currentBridgeType.statBases.Add(new StatModifier {stat = StatDefOf.WorkToBuild, value = 3200});
+                currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.WorkToBuild, value = 3200 });
                 currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge_DeepWater;
                 currentBridgeType.researchPrerequisites = new List<ResearchProjectDef>
                 {
@@ -190,7 +190,7 @@ namespace SimplyMoreBridges
             {
                 currentBridgeType.uiIconPath = "Terrain/Surfaces/HeavyBridge_MenuIcon";
                 currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.Bridgeable;
-                currentBridgeType.statBases.Add(new StatModifier {stat = StatDefOf.WorkToBuild, value = 2200});
+                currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.WorkToBuild, value = 2200 });
                 currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge_Heavy;
                 currentBridgeType.researchPrerequisites = new List<ResearchProjectDef>
                 {
@@ -364,7 +364,7 @@ namespace SimplyMoreBridges
                         {
                             thingDef = ThingDefOf.Steel, count = GetCustomCost(5)
                         },
-                        new ThingDefCountClass {thingDef = material, count = GetCustomCost(baseCost)}
+                        new ThingDefCountClass { thingDef = material, count = GetCustomCost(baseCost) }
                     };
                 }
                 else
@@ -381,7 +381,7 @@ namespace SimplyMoreBridges
                         {
                             thingDef = ThingDefOf.Steel, count = GetCustomCost(3)
                         },
-                        new ThingDefCountClass {thingDef = material, count = GetCustomCost(baseCost)}
+                        new ThingDefCountClass { thingDef = material, count = GetCustomCost(baseCost) }
                     };
                 }
             }
@@ -389,10 +389,10 @@ namespace SimplyMoreBridges
             if (material.statBases.StatListContains(StatDefOf.StuffPower_Armor_Sharp))
             {
                 var sharpValue = material.GetStatValueAbstract(StatDefOf.StuffPower_Armor_Sharp);
-                hitPoints = (float) Math.Round(500f * sharpValue);
+                hitPoints = (float)Math.Round(500f * sharpValue);
             }
 
-            currentBridgeType.statBases.Add(new StatModifier {stat = StatDefOf.MaxHitPoints, value = hitPoints});
+            currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.MaxHitPoints, value = hitPoints });
 
             currentBridgeType.tags = new List<string>();
 
@@ -402,9 +402,14 @@ namespace SimplyMoreBridges
             }
 
             if (material.stuffProps.statOffsets?.Any(
-                modifier => modifier.stat == StatDefOf.Beauty && modifier.value > 5) == true)
+                modifier => modifier.stat == StatDefOf.Beauty) == true)
             {
-                currentBridgeType.tags.Add("FineFloor");
+                var beauty = material.stuffProps.statOffsets.GetStatOffsetFromList(StatDefOf.Beauty);
+                currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.Beauty, value = beauty });
+                if (beauty > 5)
+                {
+                    currentBridgeType.tags.Add("FineFloor");
+                }
             }
 
             if (alternateTexture != "Sterile")
@@ -412,7 +417,7 @@ namespace SimplyMoreBridges
                 return currentBridgeType;
             }
 
-            currentBridgeType.statBases.Add(new StatModifier {stat = StatDefOf.Cleanliness, value = 0.6f});
+            currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.Cleanliness, value = 0.6f });
             currentBridgeType.color = DefDatabase<TerrainDef>.GetNamedSilentFail("SterileTile").color;
             currentBridgeType.researchPrerequisites.Add(
                 DefDatabase<ResearchProjectDef>.GetNamedSilentFail("SterileMaterials"));

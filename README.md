@@ -1,6 +1,6 @@
 # SimplyMoreBridges
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of Lanilors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1420241138
@@ -14,7 +14,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1420241138
 - All bridges built from beautiful material (Gold/Jade etc.) are considered Fine Floor
 - Added french translation, thanks qux!
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
 
 [table]
@@ -26,7 +26,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1420241138
 	[/tr]
 [/table]
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 
 # New bridges types for heavy structure support and building in deep water!
@@ -36,7 +36,7 @@ A simple mod that adds more briges types on top of the wood bridges that rimworl
 
 You can build these new bridges out of steel, plasteel and stone types.
 
-Research &quot;heavy bridges&quot; and &quot;deep water bridges&quot; to build them.
+Research "heavy bridges" and "deep water bridges" to build them.
 
 Can be added to an existing save. (To remove this mod, remove all steel bridges from your world first.)
 
@@ -44,7 +44,7 @@ Can be added to an existing save. (To remove this mod, remove all steel bridges 
 
 
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
@@ -54,7 +54,6 @@ Can be added to an existing save. (To remove this mod, remove all steel bridges 
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
-
 
 
 
