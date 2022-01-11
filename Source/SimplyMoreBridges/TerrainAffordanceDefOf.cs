@@ -1,22 +1,17 @@
-﻿using RimWorld;
+using RimWorld;
 using Verse;
 
-namespace SimplyMoreBridges
+namespace SimplyMoreBridges;
+
+[DefOf]
+public static class TerrainAffordanceDefOf
 {
-    // Token: 0x02000003 RID: 3
-    [DefOf]
-    public static class TerrainAffordanceDefOf
+    public static TerrainAffordanceDef Bridgeable;
+
+    public static TerrainAffordanceDef BridgeableDeep;
+
+    static TerrainAffordanceDefOf()
     {
-        // Token: 0x0400000F RID: 15
-        public static TerrainAffordanceDef Bridgeable;
-
-        // Token: 0x04000010 RID: 16
-        public static TerrainAffordanceDef BridgeableDeep;
-
-        // Token: 0x06000002 RID: 2 RVA: 0x00002063 File Offset: 0x00000263
-        static TerrainAffordanceDefOf()
-        {
-            DefOfHelper.EnsureInitializedInCtor(typeof(TerrainAffordanceDefOf));
-        }
+        DefOfHelper.EnsureInitializedInCtor(typeof(TerrainAffordanceDefOf));
     }
 }

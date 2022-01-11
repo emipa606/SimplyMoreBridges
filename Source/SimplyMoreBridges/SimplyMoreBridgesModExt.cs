@@ -1,16 +1,15 @@
 ﻿using Verse;
 
-namespace SimplyMoreBridges
+namespace SimplyMoreBridges;
+
+internal class SimplyMoreBridgesModExt : DefModExtension
 {
-    internal class SimplyMoreBridgesModExt : DefModExtension
-    {
-        // Gravel or Marsh
-        public string defaultTerrainDefName = "Marsh";
+    // Gravel or Marsh
+    public string defaultTerrainDefName = "Marsh";
 
-        // wood or concrete 
-        public string foundationType = "wood";
+    // wood or concrete 
+    public string foundationType = "wood";
 
-        // Diggable or Bridgeable
-        public string terrainAffordanceDefName = "Bridgeable";
-    }
+    // Diggable or Bridgeable
+    public string terrainAffordanceDefName = "Bridgeable";
 }

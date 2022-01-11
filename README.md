@@ -13,18 +13,10 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1420241138
 - All bridges (except Flagstone) are now considered Floor for Royalty
 - All bridges built from beautiful material (Gold/Jade etc.) are considered Fine Floor
 - Added french translation, thanks qux!
+- All bridges should now inherit the beauty-value from the material they are made of
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 
-
-[table]
-	[tr]
-		[td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
-[/td]
-		[td]https://github.com/emipa606/SimplyMoreBridges]![Image](https://i.imgur.com/kTkpTOE.png)
-[/td]
-	[/tr]
-[/table]
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
 
