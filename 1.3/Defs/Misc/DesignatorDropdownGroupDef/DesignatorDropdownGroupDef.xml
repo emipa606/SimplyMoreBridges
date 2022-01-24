@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <DesignatorDropdownGroupDef>
+    <defName>Bridge</defName>
+  </DesignatorDropdownGroupDef>
+  <DesignatorDropdownGroupDef>
     <defName>Bridge_Heavy</defName>
   </DesignatorDropdownGroupDef>
   <DesignatorDropdownGroupDef>

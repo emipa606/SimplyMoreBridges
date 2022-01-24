@@ -6,6 +6,8 @@ namespace SimplyMoreBridges;
 [DefOf]
 public static class DesignatorDropdownGroupDefOf
 {
+    public static DesignatorDropdownGroupDef Bridge;
+
     public static DesignatorDropdownGroupDef Bridge_Heavy;
 
     public static DesignatorDropdownGroupDef Bridge_DeepWater;

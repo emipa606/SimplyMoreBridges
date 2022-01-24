@@ -8,14 +8,23 @@ namespace SimplyMoreBridges;
 
 public class GenerateBridges
 {
+    public enum BridgeType
+    {
+        Wooden,
+        Bridge,
+        Deep
+    }
+
     public static void Prefix()
     {
         var materials =
             LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>().GenerateFromAll
                 ? (from dd in DefDatabase<ThingDef>.AllDefsListForReading
-                    where dd.stuffProps?.categories != null
+                    where dd.stuffProps?.categories != null &&
+                          dd.defName != "WoodLog"
                           && (dd.stuffProps.categories.Contains(StuffCategoryDefOf.Metallic)
-                              || dd.stuffProps.categories.Contains(StuffCategoryDefOf.Stony))
+                              || dd.stuffProps.categories.Contains(StuffCategoryDefOf.Stony)
+                              || dd.stuffProps.categories.Contains(StuffCategoryDefOf.Woody))
                     select dd).ToList()
                 : (from dd in DefDatabase<ThingDef>.AllDefsListForReading
                     where dd.defName == "Plasteel" || dd.defName == "Steel" || dd.defName == "BlocksSandstone"
@@ -26,38 +35,46 @@ public class GenerateBridges
 
         var stonyBridgesToAdd = new HashSet<TerrainDef>();
         var metalBridgesToAdd = new HashSet<TerrainDef>();
+        var woodyBridgesToAdd = new HashSet<TerrainDef>();
         foreach (var material in materials)
         {
             try
             {
                 if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Stony))
                 {
-                    stonyBridgesToAdd.Add(GenerateBridgeDef(material, true, stonyBridgesToAdd));
+                    stonyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, stonyBridgesToAdd));
                     if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
                         .AddVisuals)
                     {
-                        stonyBridgesToAdd.Add(GenerateBridgeDef(material, true, stonyBridgesToAdd, "Flagstone"));
+                        stonyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, stonyBridgesToAdd,
+                            "Flagstone"));
                     }
 
-                    stonyBridgesToAdd.Add(GenerateBridgeDef(material, false, stonyBridgesToAdd));
+                    stonyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, stonyBridgesToAdd));
                     if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
                         .AddVisuals)
                     {
-                        stonyBridgesToAdd.Add(GenerateBridgeDef(material, false, stonyBridgesToAdd, "Flagstone"));
+                        stonyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, stonyBridgesToAdd,
+                            "Flagstone"));
                     }
+
+                    continue;
                 }
-                else
+
+                if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Metallic))
                 {
-                    metalBridgesToAdd.Add(GenerateBridgeDef(material, true, metalBridgesToAdd));
+                    metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd));
                     if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
                         .AddVisuals)
                     {
                         if (material.defName == "Steel")
                         {
-                            metalBridgesToAdd.Add(GenerateBridgeDef(material, true, metalBridgesToAdd, "Concrete"));
+                            metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
+                                "Concrete"));
                         }
 
-                        metalBridgesToAdd.Add(GenerateBridgeDef(material, true, metalBridgesToAdd, "PavedTile"));
+                        metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
+                            "PavedTile"));
                     }
 
                     if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
@@ -65,21 +82,23 @@ public class GenerateBridges
                     {
                         if (material.defName == "Silver")
                         {
-                            metalBridgesToAdd.Add(GenerateBridgeDef(material, true, metalBridgesToAdd, "Sterile"));
+                            metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
+                                "Sterile"));
                         }
                     }
 
-                    metalBridgesToAdd.Add(GenerateBridgeDef(material, false, metalBridgesToAdd));
+                    metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd));
                     if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
                         .AddVisuals)
                     {
                         if (material.defName == "Steel")
                         {
-                            metalBridgesToAdd.Add(GenerateBridgeDef(material, false, metalBridgesToAdd,
+                            metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd,
                                 "Concrete"));
                         }
 
-                        metalBridgesToAdd.Add(GenerateBridgeDef(material, false, metalBridgesToAdd, "PavedTile"));
+                        metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd,
+                            "PavedTile"));
                     }
 
                     if (!LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
@@ -90,8 +109,16 @@ public class GenerateBridges
 
                     if (material.defName == "Silver")
                     {
-                        metalBridgesToAdd.Add(GenerateBridgeDef(material, false, metalBridgesToAdd, "Sterile"));
+                        metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd,
+                            "Sterile"));
                     }
+
+                    continue;
+                }
+
+                if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Woody))
+                {
+                    woodyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Wooden, woodyBridgesToAdd));
                 }
             }
             catch (Exception exception)
@@ -105,6 +132,9 @@ public class GenerateBridges
             $"SimplyMoreBridges: Generated the following stony bridges: {string.Join(",", stonyBridgesToAdd)}");
         Log.Message(
             $"SimplyMoreBridges: Generated the following metal bridges: {string.Join(",", metalBridgesToAdd)}");
+        Log.Message(
+            $"SimplyMoreBridges: Generated the following woody bridges: {string.Join(",", woodyBridgesToAdd)}");
+
         foreach (var terrainDef in stonyBridgesToAdd)
         {
             DefGenerator.AddImpliedDef(terrainDef);
@@ -114,32 +144,60 @@ public class GenerateBridges
         {
             DefGenerator.AddImpliedDef(terrainDef);
         }
+
+        if (!woodyBridgesToAdd.Any())
+        {
+            return;
+        }
+
+        foreach (var terrainDef in woodyBridgesToAdd)
+        {
+            DefGenerator.AddImpliedDef(terrainDef);
+        }
+
+        TerrainDef.Named("Bridge").designatorDropdown = DesignatorDropdownGroupDefOf.Bridge;
     }
 
-    private static TerrainDef GenerateBridgeDef(ThingDef material, bool deep, HashSet<TerrainDef> currentBridges,
+    private static TerrainDef GenerateBridgeDef(ThingDef material, BridgeType bridgeType,
+        HashSet<TerrainDef> currentBridges,
         string alternateTexture = "")
     {
         string defName;
         string label;
-        if (deep)
+        switch (bridgeType)
         {
-            defName = $"DeepWaterBridge{material.defName.Replace("Blocks", string.Empty)}{alternateTexture}";
-            label = $"{material.label.Replace(" blocks", string.Empty)} deep water bridge";
-            if (currentBridges.Any(def => def.defName == defName))
-            {
-                defName = $"DeepWaterBridge{material.defName}{alternateTexture}";
-                label = $"{material.label} deep water bridge";
-            }
-        }
-        else
-        {
-            defName = $"HeavyBridge{material.defName.Replace("Blocks", string.Empty)}{alternateTexture}";
-            label = $"{material.label.Replace(" blocks", string.Empty)} bridge";
-            if (currentBridges.Any(def => def.defName == defName))
-            {
-                defName = $"HeavyBridge{material.defName}{alternateTexture}";
-                label = $"{material.label} bridge";
-            }
+            case BridgeType.Wooden:
+                defName = $"WoodenBridge{material.defName.Replace("Blocks", string.Empty)}{alternateTexture}";
+                label = $"{material.label.Replace(" blocks", string.Empty)} bridge";
+                if (currentBridges.Any(def => def.defName == defName))
+                {
+                    defName = $"WoodenBridge{material.defName}{alternateTexture}";
+                    label = $"{material.label} bridge";
+                }
+
+                break;
+            case BridgeType.Bridge:
+                defName = $"DeepWaterBridge{material.defName.Replace("Blocks", string.Empty)}{alternateTexture}";
+                label = $"{material.label.Replace(" blocks", string.Empty)} deep water bridge";
+                if (currentBridges.Any(def => def.defName == defName))
+                {
+                    defName = $"DeepWaterBridge{material.defName}{alternateTexture}";
+                    label = $"{material.label} deep water bridge";
+                }
+
+                break;
+            case BridgeType.Deep:
+                defName = $"HeavyBridge{material.defName.Replace("Blocks", string.Empty)}{alternateTexture}";
+                label = $"{material.label.Replace(" blocks", string.Empty)} bridge";
+                if (currentBridges.Any(def => def.defName == defName))
+                {
+                    defName = $"HeavyBridge{material.defName}{alternateTexture}";
+                    label = $"{material.label} bridge";
+                }
+
+                break;
+            default:
+                return null;
         }
 
         var currentBridgeType = new TerrainDef
@@ -174,29 +232,48 @@ public class GenerateBridges
             }
         };
 
-        if (deep)
+        var hitPoints = 100f;
+        switch (bridgeType)
         {
-            currentBridgeType.uiIconPath = "Terrain/Surfaces/DeepWaterBridge_MenuIcon";
-            currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.BridgeableDeep;
-            currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.WorkToBuild, value = 3200 });
-            currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge_DeepWater;
-            currentBridgeType.researchPrerequisites = new List<ResearchProjectDef>
-            {
-                DefDatabase<ResearchProjectDef>.GetNamedSilentFail(
-                    "DeepWaterBridges")
-            };
-        }
-        else
-        {
-            currentBridgeType.uiIconPath = "Terrain/Surfaces/HeavyBridge_MenuIcon";
-            currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.Bridgeable;
-            currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.WorkToBuild, value = 2200 });
-            currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge_Heavy;
-            currentBridgeType.researchPrerequisites = new List<ResearchProjectDef>
-            {
-                DefDatabase<ResearchProjectDef>.GetNamedSilentFail(
-                    "HeavyBridges")
-            };
+            case BridgeType.Wooden:
+                currentBridgeType.uiIconPath = "Terrain/Surfaces/Bridge_MenuIcon";
+                currentBridgeType.texturePath = "Terrain/Surfaces/Bridge";
+                currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.Bridgeable;
+                currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.WorkToBuild, value = 1500 });
+                currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge;
+                var baseCost = 12;
+                if (material.smallVolume)
+                {
+                    baseCost *= 10;
+                }
+
+                currentBridgeType.costList = new List<ThingDefCountClass>
+                {
+                    new ThingDefCountClass { thingDef = material, count = GetCustomCost(baseCost) }
+                };
+                break;
+            case BridgeType.Bridge:
+                currentBridgeType.uiIconPath = "Terrain/Surfaces/HeavyBridge_MenuIcon";
+                currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.Bridgeable;
+                currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.WorkToBuild, value = 2200 });
+                currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge_Heavy;
+                currentBridgeType.researchPrerequisites = new List<ResearchProjectDef>
+                {
+                    DefDatabase<ResearchProjectDef>.GetNamedSilentFail(
+                        "HeavyBridges")
+                };
+                break;
+            case BridgeType.Deep:
+                currentBridgeType.uiIconPath = "Terrain/Surfaces/DeepWaterBridge_MenuIcon";
+                currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.BridgeableDeep;
+                currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.WorkToBuild, value = 3200 });
+                currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge_DeepWater;
+                currentBridgeType.researchPrerequisites = new List<ResearchProjectDef>
+                {
+                    DefDatabase<ResearchProjectDef>.GetNamedSilentFail(
+                        "DeepWaterBridges")
+                };
+                break;
         }
 
         if (alternateTexture != "Concrete")
@@ -206,7 +283,6 @@ public class GenerateBridges
             currentBridgeType.color = tile?.color ?? material.stuffProps.color;
         }
 
-        float hitPoints;
         if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Metallic))
         {
             hitPoints = 300f;
@@ -227,114 +303,118 @@ public class GenerateBridges
 
             currentBridgeType.researchPrerequisites.Add(
                 DefDatabase<ResearchProjectDef>.GetNamedSilentFail("Smithing"));
-            if (deep)
+            switch (bridgeType)
             {
-                if (material.defName == "Steel")
-                {
-                    if (currentBridgeType.label.Contains("FloorTile"))
+                case BridgeType.Bridge:
+                    if (material.defName == "Steel")
                     {
                         currentBridgeType.texturePath = "Terrain/Surfaces/BridgeMetal";
                         currentBridgeType.color = DefDatabase<TerrainDef>.GetNamedSilentFail("MetalTile").color;
+                        currentBridgeType.costList = new List<ThingDefCountClass>
+                        {
+                            new ThingDefCountClass
+                            {
+                                thingDef = ThingDefOf.Steel,
+                                count = GetCustomCost(12)
+                            }
+                        };
+                    }
+                    else
+                    {
+                        var baseCost = 9;
+                        if (material.smallVolume)
+                        {
+                            currentBridgeType.texturePath = "Terrain/Surfaces/BridgeMetal";
+                            switch (material.defName)
+                            {
+                                case "Silver":
+                                    currentBridgeType.color =
+                                        DefDatabase<TerrainDef>.GetNamedSilentFail("SilverTile").color;
+                                    break;
+                                case "Gold":
+                                    currentBridgeType.color =
+                                        DefDatabase<TerrainDef>.GetNamedSilentFail("GoldTile").color;
+                                    break;
+                            }
+
+                            baseCost *= 10;
+                        }
+
+                        currentBridgeType.costList = new List<ThingDefCountClass>
+                        {
+                            new ThingDefCountClass
+                            {
+                                thingDef = ThingDefOf.Steel,
+                                count = GetCustomCost(3)
+                            },
+                            new ThingDefCountClass
+                            {
+                                thingDef = material,
+                                count = GetCustomCost(baseCost)
+                            }
+                        };
                     }
 
-                    currentBridgeType.costList = new List<ThingDefCountClass>
+                    break;
+                case BridgeType.Deep:
+                    if (material.defName == "Steel")
                     {
-                        new ThingDefCountClass
+                        if (currentBridgeType.label.Contains("FloorTile"))
                         {
-                            thingDef = ThingDefOf.Steel,
-                            count = GetCustomCost(20)
-                        }
-                    };
-                }
-                else
-                {
-                    var baseCost = 15;
-                    if (material.smallVolume)
-                    {
-                        currentBridgeType.texturePath = "Terrain/Surfaces/BridgeMetal";
-                        switch (material.defName)
-                        {
-                            case "Silver":
-                                currentBridgeType.color =
-                                    DefDatabase<TerrainDef>.GetNamedSilentFail("SilverTile").color;
-                                break;
-                            case "Gold":
-                                currentBridgeType.color =
-                                    DefDatabase<TerrainDef>.GetNamedSilentFail("GoldTile").color;
-                                break;
+                            currentBridgeType.texturePath = "Terrain/Surfaces/BridgeMetal";
+                            currentBridgeType.color = DefDatabase<TerrainDef>.GetNamedSilentFail("MetalTile").color;
                         }
 
-                        baseCost *= 10;
+                        currentBridgeType.costList = new List<ThingDefCountClass>
+                        {
+                            new ThingDefCountClass
+                            {
+                                thingDef = ThingDefOf.Steel,
+                                count = GetCustomCost(20)
+                            }
+                        };
+                    }
+                    else
+                    {
+                        var baseCost = 15;
+                        if (material.smallVolume)
+                        {
+                            currentBridgeType.texturePath = "Terrain/Surfaces/BridgeMetal";
+                            switch (material.defName)
+                            {
+                                case "Silver":
+                                    currentBridgeType.color =
+                                        DefDatabase<TerrainDef>.GetNamedSilentFail("SilverTile").color;
+                                    break;
+                                case "Gold":
+                                    currentBridgeType.color =
+                                        DefDatabase<TerrainDef>.GetNamedSilentFail("GoldTile").color;
+                                    break;
+                            }
+
+                            baseCost *= 10;
+                        }
+
+                        currentBridgeType.costList = new List<ThingDefCountClass>
+                        {
+                            new ThingDefCountClass
+                            {
+                                thingDef = ThingDefOf.Steel,
+                                count = GetCustomCost(5)
+                            },
+                            new ThingDefCountClass
+                            {
+                                thingDef = material,
+                                count = GetCustomCost(baseCost)
+                            }
+                        };
                     }
 
-                    currentBridgeType.costList = new List<ThingDefCountClass>
-                    {
-                        new ThingDefCountClass
-                        {
-                            thingDef = ThingDefOf.Steel,
-                            count = GetCustomCost(5)
-                        },
-                        new ThingDefCountClass
-                        {
-                            thingDef = material,
-                            count = GetCustomCost(baseCost)
-                        }
-                    };
-                }
-            }
-            else
-            {
-                if (material.defName == "Steel")
-                {
-                    currentBridgeType.texturePath = "Terrain/Surfaces/BridgeMetal";
-                    currentBridgeType.color = DefDatabase<TerrainDef>.GetNamedSilentFail("MetalTile").color;
-                    currentBridgeType.costList = new List<ThingDefCountClass>
-                    {
-                        new ThingDefCountClass
-                        {
-                            thingDef = ThingDefOf.Steel,
-                            count = GetCustomCost(12)
-                        }
-                    };
-                }
-                else
-                {
-                    var baseCost = 9;
-                    if (material.smallVolume)
-                    {
-                        currentBridgeType.texturePath = "Terrain/Surfaces/BridgeMetal";
-                        switch (material.defName)
-                        {
-                            case "Silver":
-                                currentBridgeType.color =
-                                    DefDatabase<TerrainDef>.GetNamedSilentFail("SilverTile").color;
-                                break;
-                            case "Gold":
-                                currentBridgeType.color =
-                                    DefDatabase<TerrainDef>.GetNamedSilentFail("GoldTile").color;
-                                break;
-                        }
-
-                        baseCost *= 10;
-                    }
-
-                    currentBridgeType.costList = new List<ThingDefCountClass>
-                    {
-                        new ThingDefCountClass
-                        {
-                            thingDef = ThingDefOf.Steel,
-                            count = GetCustomCost(3)
-                        },
-                        new ThingDefCountClass
-                        {
-                            thingDef = material,
-                            count = GetCustomCost(baseCost)
-                        }
-                    };
-                }
+                    break;
             }
         }
-        else
+
+        if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Stony))
         {
             hitPoints = 200f;
             if (string.IsNullOrEmpty(alternateTexture))
@@ -352,39 +432,41 @@ public class GenerateBridges
                 currentBridgeType.label += $" ({alternateTexture})";
             }
 
-            if (deep)
+            int baseCost;
+            switch (bridgeType)
             {
-                var baseCost = 17;
-                if (material.smallVolume)
-                {
-                    baseCost *= 10;
-                }
-
-                currentBridgeType.costList = new List<ThingDefCountClass>
-                {
-                    new ThingDefCountClass
+                case BridgeType.Bridge:
+                    baseCost = 10;
+                    if (material.smallVolume)
                     {
-                        thingDef = ThingDefOf.Steel, count = GetCustomCost(5)
-                    },
-                    new ThingDefCountClass { thingDef = material, count = GetCustomCost(baseCost) }
-                };
-            }
-            else
-            {
-                var baseCost = 10;
-                if (material.smallVolume)
-                {
-                    baseCost *= 10;
-                }
+                        baseCost *= 10;
+                    }
 
-                currentBridgeType.costList = new List<ThingDefCountClass>
-                {
-                    new ThingDefCountClass
+                    currentBridgeType.costList = new List<ThingDefCountClass>
                     {
-                        thingDef = ThingDefOf.Steel, count = GetCustomCost(3)
-                    },
-                    new ThingDefCountClass { thingDef = material, count = GetCustomCost(baseCost) }
-                };
+                        new ThingDefCountClass
+                        {
+                            thingDef = ThingDefOf.Steel, count = GetCustomCost(3)
+                        },
+                        new ThingDefCountClass { thingDef = material, count = GetCustomCost(baseCost) }
+                    };
+                    break;
+                case BridgeType.Deep:
+                    baseCost = 17;
+                    if (material.smallVolume)
+                    {
+                        baseCost *= 10;
+                    }
+
+                    currentBridgeType.costList = new List<ThingDefCountClass>
+                    {
+                        new ThingDefCountClass
+                        {
+                            thingDef = ThingDefOf.Steel, count = GetCustomCost(5)
+                        },
+                        new ThingDefCountClass { thingDef = material, count = GetCustomCost(baseCost) }
+                    };
+                    break;
             }
         }
 
