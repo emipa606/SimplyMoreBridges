@@ -42,14 +42,6 @@ public class GenerateBridges
             {
                 if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Stony))
                 {
-                    stonyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, stonyBridgesToAdd));
-                    if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
-                        .AddVisuals)
-                    {
-                        stonyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, stonyBridgesToAdd,
-                            "Flagstone"));
-                    }
-
                     stonyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, stonyBridgesToAdd));
                     if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
                         .AddVisuals)
@@ -58,35 +50,19 @@ public class GenerateBridges
                             "Flagstone"));
                     }
 
+                    stonyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, stonyBridgesToAdd));
+                    if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
+                        .AddVisuals)
+                    {
+                        stonyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, stonyBridgesToAdd,
+                            "Flagstone"));
+                    }
+
                     continue;
                 }
 
                 if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Metallic))
                 {
-                    metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd));
-                    if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
-                        .AddVisuals)
-                    {
-                        if (material.defName == "Steel")
-                        {
-                            metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
-                                "Concrete"));
-                        }
-
-                        metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
-                            "PavedTile"));
-                    }
-
-                    if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
-                        .GenerateFloorlike)
-                    {
-                        if (material.defName == "Silver")
-                        {
-                            metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
-                                "Sterile"));
-                        }
-                    }
-
                     metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd));
                     if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
                         .AddVisuals)
@@ -111,6 +87,30 @@ public class GenerateBridges
                     {
                         metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd,
                             "Sterile"));
+                    }
+
+                    metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd));
+                    if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
+                        .AddVisuals)
+                    {
+                        if (material.defName == "Steel")
+                        {
+                            metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
+                                "Concrete"));
+                        }
+
+                        metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
+                            "PavedTile"));
+                    }
+
+                    if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
+                        .GenerateFloorlike)
+                    {
+                        if (material.defName == "Silver")
+                        {
+                            metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
+                                "Sterile"));
+                        }
                     }
 
                     continue;
@@ -177,22 +177,22 @@ public class GenerateBridges
 
                 break;
             case BridgeType.Bridge:
-                defName = $"DeepWaterBridge{material.defName.Replace("Blocks", string.Empty)}{alternateTexture}";
-                label = $"{material.label.Replace(" blocks", string.Empty)} deep water bridge";
-                if (currentBridges.Any(def => def.defName == defName))
-                {
-                    defName = $"DeepWaterBridge{material.defName}{alternateTexture}";
-                    label = $"{material.label} deep water bridge";
-                }
-
-                break;
-            case BridgeType.Deep:
                 defName = $"HeavyBridge{material.defName.Replace("Blocks", string.Empty)}{alternateTexture}";
                 label = $"{material.label.Replace(" blocks", string.Empty)} bridge";
                 if (currentBridges.Any(def => def.defName == defName))
                 {
                     defName = $"HeavyBridge{material.defName}{alternateTexture}";
                     label = $"{material.label} bridge";
+                }
+
+                break;
+            case BridgeType.Deep:
+                defName = $"DeepWaterBridge{material.defName.Replace("Blocks", string.Empty)}{alternateTexture}";
+                label = $"{material.label.Replace(" blocks", string.Empty)} deep water bridge";
+                if (currentBridges.Any(def => def.defName == defName))
+                {
+                    defName = $"DeepWaterBridge{material.defName}{alternateTexture}";
+                    label = $"{material.label} deep water bridge";
                 }
 
                 break;
@@ -239,8 +239,17 @@ public class GenerateBridges
                 currentBridgeType.uiIconPath = "Terrain/Surfaces/Bridge_MenuIcon";
                 currentBridgeType.texturePath = "Terrain/Surfaces/Bridge";
                 currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.Bridgeable;
-                currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.WorkToBuild, value = 1500 });
+                currentBridgeType.statBases = new List<StatModifier>
+                {
+                    new StatModifier { stat = StatDefOf.Flammability, value = 0.8f },
+                    new StatModifier { stat = StatDefOf.WorkToBuild, value = 1500 }
+                };
                 currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge;
+                currentBridgeType.affordances =
+                    new List<TerrainAffordanceDef>
+                    {
+                        RimWorld.TerrainAffordanceDefOf.Light
+                    };
                 var baseCost = 12;
                 if (material.smallVolume)
                 {

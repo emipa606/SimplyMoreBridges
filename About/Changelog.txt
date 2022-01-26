@@ -1,5 +1,8 @@
 # Changelog for SimplyMoreBridges
 
+1.3.3 - Fixed error with deep/heavy bridges being switched. Also fixed affordance given and flameability for woody bridges
+
+
 1.3.2 - Will now generate bridges from woody-stuff as well
 
 

@@ -6,7 +6,8 @@ Update of Lanilors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1420241138
 
 - Splitted up the research-requirements for the bridges to make it more compatible with medival playthroughs.
-- Added an option to generate bridges from all materials, even from other mods.
+- Added an option to generate bridges from all materials, even from other mods. 
+- Also wooden bridges will be generated from all woody materials.
 - Added option to build bridges using other visuals; Flagstone, Paved tile and Concrete-visuals.
 - Added russian translation, thanks Uncle Shvya
 - Added slider to set the cost of the bridges

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <HugsLib.UpdateFeatureDef Abstract="true" Name="UpdateFeatureBase">
     <modNameReadable>SimplyMoreBridges</modNameReadable>
@@ -27,10 +27,10 @@ Hope this will be of use to someone!
     <content>Small update, added a sterile bridge by request. It can be activated in the options if you turn on the generation of bridges from more materials. I may add more floorlike bridges if there is an interest of it, please leave a comment if this is something you would like to see.
 </content>
   </HugsLib.UpdateFeatureDef>
-	<HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
-		<defName>SimplyMoreBridges_1_3_2</defName>
-		<assemblyVersion>1.3.2</assemblyVersion>
-		<content>If you enable the option "Generate bridges from more materials" the mod will now also generate bridges from all woody-materials if any are loaded. 
+  <HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+    <defName>SimplyMoreBridges_1_3_2</defName>
+    <assemblyVersion>1.3.2</assemblyVersion>
+    <content>If you enable the option "Generate bridges from more materials" the mod will now also generate bridges from all woody-materials if any are loaded. 
 So for example Bamboo and Iron Wood from VGP or Bones from the Bones-mod could be used to build wooden bridges instead of just the vanilla WoodLog.</content>
-	</HugsLib.UpdateFeatureDef>
+  </HugsLib.UpdateFeatureDef>
 </Defs>
