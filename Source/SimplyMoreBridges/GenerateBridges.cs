@@ -285,7 +285,7 @@ public class GenerateBridges
                 break;
         }
 
-        if (alternateTexture != "Concrete")
+        if (alternateTexture != "Concrete" && alternateTexture != "PavedTile")
         {
             var tile = DefDatabase<TerrainDef>.GetNamedSilentFail(
                 $"Tile{material.defName.Replace("Blocks", string.Empty)}");
@@ -295,30 +295,20 @@ public class GenerateBridges
         if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Metallic))
         {
             hitPoints = 300f;
-            if (string.IsNullOrEmpty(alternateTexture))
-            {
-                currentBridgeType.texturePath = "Terrain/Surfaces/DeepWaterBridgeMetal";
-                if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>()
-                    .AddVisuals)
-                {
-                    currentBridgeType.label += " (FloorTile)";
-                }
-            }
-            else
-            {
-                currentBridgeType.texturePath = $"Terrain/Surfaces/Bridge{alternateTexture}";
-                currentBridgeType.label += $" ({alternateTexture})";
-            }
 
             currentBridgeType.researchPrerequisites.Add(
                 DefDatabase<ResearchProjectDef>.GetNamedSilentFail("Smithing"));
+            currentBridgeType.texturePath = "Terrain/Surfaces/BridgeMetal";
             switch (bridgeType)
             {
                 case BridgeType.Bridge:
                     if (material.defName == "Steel")
                     {
-                        currentBridgeType.texturePath = "Terrain/Surfaces/BridgeMetal";
-                        currentBridgeType.color = DefDatabase<TerrainDef>.GetNamedSilentFail("MetalTile").color;
+                        if (alternateTexture != "Concrete" && alternateTexture != "PavedTile")
+                        {
+                            currentBridgeType.color = DefDatabase<TerrainDef>.GetNamedSilentFail("MetalTile").color;
+                        }
+
                         currentBridgeType.costList = new List<ThingDefCountClass>
                         {
                             new ThingDefCountClass
@@ -333,7 +323,6 @@ public class GenerateBridges
                         var baseCost = 9;
                         if (material.smallVolume)
                         {
-                            currentBridgeType.texturePath = "Terrain/Surfaces/BridgeMetal";
                             switch (material.defName)
                             {
                                 case "Silver":
@@ -370,7 +359,6 @@ public class GenerateBridges
                     {
                         if (currentBridgeType.label.Contains("FloorTile"))
                         {
-                            currentBridgeType.texturePath = "Terrain/Surfaces/BridgeMetal";
                             currentBridgeType.color = DefDatabase<TerrainDef>.GetNamedSilentFail("MetalTile").color;
                         }
 
@@ -388,7 +376,6 @@ public class GenerateBridges
                         var baseCost = 15;
                         if (material.smallVolume)
                         {
-                            currentBridgeType.texturePath = "Terrain/Surfaces/BridgeMetal";
                             switch (material.defName)
                             {
                                 case "Silver":
@@ -420,6 +407,19 @@ public class GenerateBridges
                     }
 
                     break;
+            }
+
+            if (LoadedModManager.GetMod<SimplyMoreBridgesMod>().GetSettings<SimplyMoreBridgesSettings>().AddVisuals)
+            {
+                if (string.IsNullOrEmpty(alternateTexture))
+                {
+                    currentBridgeType.label += " (FloorTile)";
+                }
+                else
+                {
+                    currentBridgeType.texturePath = $"Terrain/Surfaces/Bridge{alternateTexture}";
+                    currentBridgeType.label += $" ({alternateTexture})";
+                }
             }
         }
 

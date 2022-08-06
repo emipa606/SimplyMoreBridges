@@ -1,5 +1,8 @@
 # Changelog for SimplyMoreBridges
 
+1.3.5 - Fixed an issue in generating visuals for metal-bridges
+
+
 1.3.4 - More unique defname for the HugLib-news base-definition, to avoid conflicts with other mods.
 
 
