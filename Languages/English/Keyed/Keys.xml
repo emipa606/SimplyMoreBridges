@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <!-- Settings -->
+  <SimplyMoreBridges.CurrentModVersion>Installed mod-version: {0}</SimplyMoreBridges.CurrentModVersion>
   <SimplyMoreBridges.RestartInfo>Changes require a game restart for effect.</SimplyMoreBridges.RestartInfo>
   <SimplyMoreBridges.AddVisualsLabel>Add different visuals</SimplyMoreBridges.AddVisualsLabel>
   <SimplyMoreBridges.AddVisualsTooltip>Also adds bridges with Concrete, Flagstone and Paved Tile-visuals.</SimplyMoreBridges.AddVisualsTooltip>

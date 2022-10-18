@@ -1,5 +1,6 @@
 ﻿using System;
 using HarmonyLib;
+using Mlie;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -13,6 +14,8 @@ internal class SimplyMoreBridgesMod : Mod
     ///     The instance of the settings to be read by the mod
     /// </summary>
     private static SimplyMoreBridgesMod instance;
+
+    private static string currentVersion;
 
     /// <summary>
     ///     The private settings
@@ -30,6 +33,9 @@ internal class SimplyMoreBridgesMod : Mod
         var original = typeof(DefGenerator).GetMethod("GenerateImpliedDefs_PreResolve");
         var prefix = typeof(GenerateBridges).GetMethod("Prefix");
         new Harmony("mlie.simplymorebridges").Patch(original, new HarmonyMethod(prefix));
+        currentVersion =
+            VersionFromManifest.GetVersionFromModMetaData(
+                ModLister.GetActiveModWithIdentifier("Mlie.SimplyMoreBridges"));
     }
 
     /// <summary>
@@ -81,9 +87,15 @@ internal class SimplyMoreBridgesMod : Mod
         var currentPercent = Math.Round(Settings.CostPercent * 100);
         listing_Standard.Label("SimplyMoreBridges.BridgeCostPercent".Translate(currentPercent));
         Settings.CostPercent = listing_Standard.Slider(Settings.CostPercent, 0.01f, 2f);
+        if (currentVersion != null)
+        {
+            listing_Standard.Gap();
+            GUI.contentColor = Color.gray;
+            listing_Standard.Label("SimplyMoreBridges.CurrentModVersion".Translate(currentVersion));
+            GUI.contentColor = Color.white;
+        }
 
         listing_Standard.End();
-        Settings.Write();
     }
 
     /// <summary>
