@@ -5,6 +5,9 @@
 Update of Lanilors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1420241138
 
+## Floors and bridges are of the same type in the game, terrainDef. That is why you cannot build floors on bridges, you can only replace one with the other. This is a limitation in the game and nothing I can change
+
+
 - Splitted up the research-requirements for the bridges to make it more compatible with medival playthroughs.
 - Added an option to generate bridges from all materials, even from other mods. 
 - Also wooden bridges will be generated from all woody materials.
@@ -51,3 +54,4 @@ Can be added to an existing save. (To remove this mod, remove all steel bridges 
 
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2012484790]Last updated 2022-12-27
