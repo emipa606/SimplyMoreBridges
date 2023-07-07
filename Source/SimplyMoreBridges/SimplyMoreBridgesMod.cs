@@ -20,7 +20,7 @@ internal class SimplyMoreBridgesMod : Mod
     /// <summary>
     ///     The private settings
     /// </summary>
-    private SimplyMoreBridgesSettings settings;
+    public readonly SimplyMoreBridgesSettings Settings;
 
     /// <summary>
     ///     Constructor
@@ -31,29 +31,10 @@ internal class SimplyMoreBridgesMod : Mod
     {
         instance = this;
         var original = typeof(DefGenerator).GetMethod("GenerateImpliedDefs_PreResolve");
+        Settings = GetSettings<SimplyMoreBridgesSettings>();
         var prefix = typeof(GenerateBridges).GetMethod("Prefix");
         new Harmony("mlie.simplymorebridges").Patch(original, new HarmonyMethod(prefix));
-        currentVersion =
-            VersionFromManifest.GetVersionFromModMetaData(
-                ModLister.GetActiveModWithIdentifier("Mlie.SimplyMoreBridges"));
-    }
-
-    /// <summary>
-    ///     The instance-settings for the mod
-    /// </summary>
-    private SimplyMoreBridgesSettings Settings
-    {
-        get
-        {
-            if (settings == null)
-            {
-                settings = GetSettings<SimplyMoreBridgesSettings>();
-            }
-
-            return settings;
-        }
-
-        set => settings = value;
+        currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
     /// <summary>

@@ -498,11 +498,16 @@ public class GenerateBridges
                 modifier => modifier.stat == StatDefOf.Beauty) == true)
         {
             var beauty = material.stuffProps.statOffsets.GetStatOffsetFromList(StatDefOf.Beauty);
+
             currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.Beauty, value = beauty });
             if (beauty > 5)
             {
                 currentBridgeType.tags.Add("FineFloor");
             }
+        }
+        else
+        {
+            currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.Beauty, value = 1 });
         }
 
         if (alternateTexture != "Sterile")

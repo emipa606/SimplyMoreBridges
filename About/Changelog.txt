@@ -1,5 +1,8 @@
 # Changelog for SimplyMoreBridges
 
+1.4.3 - Added a base-beauty of 1, same as vanilla default value for floors.
+
+
 1.4.2 - Updated Russian translation, thanks uncleshvya
 
 
