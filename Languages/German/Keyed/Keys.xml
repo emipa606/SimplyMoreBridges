@@ -12,4 +12,10 @@
   <SimplyMoreBridges.GenerateFloorlikeTooltip>Wird sterile Brücken aus Silber hinzufügen.</SimplyMoreBridges.GenerateFloorlikeTooltip>
   <SimplyMoreBridges.BridgeCostPercent>Kosten der Brücken in Prozent: {0}%</SimplyMoreBridges.BridgeCostPercent>
   <SimplyMoreBridges.NoFloorsOnBridges>Sie können keine Etage bauen, ohne vorher die Brücke abzureißen.</SimplyMoreBridges.NoFloorsOnBridges>
+  <SimplyMoreBridges.SteelPercent>Prozentualer Anteil von Stahl in normalen Brücken: {0}
+Steinbrücke: {1} Stein, {2} Stahl
+Metallbrücke: {3} Metall, {4} Stahl</SimplyMoreBridges.SteelPercent>
+  <SimplyMoreBridges.SteelPercentDeep>Prozentualer Anteil von Stahl in tiefen Brücken: {0}
+Stein-Tiefbrücke: {1} Stein, {2} Stahl
+Metall-Tiefbrücke: {3} Metall, {4} Stahl</SimplyMoreBridges.SteelPercentDeep>
 </LanguageData>

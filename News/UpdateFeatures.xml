@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <HugsLib.UpdateFeatureDef Abstract="true" Name="SimplyMoreBridges_UpdateFeatureBase">
     <modNameReadable>SimplyMoreBridges</modNameReadable>
@@ -33,4 +33,11 @@ Hope this will be of use to someone!
     <content>If you enable the option "Generate bridges from more materials" the mod will now also generate bridges from all woody-materials if any are loaded. 
 So for example Bamboo and Iron Wood from VGP or Bones from the Bones-mod could be used to build wooden bridges instead of just the vanilla WoodLog.</content>
   </HugsLib.UpdateFeatureDef>
+	<HugsLib.UpdateFeatureDef ParentName="SimplyMoreBridges_UpdateFeatureBase">
+		<defName>SimplyMoreBridges_1_4_4</defName>
+		<assemblyVersion>1.4.4</assemblyVersion>
+		<content>There is now an option to change the ratio of steel and material in the bridges.
+Added since some users saw these bridges more like steel bridges with a material veneer.
+Remember to restart the game if you change any mod-settings.</content>
+	</HugsLib.UpdateFeatureDef>
 </Defs>
