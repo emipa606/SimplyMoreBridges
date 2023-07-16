@@ -1,5 +1,8 @@
 # Changelog for SimplyMoreBridges
 
+1.4.5 - All bridges should now be paintable, same as vanilla metal and wood-floors
+
+
 1.4.4 - Added setting to modify the steel to material ratio. Will now also ignore fake wood-types added by Vanilla Furniture Expanded - Architect.
 Used DeepL to update translations for ChineseSimplified, French, German, Russian
 

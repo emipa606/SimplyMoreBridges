@@ -211,6 +211,7 @@ public class GenerateBridges
             edgeType = TerrainDef.TerrainEdgeType.Hard,
             renderPrecedence = 400,
             layerable = true,
+            isPaintable = true,
             affordances =
                 new List<TerrainAffordanceDef>
                 {
