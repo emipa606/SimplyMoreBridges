@@ -4,7 +4,7 @@ using System.Reflection.Emit;
 using HarmonyLib;
 using Verse;
 
-namespace SimplyMoreBridges;
+namespace SimplyMoreBridges.Harmony;
 
 [HarmonyPatch("SetTerrain")]
 [HarmonyPatch(typeof(TerrainGrid))]

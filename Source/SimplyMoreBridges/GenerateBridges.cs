@@ -213,13 +213,12 @@ public class GenerateBridges
             layerable = true,
             isPaintable = true,
             affordances =
-                new List<TerrainAffordanceDef>
-                {
-                    RimWorld.TerrainAffordanceDefOf.Light,
-                    RimWorld.TerrainAffordanceDefOf.Medium,
-                    RimWorld.TerrainAffordanceDefOf.Heavy
-                },
-            designationCategory = DesignationCategoryDefOf.Structure,
+            [
+                RimWorld.TerrainAffordanceDefOf.Light,
+                RimWorld.TerrainAffordanceDefOf.Medium,
+                RimWorld.TerrainAffordanceDefOf.Heavy
+            ],
+            designationCategory = DefDatabase<DesignationCategoryDef>.GetNamedSilentFail("Structure"),
             fertility = 0,
             constructEffect = EffecterDefOf.ConstructMetal,
             destroyBuildingsOnDestroyed = true,
@@ -231,10 +230,7 @@ public class GenerateBridges
                 "A flat surface of the chosen material on supportive beams which can be built over water. You can even build heavy structures on these bridges, but be careful, they are still fragile. If a bridge falls, buildings on top of it fall as well.",
             resourcesFractionWhenDeconstructed = 0,
             destroyOnBombDamageThreshold = 40,
-            statBases = new List<StatModifier>
-            {
-                new StatModifier { stat = StatDefOf.Flammability, value = 0 }
-            }
+            statBases = [new StatModifier { stat = StatDefOf.Flammability, value = 0 }]
         };
 
         var hitPoints = 100f;
@@ -244,17 +240,14 @@ public class GenerateBridges
                 currentBridgeType.uiIconPath = "Terrain/Surfaces/Bridge_MenuIcon";
                 currentBridgeType.texturePath = "Terrain/Surfaces/Bridge";
                 currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.Bridgeable;
-                currentBridgeType.statBases = new List<StatModifier>
-                {
+                currentBridgeType.statBases =
+                [
                     new StatModifier { stat = StatDefOf.Flammability, value = 0.8f },
                     new StatModifier { stat = StatDefOf.WorkToBuild, value = 1500 }
-                };
+                ];
                 currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge;
                 currentBridgeType.affordances =
-                    new List<TerrainAffordanceDef>
-                    {
-                        RimWorld.TerrainAffordanceDefOf.Light
-                    };
+                    [RimWorld.TerrainAffordanceDefOf.Light];
 
                 currentBridgeType.costList = GetCost(true, false, material);
                 break;
@@ -263,22 +256,22 @@ public class GenerateBridges
                 currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.Bridgeable;
                 currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.WorkToBuild, value = 2200 });
                 currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge_Heavy;
-                currentBridgeType.researchPrerequisites = new List<ResearchProjectDef>
-                {
+                currentBridgeType.researchPrerequisites =
+                [
                     DefDatabase<ResearchProjectDef>.GetNamedSilentFail(
                         "HeavyBridges")
-                };
+                ];
                 break;
             case BridgeType.Deep:
                 currentBridgeType.uiIconPath = "Terrain/Surfaces/DeepWaterBridge_MenuIcon";
                 currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.BridgeableDeep;
                 currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.WorkToBuild, value = 3200 });
                 currentBridgeType.designatorDropdown = DesignatorDropdownGroupDefOf.Bridge_DeepWater;
-                currentBridgeType.researchPrerequisites = new List<ResearchProjectDef>
-                {
+                currentBridgeType.researchPrerequisites =
+                [
                     DefDatabase<ResearchProjectDef>.GetNamedSilentFail(
                         "DeepWaterBridges")
-                };
+                ];
                 break;
         }
 
@@ -412,7 +405,7 @@ public class GenerateBridges
 
         currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.MaxHitPoints, value = hitPoints });
 
-        currentBridgeType.tags = new List<string>();
+        currentBridgeType.tags = [];
 
         if (alternateTexture != "Flagstone")
         {
@@ -463,12 +456,12 @@ public class GenerateBridges
             steel = GetCustomCost(steel);
             if (material == null)
             {
-                return new List<ThingDefCountClass> { new ThingDefCountClass(ThingDefOf.Steel, total) };
+                return [new ThingDefCountClass(ThingDefOf.Steel, total)];
             }
 
             if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Woody))
             {
-                return new List<ThingDefCountClass> { new ThingDefCountClass(material, total) };
+                return [new ThingDefCountClass(material, total)];
             }
 
             materialCost = total - steel;
@@ -477,8 +470,7 @@ public class GenerateBridges
                 materialCost *= 10;
             }
 
-            return new List<ThingDefCountClass>
-                { new ThingDefCountClass(material, materialCost), new ThingDefCountClass(ThingDefOf.Steel, steel) };
+            return [new ThingDefCountClass(material, materialCost), new ThingDefCountClass(ThingDefOf.Steel, steel)];
         }
 
         total = 22;
@@ -493,7 +485,7 @@ public class GenerateBridges
 
         if (material == null)
         {
-            return new List<ThingDefCountClass> { new ThingDefCountClass(ThingDefOf.Steel, total) };
+            return [new ThingDefCountClass(ThingDefOf.Steel, total)];
         }
 
 
@@ -503,8 +495,7 @@ public class GenerateBridges
             materialCost *= 10;
         }
 
-        return new List<ThingDefCountClass>
-            { new ThingDefCountClass(material, materialCost), new ThingDefCountClass(ThingDefOf.Steel, steel) };
+        return [new ThingDefCountClass(material, materialCost), new ThingDefCountClass(ThingDefOf.Steel, steel)];
     }
 
     private static int GetCustomCost(int originalCost)

@@ -1,12 +1,12 @@
 ﻿using HarmonyLib;
 using Verse;
 
-namespace SimplyMoreBridges;
+namespace SimplyMoreBridges.Harmony;
 
 [HarmonyPatch(typeof(TerrainGrid), "RemoveTopLayer", typeof(IntVec3), typeof(bool))]
 public static class Harmony_TerrainGrid_RemoveTopLayer
 {
-    public static bool Prefix(ref TerrainGrid __instance, IntVec3 c, bool doLeavings = true)
+    public static bool Prefix(ref TerrainGrid __instance, IntVec3 c)
     {
         var terrainDef = __instance.TerrainAt(c);
         if (Prefs.DevMode)

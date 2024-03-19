@@ -1,15 +1,14 @@
 using System.Reflection;
-using HarmonyLib;
 using Verse;
 
-namespace SimplyMoreBridges;
+namespace SimplyMoreBridges.Harmony;
 
 [StaticConstructorOnStartup]
 internal class HarmonyPatches
 {
     static HarmonyPatches()
     {
-        var harmonyInstance = new Harmony("rimworld.lanilor.simplymorebridges");
+        var harmonyInstance = new HarmonyLib.Harmony("rimworld.lanilor.simplymorebridges");
         harmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
     }
 }

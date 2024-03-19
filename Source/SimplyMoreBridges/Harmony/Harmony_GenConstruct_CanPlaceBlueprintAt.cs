@@ -3,7 +3,7 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace SimplyMoreBridges;
+namespace SimplyMoreBridges.Harmony;
 
 [HarmonyPatch("CanPlaceBlueprintAt")]
 [HarmonyPatch(typeof(GenConstruct))]
@@ -12,7 +12,7 @@ public class Harmony_GenConstruct_CanPlaceBlueprintAt
     public static void Postfix(ref AcceptanceReport __result, BuildableDef entDef, IntVec3 center, Map map)
     {
         var centerDef = map.terrainGrid.TerrainAt(center);
-        if (!(entDef is TerrainDef) || entDef.HasModExtension<SimplyMoreBridgesModExt>() ||
+        if (entDef is not TerrainDef || entDef.HasModExtension<SimplyMoreBridgesModExt>() ||
             centerDef.HasModExtension<SimplyMoreBridgesModExt>())
         {
             return;

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TabulaRasa.UpdateDef Abstract="true" Name="SimplyMoreBridges_UpdateInfoBase">
+    <linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2012484790</linkUrl>
+    <banner>UpdateInfo/SimplyMoreBridges</banner>
+  </TabulaRasa.UpdateDef>
+  <TabulaRasa.UpdateDef ParentName="SimplyMoreBridges_UpdateInfoBase">
+    <defName>SimplyMoreBridges_1_4_4</defName>
+    <date>2023/7/14</date>
+    <content>There is now an option to change the ratio of steel and material in the bridges.
+Added since some users saw these bridges more like steel bridges with a material veneer.
+Remember to restart the game if you change any mod-settings.</content>
+  </TabulaRasa.UpdateDef>
+</Defs>

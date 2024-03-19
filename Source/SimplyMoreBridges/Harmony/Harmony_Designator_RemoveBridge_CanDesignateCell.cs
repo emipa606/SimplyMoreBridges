@@ -2,7 +2,7 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace SimplyMoreBridges;
+namespace SimplyMoreBridges.Harmony;
 
 [HarmonyPatch(typeof(Designator_RemoveBridge), "CanDesignateCell", typeof(IntVec3))]
 public static class Harmony_Designator_RemoveBridge_CanDesignateCell

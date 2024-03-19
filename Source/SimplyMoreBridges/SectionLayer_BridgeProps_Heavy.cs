@@ -4,7 +4,7 @@ using Verse;
 namespace SimplyMoreBridges;
 
 [StaticConstructorOnStartup]
-public class SectionLayer_BridgeProps_Heavy : SectionLayer_BridgeProps
+public class SectionLayer_BridgeProps_Heavy(Section section) : SectionLayer_BridgeProps(section)
 {
     private static readonly Material propsLoopMat = MaterialPool.MatFrom(
         "Terrain/Misc/HeavyBridgeProps_Loop",
@@ -13,11 +13,6 @@ public class SectionLayer_BridgeProps_Heavy : SectionLayer_BridgeProps
     private static readonly Material propsRightMat = MaterialPool.MatFrom(
         "Terrain/Misc/HeavyBridgeProps_Right",
         ShaderDatabase.Transparent);
-
-    public SectionLayer_BridgeProps_Heavy(Section section)
-        : base(section)
-    {
-    }
 
     protected override Material PropsLoopMat => propsLoopMat;
 

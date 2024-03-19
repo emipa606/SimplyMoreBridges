@@ -1,3 +1,4 @@
+using RimWorld;
 using UnityEngine;
 using Verse;
 
@@ -9,7 +10,7 @@ public abstract class SectionLayer_BridgeProps : SectionLayer
     protected SectionLayer_BridgeProps(Section section)
         : base(section)
     {
-        relevantChangeTypes = MapMeshFlag.Terrain;
+        relevantChangeTypes = MapMeshFlagDefOf.Terrain;
     }
 
     public override bool Visible => DebugViewSettings.drawTerrain;

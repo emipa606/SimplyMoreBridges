@@ -32,7 +32,7 @@ internal class SimplyMoreBridgesMod : Mod
         var original = typeof(DefGenerator).GetMethod("GenerateImpliedDefs_PreResolve");
         Settings = GetSettings<SimplyMoreBridgesSettings>();
         var prefix = typeof(GenerateBridges).GetMethod("Prefix");
-        new Harmony("mlie.simplymorebridges").Patch(original, new HarmonyMethod(prefix));
+        new HarmonyLib.Harmony("mlie.simplymorebridges").Patch(original, new HarmonyMethod(prefix));
         currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
