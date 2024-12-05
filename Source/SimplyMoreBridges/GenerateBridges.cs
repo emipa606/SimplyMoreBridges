@@ -210,6 +210,8 @@ public class GenerateBridges
             label = label,
             edgeType = TerrainDef.TerrainEdgeType.Hard,
             renderPrecedence = 400,
+            autoRebuildable = true,
+            bridge = true,
             layerable = true,
             isPaintable = true,
             affordances =
