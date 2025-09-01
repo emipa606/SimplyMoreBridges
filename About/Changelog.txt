@@ -1,5 +1,9 @@
 # Changelog for SimplyMoreBridges
 
+1.6.0 - Mod updated for 1.6 and passed autotests
+Used DeepL to update translations for Russian
+
+
 1.5.0 - Mod updated for 1.5 and passed autotests
 
 

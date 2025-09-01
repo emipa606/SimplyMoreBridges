@@ -8,7 +8,6 @@ internal class HarmonyPatches
 {
     static HarmonyPatches()
     {
-        var harmonyInstance = new HarmonyLib.Harmony("rimworld.lanilor.simplymorebridges");
-        harmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
+        new HarmonyLib.Harmony("rimworld.lanilor.simplymorebridges").PatchAll(Assembly.GetExecutingAssembly());
     }
 }

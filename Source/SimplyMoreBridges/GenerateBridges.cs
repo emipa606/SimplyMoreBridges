@@ -8,13 +8,6 @@ namespace SimplyMoreBridges;
 
 public class GenerateBridges
 {
-    public enum BridgeType
-    {
-        Wooden,
-        Bridge,
-        Deep
-    }
-
     public static void Prefix()
     {
         var materials = SimplyMoreBridgesMod.instance.Settings.GenerateFromAll
@@ -26,9 +19,8 @@ public class GenerateBridges
                           || dd.stuffProps.categories.Contains(StuffCategoryDefOf.Woody))
                 select dd).ToList()
             : (from dd in DefDatabase<ThingDef>.AllDefsListForReading
-                where dd.defName == "Plasteel" || dd.defName == "Steel" || dd.defName == "BlocksSandstone"
-                      || dd.defName == "BlocksGranite" || dd.defName == "BlocksLimestone"
-                      || dd.defName == "BlocksSlate" || dd.defName == "BlocksMarble"
+                where dd.defName is "Plasteel" or "Steel" or "BlocksSandstone" or "BlocksGranite" or "BlocksLimestone"
+                    or "BlocksSlate" or "BlocksMarble"
                 select dd).ToList();
         Log.Message($"SimplyMoreBridges: Found {materials.Count} materials to generate bridge-definitions for.");
 
@@ -41,17 +33,17 @@ public class GenerateBridges
             {
                 if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Stony))
                 {
-                    stonyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, stonyBridgesToAdd));
+                    stonyBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Bridge, stonyBridgesToAdd));
                     if (SimplyMoreBridgesMod.instance.Settings.AddVisuals)
                     {
-                        stonyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, stonyBridgesToAdd,
+                        stonyBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Bridge, stonyBridgesToAdd,
                             "Flagstone"));
                     }
 
-                    stonyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, stonyBridgesToAdd));
+                    stonyBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Deep, stonyBridgesToAdd));
                     if (SimplyMoreBridgesMod.instance.Settings.AddVisuals)
                     {
-                        stonyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, stonyBridgesToAdd,
+                        stonyBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Deep, stonyBridgesToAdd,
                             "Flagstone"));
                     }
 
@@ -60,16 +52,16 @@ public class GenerateBridges
 
                 if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Metallic))
                 {
-                    metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd));
+                    metalBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd));
                     if (SimplyMoreBridgesMod.instance.Settings.AddVisuals)
                     {
                         if (material.defName == "Steel")
                         {
-                            metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd,
+                            metalBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd,
                                 "Concrete"));
                         }
 
-                        metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd,
+                        metalBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd,
                             "PavedTile"));
                     }
 
@@ -80,20 +72,20 @@ public class GenerateBridges
 
                     if (material.defName == "Silver")
                     {
-                        metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd,
+                        metalBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Bridge, metalBridgesToAdd,
                             "Sterile"));
                     }
 
-                    metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd));
+                    metalBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd));
                     if (SimplyMoreBridgesMod.instance.Settings.AddVisuals)
                     {
                         if (material.defName == "Steel")
                         {
-                            metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
+                            metalBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
                                 "Concrete"));
                         }
 
-                        metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
+                        metalBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
                             "PavedTile"));
                     }
 
@@ -101,7 +93,7 @@ public class GenerateBridges
                     {
                         if (material.defName == "Silver")
                         {
-                            metalBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
+                            metalBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
                                 "Sterile"));
                         }
                     }
@@ -122,7 +114,7 @@ public class GenerateBridges
                 }
                 else
                 {
-                    woodyBridgesToAdd.Add(GenerateBridgeDef(material, BridgeType.Wooden, woodyBridgesToAdd));
+                    woodyBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Wooden, woodyBridgesToAdd));
                 }
             }
             catch (Exception exception)
@@ -133,11 +125,11 @@ public class GenerateBridges
         }
 
         Log.Message(
-            $"SimplyMoreBridges: Generated the following stony bridges: {string.Join(",", stonyBridgesToAdd)}");
+            $"SimplyMoreBridges: Generated the following stony bridges:{Environment.NewLine}{string.Join(",", stonyBridgesToAdd)}");
         Log.Message(
-            $"SimplyMoreBridges: Generated the following metal bridges: {string.Join(",", metalBridgesToAdd)}");
+            $"SimplyMoreBridges: Generated the following metal bridges:{Environment.NewLine}{string.Join(",", metalBridgesToAdd)}");
         Log.Message(
-            $"SimplyMoreBridges: Generated the following woody bridges: {string.Join(",", woodyBridgesToAdd)}");
+            $"SimplyMoreBridges: Generated the following woody bridges:{Environment.NewLine}{string.Join(",", woodyBridgesToAdd)}");
 
         foreach (var terrainDef in stonyBridgesToAdd)
         {
@@ -162,7 +154,7 @@ public class GenerateBridges
         TerrainDef.Named("Bridge").designatorDropdown = DesignatorDropdownGroupDefOf.Bridge;
     }
 
-    private static TerrainDef GenerateBridgeDef(ThingDef material, BridgeType bridgeType,
+    private static TerrainDef generateBridgeDef(ThingDef material, BridgeType bridgeType,
         HashSet<TerrainDef> currentBridges,
         string alternateTexture = "")
     {
@@ -414,8 +406,7 @@ public class GenerateBridges
             currentBridgeType.tags.Add("Floor");
         }
 
-        if (material.stuffProps.statOffsets?.Any(
-                modifier => modifier.stat == StatDefOf.Beauty) == true)
+        if (material.stuffProps.statOffsets?.Any(modifier => modifier.stat == StatDefOf.Beauty) == true)
         {
             var beauty = material.stuffProps.statOffsets.GetStatOffsetFromList(StatDefOf.Beauty);
 
@@ -442,10 +433,10 @@ public class GenerateBridges
         return currentBridgeType;
     }
 
-    public static List<ThingDefCountClass> GetCost(bool metalorwood, bool deep, ThingDef material)
+    public static List<ThingDefCountClass> GetCost(bool metalOrWood, bool deep, ThingDef material)
     {
         var total = 13;
-        if (metalorwood)
+        if (metalOrWood)
         {
             total = 12;
         }
@@ -454,8 +445,8 @@ public class GenerateBridges
         int materialCost;
         if (!deep)
         {
-            total = GetCustomCost(total);
-            steel = GetCustomCost(steel);
+            total = getCustomCost(total);
+            steel = getCustomCost(steel);
             if (material == null)
             {
                 return [new ThingDefCountClass(ThingDefOf.Steel, total)];
@@ -476,14 +467,14 @@ public class GenerateBridges
         }
 
         total = 22;
-        if (metalorwood)
+        if (metalOrWood)
         {
             total = 20;
         }
 
         steel = (int)Math.Round(total * SimplyMoreBridgesMod.instance.Settings.SteelPercentDeep);
-        total = GetCustomCost(total);
-        steel = GetCustomCost(steel);
+        total = getCustomCost(total);
+        steel = getCustomCost(steel);
 
         if (material == null)
         {
@@ -500,9 +491,16 @@ public class GenerateBridges
         return [new ThingDefCountClass(material, materialCost), new ThingDefCountClass(ThingDefOf.Steel, steel)];
     }
 
-    private static int GetCustomCost(int originalCost)
+    private static int getCustomCost(int originalCost)
     {
         var recountedCost = originalCost * SimplyMoreBridgesMod.instance.Settings.CostPercent;
         return Convert.ToInt32(Math.Ceiling(recountedCost));
+    }
+
+    private enum BridgeType
+    {
+        Wooden,
+        Bridge,
+        Deep
     }
 }

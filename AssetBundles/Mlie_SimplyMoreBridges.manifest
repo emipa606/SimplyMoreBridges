@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 787412731
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 673182eb477ea172c6996a12b9aa57f8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 673182eb477ea172c6996a12b9aa57f8
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Surfaces/DeepWaterBridgeStone.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Surfaces/BridgeSterile.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Surfaces/BridgeConcrete.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Surfaces/HeavyBridgeStone.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Surfaces/HeavyBridgeMetal.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Misc/HeavyBridgeProps_Right.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/UpdateInfo/SimplyMoreBridges.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Surfaces/HeavyBridge_MenuIcon.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Misc/DeepWaterBridgeProps_Loop.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Surfaces/DeepWaterBridge_MenuIcon.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Surfaces/BridgeMetal.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Misc/DeepWaterBridgeProps_Right.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Surfaces/BridgePavedTile.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Surfaces/DeepWaterBridgeMetal.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Surfaces/BridgeFlagstone.png
+- Assets/Data/Mlie.SimplyMoreBridges/Textures/Terrain/Misc/HeavyBridgeProps_Loop.png
+Dependencies: []

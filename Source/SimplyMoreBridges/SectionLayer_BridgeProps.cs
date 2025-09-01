@@ -27,7 +27,7 @@ public abstract class SectionLayer_BridgeProps : SectionLayer
         var num = AltitudeLayer.TerrainScatter.AltitudeFor();
         foreach (var intVec in cellRect)
         {
-            if (!ShouldDrawPropsBelow(intVec, terrainGrid))
+            if (!shouldDrawPropsBelow(intVec, terrainGrid))
             {
                 continue;
             }
@@ -35,7 +35,7 @@ public abstract class SectionLayer_BridgeProps : SectionLayer
             var c = intVec;
             c.x++;
             Material material;
-            if (c.InBounds(Map) && ShouldDrawPropsBelow(c, terrainGrid))
+            if (c.InBounds(Map) && shouldDrawPropsBelow(c, terrainGrid))
             {
                 material = PropsLoopMat;
             }
@@ -67,7 +67,7 @@ public abstract class SectionLayer_BridgeProps : SectionLayer
 
     protected abstract bool IsTerrainThisBridge(TerrainDef terrain);
 
-    private bool ShouldDrawPropsBelow(IntVec3 c, TerrainGrid terrGrid)
+    private bool shouldDrawPropsBelow(IntVec3 c, TerrainGrid terrGrid)
     {
         var terrainDef = terrGrid.TerrainAt(c);
         bool result;

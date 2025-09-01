@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   <!-- EN: NoFloorsOnBridges -->
   <SimplyMoreBridges.NoFloorsOnBridges>Нельзя изменить настил, не разбирая мост.</SimplyMoreBridges.NoFloorsOnBridges>
@@ -27,4 +27,5 @@
   <SimplyMoreBridges.SteelPercentDeep>Процентное содержание стали в мостах глубокого заложения: {0}
 Каменный глубинный мост: {1} камень, {2} сталь
 Металлический глубинный мост: {3} металл, {4} сталь</SimplyMoreBridges.SteelPercentDeep>
+  <!-- Settings -->
 </LanguageData>

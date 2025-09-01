@@ -1,9 +1,12 @@
-# SimplyMoreBridges
+# [Simply More Bridges (Continued)]()
 
 ![Image](https://i.imgur.com/buuPQel.png)
 
 Update of Lanilors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1420241138
+
+**The release of RimWorld 1.6 added improved support for [Asset Bundles](https://github.com/emipa606/AssetBuilder/blob/main/README.md)**.
+To avoid doubling the size of the mod, it was re-released using only Asset Bundles, you can find the previous version of this mod [here](https://steamcommunity.com/sharedfiles/filedetails/?id=2012484790).
 
 ## Floors and bridges are of the same type in the game, terrainDef. That is why you cannot build floors on bridges, you can only replace one with the other. This is a limitation in the game and nothing I can change
 
@@ -20,10 +23,8 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1420241138
 - All bridges should now inherit the beauty-value from the material they are made of
 
 ![Image](https://i.imgur.com/pufA0kM.png)
-
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
-
 
 # New bridges types for heavy structure support and building in deep water!
 
@@ -46,13 +47,10 @@ Can be added to an existing save. (To remove this mod, remove all steel bridges 
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib or the standalone https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader and command Ctrl+F12
+-  Post your error-log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
--  Use https://github.com/RimSort/RimSort/releases/latest]RimSort to sort your mods
+-  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
-
-
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2012484790]![Image](https://img.shields.io/github/v/release/emipa606/SimplyMoreBridges?label=latest%20version&style=plastic&color=9f1111&labelColor=black)
 
