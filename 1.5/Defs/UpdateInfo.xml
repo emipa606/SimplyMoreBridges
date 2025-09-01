@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <TabulaRasa.UpdateDef Abstract="true" Name="SimplyMoreBridges_UpdateInfoBase">
     <linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2012484790</linkUrl>
@@ -11,4 +11,10 @@
 Added since some users saw these bridges more like steel bridges with a material veneer.
 Remember to restart the game if you change any mod-settings.</content>
   </TabulaRasa.UpdateDef>
+	<TabulaRasa.UpdateDef ParentName="SimplyMoreBridges_UpdateInfoBase" MayRequire="neronix17.toolbox">
+		<defName>SimplyMoreBridges_1_5_0</defName>
+		<date>2025/9/1</date>
+		<content>This mod has been re-released for the new version of the game. This version will remain but will not be updated further.</content>
+	</TabulaRasa.UpdateDef>
 </Defs>
+

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <HugsLib.UpdateFeatureDef Abstract="true" Name="SimplyMoreBridges_UpdateFeatureBase">
     <modNameReadable>SimplyMoreBridges</modNameReadable>
@@ -40,4 +40,10 @@ So for example Bamboo and Iron Wood from VGP or Bones from the Bones-mod could b
 Added since some users saw these bridges more like steel bridges with a material veneer.
 Remember to restart the game if you change any mod-settings.</content>
   </HugsLib.UpdateFeatureDef>
+	<HugsLib.UpdateFeatureDef ParentName="SimplyMoreBridges_UpdateFeatureBase">
+		<defName>SimplyMoreBridges_1_5_0</defName>
+		<assemblyVersion>1.5.0</assemblyVersion>
+		<content>This mod has been re-released for the new version of the game. This version will remain but will not be updated further.</content>
+	</HugsLib.UpdateFeatureDef>
 </Defs>
+

@@ -1,5 +1,8 @@
 # Changelog for SimplyMoreBridges
 
+1.5.1 - Last update of the legacy version of the mod
+
+
 1.5.0 - Mod updated for 1.5 and passed autotests
 
 
