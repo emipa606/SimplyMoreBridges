@@ -206,11 +206,14 @@ public class GenerateBridges
             bridge = true,
             layerable = true,
             isPaintable = true,
+            isFoundation = true,
+            preventCraters = true,
             affordances =
             [
                 RimWorld.TerrainAffordanceDefOf.Light,
                 RimWorld.TerrainAffordanceDefOf.Medium,
-                RimWorld.TerrainAffordanceDefOf.Heavy
+                RimWorld.TerrainAffordanceDefOf.Heavy,
+                RimWorld.TerrainAffordanceDefOf.Walkable
             ],
             designationCategory = DefDatabase<DesignationCategoryDef>.GetNamedSilentFail("Structure"),
             fertility = 0,
@@ -231,6 +234,7 @@ public class GenerateBridges
         switch (bridgeType)
         {
             case BridgeType.Wooden:
+                currentBridgeType.bridgePropsPath = "Terrain/Misc/BridgeProps";
                 currentBridgeType.uiIconPath = "Terrain/Surfaces/Bridge_MenuIcon";
                 currentBridgeType.texturePath = "Terrain/Surfaces/Bridge";
                 currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.Bridgeable;
@@ -246,6 +250,7 @@ public class GenerateBridges
                 currentBridgeType.costList = GetCost(true, false, material);
                 break;
             case BridgeType.Bridge:
+                currentBridgeType.bridgePropsPath = "Terrain/Misc/HeavyBridgeProps";
                 currentBridgeType.uiIconPath = "Terrain/Surfaces/HeavyBridge_MenuIcon";
                 currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.Bridgeable;
                 currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.WorkToBuild, value = 2200 });
@@ -257,6 +262,7 @@ public class GenerateBridges
                 ];
                 break;
             case BridgeType.Deep:
+                currentBridgeType.bridgePropsPath = "Terrain/Misc/DeepWaterBridgeProps";
                 currentBridgeType.uiIconPath = "Terrain/Surfaces/DeepWaterBridge_MenuIcon";
                 currentBridgeType.terrainAffordanceNeeded = TerrainAffordanceDefOf.BridgeableDeep;
                 currentBridgeType.statBases.Add(new StatModifier { stat = StatDefOf.WorkToBuild, value = 3200 });
@@ -275,6 +281,8 @@ public class GenerateBridges
                 $"Tile{material.defName.Replace("Blocks", string.Empty)}");
             currentBridgeType.color = tile?.color ?? material.stuffProps.color;
         }
+
+        currentBridgeType.spaceBridgePropsPath = "Terrain/Misc/BridgeSpaceProps";
 
         if (material.stuffProps.categories.Contains(StuffCategoryDefOf.Metallic))
         {

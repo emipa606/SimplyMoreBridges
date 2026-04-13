@@ -1,43 +1,67 @@
-# GitHub Copilot Instructions for Simply More Bridges (Continued)
-
-Welcome to the development guide for the "Simply More Bridges (Continued)" mod for RimWorld. This file serves as a comprehensive guide for leveraging GitHub Copilot to enhance and maintain the mod effectively. Below, you'll find detailed instructions on the mod’s purpose, key features, coding patterns, XML integration, Harmony patching, and suggestions for using Copilot.
+# GitHub Copilot Instructions for Simply More Bridges (Continued) Mod
 
 ## Mod Overview and Purpose
 
-"Simply More Bridges (Continued)" is a mod that expands the bridge-building capabilities within RimWorld by introducing new bridge types and materials. The mod aims to enhance gameplay flexibility, especially in medieval and other themed playthroughs, by allowing bridges to be constructed from various materials and with different visual appearances.
+**Mod Name**: Simply More Bridges (Continued)
+
+The Simply More Bridges (Continued) mod is an extension and enhancement of Lanilor's original mod, compatible with RimWorld version 1.6. It introduces a variety of additional bridge types, expanding the existing functionality of wood bridges in the RimWorld core by providing more construction options for different materials and environments. The mod aims to offer improved integration with medieval playthroughs and other mods by adapting research requirements and material compatibility. 
 
 ## Key Features and Systems
 
-- **Expanded Material Options**: Create bridges from an array of materials, including those provided by other mods.
-- **Visual Customization**: Options to build bridges using flagstone, paved tile, and concrete visuals.
-- **Heavy and Deep Water Bridges**: New bridge types support heavy structures and can be built in deep water.
-- **Royalty and Fine Floors**: Integration with RimWorld Royalty; beautiful materials yield fine floors.
-- **Research Integration**: New research projects for heavy and deep water bridges.
-- **Localizations**: Includes Russian and French translations.
+- **Material Diversity**: Build bridges using a wide range of materials, including those introduced by other mods. Materials include wood, plasteel, steel, and stone types.
+  
+- **Visual and Functional Enhancements**: Option to build bridges with different visual styles like Flagstone, Paved Tile, and Concrete. Bridges now also recognize their material's beauty value.
+
+- **Research**: Separate research paths for "heavy bridges" and "deep water bridges" make them compatible with different tech levels.
+
+- **Gameplay Integration**: New bridge types that support heavy structures and building in deep water, broadening the player's construction capabilities.
+
+- **Cost Configuration**: Players can adjust the material cost for construction using a slider.
+
+- **Localization Support**: Includes translations for Russian and French languages.
 
 ## Coding Patterns and Conventions
 
-- **Class and Method Naming**: Classes and methods are named concisely and descriptively, e.g., `Harmony_Designator_RemoveBridge_CanDesignateCell`.
-- **Accessibility Modifiers**: Utilize `public`, `internal`, and `private` to designate the intended accessibility of classes and methods.
-- **Inheritance**: Use of inheritance for section layer classes like `SectionLayer_BridgeProps_DeepWater`.
+- **Project Structure**: The project is organized into multiple C# files, each targeting specific functionality. Classes are generally kept small and focused on a single purpose.
+
+- **Naming Conventions**: Classes and methods use PascalCase, while private methods and fields are maintained in camelCase. Static classes are used for utility methods.
+
+- **Accessibility**: Class and method scopes are explicitly defined, with internal access modifiers used for non-public aspects of the mod to prevent unintended access.
 
 ## XML Integration
 
-- Use XML to define new `TerrainDef` for bridge types, ensuring compatibility with existing terrain definitions.
-- XML files should maintain proper indentation and descriptive comments to ease updates and expansion.
-- Designator and research projects should also be defined within XML to appear correctly in the game’s UI.
+The mod relies on the XML definition files for integrating modded content seamlessly with the RimWorld engine:
+
+- **Terrain Definitions**: New terrainDefs are properly added in XML to support the additional bridge types. Ensure all additions respect the game's XML schema.
+
+- **Beauty and Affordance Values**: XML should correctly reflect the real-world attributes of materials used for bridge construction, such as beauty and support affordances.
 
 ## Harmony Patching
 
-- **Harmony Patches**: Facilitates the mod’s core functionality by patching into RimWorld's methods.
-- **Patch Locations**: Files such as `Harmony_Designator_RemoveBridge_CanDesignateCell.cs` and `Harmony_GenConstruct_CanPlaceBlueprintAt.cs` handle specific functionalities like removing and placing bridges.
-- **Defensive Programming**: Ensure patches are safe and account for potential edge cases to prevent game crashes.
+Harmony is used to apply runtime patches to the existing game functionality to ensure compatibility and extend features without modifying the core game code:
+
+- **File: HarmonyPatches.cs**: This file contains the necessary patches and should follow best practices for stability. Always ensure that patches are surrounded by try-catch blocks to handle potential exceptions.
+
+- **Patch Focus**: The patches update the game engine to facilitate new functionality such as terrain support and bridge properties.
 
 ## Suggestions for Copilot
 
-- **Code Completion**: Use Copilot to rapidly generate boilerplate code for new classes and methods based on existing patterns.
-- **XML Templates**: Leverage Copilot to quickly create and modify XML definitions for new bridge types and visual styles.
-- **Harmony Integration**: Utilize Copilot to suggest and refine Harmony patches, drawing on existing code examples in the mod.
-- **Documentation**: Encourage Copilot to add comments and documentation to improve code readability and maintainability.
+To ensure Copilot suggestions align with the project's goals, consider the following:
 
-By following these guidelines and actively utilizing GitHub Copilot, you can contribute effectively to the ongoing development and improvement of the "Simply More Bridges (Continued)" mod. Happy modding!
+- **Contextual Completion**: Leverage Copilot's ability to auto-complete based on context when writing new methods for bridge properties using existing naming conventions.
+
+- **Code Generation**: Use Copilot to generate boilerplate code for XML parsing and Harmony patches, reducing manual coding time.
+
+- **Refactoring Support**: Allow Copilot to suggest refactoring opportunities to improve code readability and maintainability.
+
+- **Error Handling**: Enable Copilot to provide suggestions on implementing robust error handling patterns, especially for runtime patches.
+
+By following these guidelines, you'll ensure that the mod maintains high code quality while providing an engaging gameplay experience for RimWorld players.
+
+## Project Solution Guidelines
+- Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
+- Use these in-solution XML files as the primary files for reference and modification.
+- The `.github/copilot-instructions.md` file is included in the solution under the `.github` solution folder, so it should be read/modified from within the solution instead of using paths outside the solution. Update this file once only, as it and the parent-path solution reference point to the same file in this workspace.
+- When making functional changes in this mod, ensure the documented features stay in sync with implementation; use the in-solution `.github` copy as the primary file.
+- In the solution is also a project called Assembly-CSharp, containing a read-only version of the decompiled game source, for reference and debugging purposes.
+- For any new documentation, update this copilot-instructions.md file rather than creating separate documentation files.
