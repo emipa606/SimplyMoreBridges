@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<TabulaRasa.UpdateDef Abstract="true" Name="SimplyMoreBridges_UpdateInfoBase">
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3560458000</linkUrl>
+		<banner>UpdateInfo/SimplyMoreBridges</banner>
+	</TabulaRasa.UpdateDef>
+	<TabulaRasa.UpdateDef ParentName="SimplyMoreBridges_UpdateInfoBase" MayRequire="neronix17.toolbox">
+		<defName>SimplyMoreBridges_1_6_1</defName>
+		<date>2026/11/7</date>
+		<content>This mod has been re-released for the new version of the game. This version will remain but will not be updated further.</content>
+	</TabulaRasa.UpdateDef>
+</Defs>
+

@@ -28,7 +28,4 @@
   <Folder Name="/XML/1.6/Defs/Misc/TerrainAffordanceDefs/">
     <File Path="../1.6/Defs/Misc/TerrainAffordanceDefs/TerrainAffordances.xml" />
   </Folder>
-  <Project Path="../../../../../../../ModPublishing/Decompiled/Assembly-CSharp.csproj">
-    <Build Project="false" />
-  </Project>
 </Solution>

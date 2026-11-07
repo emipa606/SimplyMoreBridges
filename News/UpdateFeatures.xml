@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="SimplyMoreBridges_UpdateFeatureBase">
+		<modNameReadable>SimplyMoreBridges</modNameReadable>
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3560458000</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+	<HugsLib.UpdateFeatureDef ParentName="SimplyMoreBridges_UpdateFeatureBase">
+		<defName>SimplyMoreBridges_1_6_1</defName>
+		<assemblyVersion>1.6.1</assemblyVersion>
+		<content>This mod has been re-released for the new version of the game. This version will remain but will not be updated further.</content>
+	</HugsLib.UpdateFeatureDef>
+</Defs>
+
