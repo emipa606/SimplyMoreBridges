@@ -4,7 +4,7 @@ using Verse;
 namespace SimplyMoreBridges.Harmony;
 
 [StaticConstructorOnStartup]
-internal class HarmonyPatches
+internal static class HarmonyPatches
 {
     static HarmonyPatches()
     {

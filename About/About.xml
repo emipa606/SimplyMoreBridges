@@ -5,7 +5,7 @@
   <author>Lanilor</author>
   <url>https://github.com/emipa606/SimplyMoreBridges</url>
   <supportedVersions>
-    <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <modDependencies>
     <li>
@@ -22,8 +22,8 @@
 Update of Lanilors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1420241138
 
-[b]The release of RimWorld 1.6 added improved support for [url=https://github.com/emipa606/AssetBuilder/blob/main/README.md]Asset Bundles[/url][/b].
-To avoid doubling the size of the mod, it was re-released using only Asset Bundles, you can find the previous version of this mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2012484790]here[/url].
+[b]The release of RimWorld 1.7 added a system where assets like textures and sounds can be cached to improve performance[/b].
+To avoid doubling the size of the mod, it was re-released with only this cache included, you can find the previous version of this mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3560458000]here[/url].
 
 [h2]Floors and bridges are of the same type in the game, terrainDef. That is why you cannot build floors on bridges, you can only replace one with the other. This is a limitation in the game and nothing I can change[/h2]
 
@@ -76,8 +76,6 @@ Can be added to an existing save. (To remove this mod, remove all steel bridges 
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
-[/list] 
-
-[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3560458000][img]https://img.shields.io/github/v/release/emipa606/SimplyMoreBridges?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url] | tags:  structure,  materials</description>
-  <modVersion IgnoreIfNoMatchingField="True">1.6.1</modVersion>
+[/list]  | materials, structure</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.7.0</modVersion>
 </ModMetaData>

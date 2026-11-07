@@ -1,62 +1,58 @@
-# GitHub Copilot Instructions for Simply More Bridges (Continued) Mod
+# GitHub Copilot Instructions for Simply More Bridges (Continued)
 
 ## Mod Overview and Purpose
 
-**Mod Name**: Simply More Bridges (Continued)
-
-The Simply More Bridges (Continued) mod is an extension and enhancement of Lanilor's original mod, compatible with RimWorld version 1.6. It introduces a variety of additional bridge types, expanding the existing functionality of wood bridges in the RimWorld core by providing more construction options for different materials and environments. The mod aims to offer improved integration with medieval playthroughs and other mods by adapting research requirements and material compatibility. 
+**Simply More Bridges (Continued)** is an update to Lanilor's original mod that adds various types of bridges to RimWorld. This mod takes advantage of the improved support for Asset Bundles introduced in RimWorld 1.6. The primary purpose of the mod is to enhance the building options in RimWorld by introducing new types of bridges that can be built from different materials, including those from other mods.
 
 ## Key Features and Systems
 
-- **Material Diversity**: Build bridges using a wide range of materials, including those introduced by other mods. Materials include wood, plasteel, steel, and stone types.
-  
-- **Visual and Functional Enhancements**: Option to build bridges with different visual styles like Flagstone, Paved Tile, and Concrete. Bridges now also recognize their material's beauty value.
-
-- **Research**: Separate research paths for "heavy bridges" and "deep water bridges" make them compatible with different tech levels.
-
-- **Gameplay Integration**: New bridge types that support heavy structures and building in deep water, broadening the player's construction capabilities.
-
-- **Cost Configuration**: Players can adjust the material cost for construction using a slider.
-
-- **Localization Support**: Includes translations for Russian and French languages.
+- **Splitted Research Requirements**: The research requirements for bridges have been modified to make the mod more compatible with medieval playthroughs.
+- **Material Flexibility**: Players can build bridges from various materials, including those from other mods, and even generate wooden bridges from all woody materials.
+- **Visual Options**: Players can build bridges using different visual styles, such as Flagstone, Paved Tile, and Concrete visuals.
+- **Translation Support**: The mod includes Russian and French translations.
+- **Cost Adjustment**: A slider allows players to set the cost of bridges.
+- **Royalty and Fine Floor Compatibility**: All bridges (except Flagstone) are now considered Floors for Royalty, and those built from beautiful materials (Gold, Jade, etc.) are considered Fine Floors.
+- **New Bridge Types**: The mod introduces heavy bridges that provide support for heavy structures and deep water bridges that can be built in deep water. These new bridges can be built from steel, plasteel, and stone types.
+- **Compatibility**: The mod can be added to an existing save. To remove the mod, players must first remove all steel bridges from their world.
 
 ## Coding Patterns and Conventions
 
-- **Project Structure**: The project is organized into multiple C# files, each targeting specific functionality. Classes are generally kept small and focused on a single purpose.
+This mod follows established coding patterns and conventions used in RimWorld modding, including:
 
-- **Naming Conventions**: Classes and methods use PascalCase, while private methods and fields are maintained in camelCase. Static classes are used for utility methods.
-
-- **Accessibility**: Class and method scopes are explicitly defined, with internal access modifiers used for non-public aspects of the mod to prevent unintended access.
+- **C# Classes and Methods**: The mod uses C# classes and methods to define and implement its functionality. Key classes include `GenerateBridges`, `HarmonyPatches`, and `DesignatorDropdownGroupDefOf`.
+- **XML Definitions**: XML files are used to define various aspects of the mod, such as `TerrainDef`, `ResearchProjectDef`, and `DesignatorDropdownGroupDef`. These files are located in the `1.7/Defs` directory.
+- **Harmony Patches**: Harmony patches are used to modify the behavior of RimWorld's existing code. Key harmony patches include `Designator_RemoveBridge_CanDesignateCell`, `GenConstruct_CanPlaceBlueprintAt`, and `HarmonyPatches`.
 
 ## XML Integration
 
-The mod relies on the XML definition files for integrating modded content seamlessly with the RimWorld engine:
+The mod integrates with RimWorld using XML definitions. Key XML files include:
 
-- **Terrain Definitions**: New terrainDefs are properly added in XML to support the additional bridge types. Ensure all additions respect the game's XML schema.
+- **TerrainDefs_Terrain_Special.xml**: Defines the new bridge terrain types.
+- **DesignatorDropdownGroupDef.xml**: Defines the designator dropdown groups for the new bridges.
+- **TerrainAffordances.xml**: Defines the terrain affordance for the new bridge types.
+- **ResearchProjects_Misc.xml**: Defines the research projects for the new bridges.
 
-- **Beauty and Affordance Values**: XML should correctly reflect the real-world attributes of materials used for bridge construction, such as beauty and support affordances.
+These XML files are located in the `1.7/Defs` directory and are parsed by RimWorld to add the new bridge types and their properties to the game.
 
 ## Harmony Patching
 
-Harmony is used to apply runtime patches to the existing game functionality to ensure compatibility and extend features without modifying the core game code:
+The mod uses Harmony to patch RimWorld's existing code. Key harmony patches include:
 
-- **File: HarmonyPatches.cs**: This file contains the necessary patches and should follow best practices for stability. Always ensure that patches are surrounded by try-catch blocks to handle potential exceptions.
+- **Designator_RemoveBridge_CanDesignateCell**: Modifies the behavior of the `Designator_RemoveBridge_CanDesignateCell` method to allow the removal of the new bridge types.
+- **GenConstruct_CanPlaceBlueprintAt**: Modifies the behavior of the `GenConstruct_CanPlaceBlueprintAt` method to allow the placement of blueprints for the new bridge types.
+- **HarmonyPatches**: A general harmony patch file that includes other patches and methods for modifying the behavior of RimWorld.
 
-- **Patch Focus**: The patches update the game engine to facilitate new functionality such as terrain support and bridge properties.
+These harmony patches are located in the `Harmony` directory of the mod's source code.
 
 ## Suggestions for Copilot
 
-To ensure Copilot suggestions align with the project's goals, consider the following:
+To assist in the development of the Simply More Bridges (Continued) mod, here are some suggestions for using GitHub Copilot:
 
-- **Contextual Completion**: Leverage Copilot's ability to auto-complete based on context when writing new methods for bridge properties using existing naming conventions.
+- **C# Code Generation**: Use Copilot to generate C# code for new classes, methods, and logic related to the mod's functionality. For example, you can use Copilot to generate a new method for calculating the cost of a bridge based on the material used.
+- **XML Integration**: Use Copilot to generate XML definitions for new bridge types, terrain affordances, and research projects. For example, you can use Copilot to generate a new `TerrainDef` entry for a new heavy bridge type.
+- **Harmony Patches**: Use Copilot to generate harmony patches for modifying existing RimWorld code. For example, you can use Copilot to generate a new harmony patch for modifying the behavior of the `Designator_RemoveBridge_CanDesignateCell` method to allow the removal of the new bridge types.
 
-- **Code Generation**: Use Copilot to generate boilerplate code for XML parsing and Harmony patches, reducing manual coding time.
-
-- **Refactoring Support**: Allow Copilot to suggest refactoring opportunities to improve code readability and maintainability.
-
-- **Error Handling**: Enable Copilot to provide suggestions on implementing robust error handling patterns, especially for runtime patches.
-
-By following these guidelines, you'll ensure that the mod maintains high code quality while providing an engaging gameplay experience for RimWorld players.
+By following these guidelines, developers can use GitHub Copilot to enhance their modding experience and quickly generate code and definitions for the Simply More Bridges (Continued) mod.
 
 ## Project Solution Guidelines
 - Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
@@ -65,3 +61,11 @@ By following these guidelines, you'll ensure that the mod maintains high code qu
 - When making functional changes in this mod, ensure the documented features stay in sync with implementation; use the in-solution `.github` copy as the primary file.
 - In the solution is also a project called Assembly-CSharp, containing a read-only version of the decompiled game source, for reference and debugging purposes.
 - For any new documentation, update this copilot-instructions.md file rather than creating separate documentation files.
+
+
+## Hard rules (must follow)
+- Do NOT run commands that modify the repo (no git commit, git apply, dotnet format) unless explicitly asked.
+- Prefer minimal reads: read only the smallest code region needed (around the suspicious lines).
+- When mentioning SonarQube issues, automatically use the SonarQube MCP service to fetch and address issues instead of making inferred fixes without querying SonarQube first.
+- When mentioning the rimworld log, automatically use the Rimworld MCP service to fetch the log.
+

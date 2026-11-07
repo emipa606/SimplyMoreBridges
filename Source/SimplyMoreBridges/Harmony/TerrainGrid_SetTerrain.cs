@@ -7,7 +7,7 @@ using Verse;
 namespace SimplyMoreBridges.Harmony;
 
 [HarmonyPatch(typeof(TerrainGrid), nameof(TerrainGrid.SetTerrain))]
-public class TerrainGrid_SetTerrain
+public static class TerrainGrid_SetTerrain
 {
     public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions, ILGenerator il)
     {

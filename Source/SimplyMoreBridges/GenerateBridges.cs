@@ -89,13 +89,10 @@ public class GenerateBridges
                             "PavedTile"));
                     }
 
-                    if (SimplyMoreBridgesMod.instance.Settings.GenerateFloorlike)
+                    if (SimplyMoreBridgesMod.instance.Settings.GenerateFloorlike && material.defName == "Silver")
                     {
-                        if (material.defName == "Silver")
-                        {
-                            metalBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
-                                "Sterile"));
-                        }
+                        metalBridgesToAdd.Add(generateBridgeDef(material, BridgeType.Deep, metalBridgesToAdd,
+                            "Sterile"));
                     }
 
                     continue;

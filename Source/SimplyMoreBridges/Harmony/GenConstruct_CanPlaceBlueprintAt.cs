@@ -6,7 +6,7 @@ using Verse;
 namespace SimplyMoreBridges.Harmony;
 
 [HarmonyPatch(typeof(GenConstruct), nameof(GenConstruct.CanPlaceBlueprintAt))]
-public class GenConstruct_CanPlaceBlueprintAt
+public static class GenConstruct_CanPlaceBlueprintAt
 {
     public static void Postfix(ref AcceptanceReport __result, BuildableDef entDef, IntVec3 center, Map map)
     {

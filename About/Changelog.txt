@@ -1,5 +1,8 @@
 # Changelog for SimplyMoreBridges
 
+1.7.0 - Mod updated for 1.7 and passed autotests
+
+
 1.6.1 - Bridges should now survive spring floods and behave the same as vanilla bridges
 
 

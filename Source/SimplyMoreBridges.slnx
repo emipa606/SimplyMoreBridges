@@ -10,25 +10,22 @@
     <File Path="../Patches/TerrainDefs_Terrain_Special.xml" />
     <File Path="../Patches/TerrainDefs_Terrain_Water.xml" />
   </Folder>
-  <Folder Name="/XML/1.6/Defs/Misc/DesignatorDropdownGroupDef/">
-    <File Path="../1.6/Defs/Misc/DesignatorDropdownGroupDef/DesignatorDropdownGroupDef.xml" />
-  </Folder>
   <Folder Name="/XML/About/">
     <File Path="../About/about.xml" />
-  </Folder>
-  <Folder Name="/XML/1.6/Defs/TerrainDefs/">
-    <File Path="../1.6/Defs/TerrainDefs/Terrain_Special.xml" />
-  </Folder>
-  <Folder Name="/XML/1.6/Defs/ResearchProjectDefs/">
-    <File Path="../1.6/Defs/ResearchProjectDefs/ResearchProjects_Misc.xml" />
   </Folder>
   <Folder Name="/XML/Languages/English/Keyed/">
     <File Path="../Languages/English/Keyed/Keys.xml" />
   </Folder>
-  <Folder Name="/XML/1.6/Defs/Misc/TerrainAffordanceDefs/">
-    <File Path="../1.6/Defs/Misc/TerrainAffordanceDefs/TerrainAffordances.xml" />
+  <Folder Name="/XML/1.7/Defs/Misc/TerrainAffordanceDefs/">
+    <File Path="../1.7/Defs/Misc/TerrainAffordanceDefs/TerrainAffordances.xml" />
   </Folder>
-  <Project Path="../../../../../../../ModPublishing/Decompiled/Assembly-CSharp.csproj">
-    <Build Project="false" />
-  </Project>
+  <Folder Name="/XML/1.7/Defs/ResearchProjectDefs/">
+    <File Path="../1.7/Defs/ResearchProjectDefs/ResearchProjects_Misc.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/Misc/DesignatorDropdownGroupDef/">
+    <File Path="../1.7/Defs/Misc/DesignatorDropdownGroupDef/DesignatorDropdownGroupDef.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/TerrainDefs/">
+    <File Path="../1.7/Defs/TerrainDefs/Terrain_Special.xml" />
+  </Folder>
 </Solution>
